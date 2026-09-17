@@ -3,346 +3,567 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Azur Hour｜人と人が出会うイベントシリーズ（株式会社吉田組）</title>
-<meta name="description" content="Azur Hour は株式会社吉田組が運営するイベントシリーズ。音楽、食、会話、場所。人が自然に出会える時間をつくります。第一回はクルーズ船を貸し切った OSAKA DJ NIGHT CRUISE。">
+<title>Azur Hour｜次代の体験と挑戦を創るイベントシリーズ</title>
+<meta name="description" content="次代の体験と挑戦を創る。Azur Hour は株式会社吉田組が企画・運営するイベントシリーズです。AIがどれだけ進化しても、人の心を動かすのは人にしかできない。第1回は 2026年10月17日 OSAKA NIGHT CRUISE（大阪・八軒家浜）。">
 <meta property="og:title" content="Azur Hour｜Where people meet, something begins.">
-<meta property="og:description" content="人と人が出会うと、次の何かが始まる。株式会社吉田組が運営するイベントシリーズ。">
+<meta property="og:description" content="次代の体験と挑戦を創る。AIには作れない時間をつくる、人が集まるイベントシリーズ。第1回 2026.10.17 OSAKA NIGHT CRUISE。">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://kimino-yoshidagumi.com/azur-hour.html">
+<meta property="og:image" content="https://kimino-yoshidagumi.com/az-hero-poster.jpg">
+<link rel="canonical" href="https://kimino-yoshidagumi.com/azur-hour.html">
 <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Hanken+Grotesk:wght@400;600&family=Instrument+Serif:ital@0;1&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Hanken+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0A0F0C; --card:#121A15; --cream:#F3EFE5; --body:#C7C2B5; --mute:#7B8A82;
-  --green:#7BC142; --green-lt:#9FD668; --green-dk:#5BA02A;
-  --line:rgba(243,239,229,0.10); --line-md:rgba(243,239,229,0.16); --line-hi:rgba(243,239,229,0.25);
+  --white:#FFFFFF; --bone:#FAF8F4;
+  --ink:#0F1A38; --ink2:#3C4766; --mute:#828AA0;
+  --hair:rgba(15,26,56,0.10); --hair2:rgba(15,26,56,0.18);
+  --blue-deep:#0A1F55; --blue:#23509E; --blue-mist:#E7EDF9;
+  --orange:#E8762D; --orange-lt:#F4A363; --orange-mist:#FDF0E4;
   --display:'Bricolage Grotesque','Noto Sans JP',sans-serif;
-  --serif:'Instrument Serif',serif;
+  --serif:'Instrument Serif',Georgia,serif;
   --mono:'Courier New',monospace;
   --jp:'Noto Sans JP',sans-serif;
+  --body:'Hanken Grotesk','Noto Sans JP',sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--body);font-family:'Hanken Grotesk',var(--jp);-webkit-font-smoothing:antialiased}
-a{color:var(--green-lt);text-decoration:none}
-a:hover{color:var(--green)}
-.mono{font-family:var(--mono);letter-spacing:0.1em}
-.eyebrow{font-family:var(--mono);letter-spacing:0.1em;font-size:12px;color:var(--green)}
-.wrap{max-width:1440px;margin:0 auto}
-.section{padding:110px 48px;border-bottom:1px solid var(--line)}
-/* reveal */
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+body{margin:0;background:var(--bone);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--blue);text-decoration:none}
+a:hover{color:var(--orange)}
+img{max-width:100%;display:block}
+.wrap{max-width:1280px;margin:0 auto}
+.sec{padding:130px 64px}
+.lbl{font-family:var(--mono);font-size:11px;letter-spacing:0.14em;color:var(--mute)}
+.lbl::before{content:'[ '}.lbl::after{content:' ]'}
+h2.dsp{font-family:var(--display);font-weight:700;font-size:clamp(34px,4.2vw,60px);line-height:1.02;letter-spacing:-0.03em;margin:16px 0 0}
+h2.jp{font-family:var(--jp);font-weight:500;font-size:clamp(25px,2.9vw,40px);line-height:1.4;letter-spacing:0.02em;margin:16px 0 0}
+em.s{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--orange);letter-spacing:-0.01em}
+.lead{font-family:var(--jp);font-size:15.5px;line-height:2.05;color:var(--ink2);margin:0;text-wrap:pretty}
+.pill{display:inline-flex;align-items:center;gap:10px;background:var(--orange);color:#fff;border:1px solid var(--orange);border-radius:999px;padding:14px 26px;font-size:14px;font-weight:600;font-family:var(--body);cursor:pointer;transition:background .25s,transform .25s,border-color .25s;line-height:1}
+.pill:hover{background:#D0631F;border-color:#D0631F;color:#fff;transform:translateY(-2px)}
+.pill.ghost{background:transparent;color:var(--ink);border-color:var(--hair2)}
+.pill.ghost:hover{background:transparent;border-color:var(--orange);color:var(--orange)}
+.pill.on-dark{background:transparent;color:#fff;border-color:rgba(255,255,255,0.35)}
+.pill.on-dark:hover{background:var(--orange);border-color:var(--orange)}
+.pill.dim{background:var(--blue-mist);color:var(--blue-deep);border-color:transparent;cursor:default}
+.pill.dim:hover{transform:none;background:var(--blue-mist);color:var(--blue-deep)}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .8s,transform .8s}
 .reveal.in{opacity:1;transform:none}
+
 /* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:16px 48px;transition:background .3s ease,border-color .3s ease;border-bottom:1px solid transparent}
-.nav.scrolled{background:rgba(10,15,12,0.85);backdrop-filter:blur(12px);border-bottom-color:var(--line)}
-.nav-logo{display:flex;align-items:center;gap:12px;color:var(--cream)}
-.a-mark{width:34px;height:34px;border:1.5px solid var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:17px;color:var(--green);transition:transform .5s ease}
-.nav-logo:hover .a-mark{transform:rotate(180deg)}
-.nav-logo b{font-family:var(--display);font-weight:700;font-size:19px}
-.nav-links{display:flex;gap:4px;background:rgba(10,15,12,0.55);border:1px solid rgba(243,239,229,0.12);border-radius:999px;padding:5px;backdrop-filter:blur(8px)}
-.nav-links a{padding:8px 16px;font-size:13px;color:var(--body);border-radius:999px;transition:all .25s ease}
-.nav-links a:hover{color:var(--cream);background:rgba(243,239,229,0.07)}
-.nav-cta{display:flex;align-items:center;gap:10px;border:1px solid var(--line-hi);border-radius:999px;padding:10px 22px;color:var(--cream);font-size:14px;font-weight:600;transition:border-color .25s ease}
-.nav-cta:hover{border-color:var(--green);color:var(--cream)}
-.nav-cta .dot{width:20px;height:20px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--bg);font-size:12px;transition:transform .3s ease}
-.nav-cta:hover .dot{transform:rotate(-45deg)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:20px 40px;transition:background .35s,border-color .35s,padding .35s;border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(250,248,244,0.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom-color:var(--hair);padding:14px 40px}
+.logo{display:flex;align-items:center;gap:11px;color:#fff;font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:-0.02em;transition:color .35s}
+.logo svg{width:28px;height:28px;color:var(--orange);transition:transform .5s}
+.logo:hover svg{transform:rotate(180deg)}
+.nav.scrolled .logo{color:var(--ink)}
+.nav-links{display:flex;gap:2px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);border-radius:999px;padding:5px;transition:background .35s,border-color .35s}
+.nav-links a{padding:8px 16px;font-size:13px;font-weight:500;color:rgba(255,255,255,0.85);border-radius:999px;transition:all .25s}
+.nav-links a:hover{color:#fff;background:rgba(255,255,255,0.14)}
+.nav-links a.on{color:#fff;background:var(--orange)}
+.nav.scrolled .nav-links{background:var(--white);border-color:var(--hair)}
+.nav.scrolled .nav-links a{color:var(--ink2)}
+.nav.scrolled .nav-links a:hover{color:var(--ink);background:rgba(15,26,56,0.05)}
+.nav.scrolled .nav-links a.on{color:#fff;background:var(--orange)}
+.nav .pill{padding:11px 20px;font-size:13px}
 .burger{display:none;flex-direction:column;gap:5px;width:26px;background:none;border:none;cursor:pointer;padding:4px 0}
-.burger div{height:1.5px;background:var(--cream);transition:transform .3s ease,opacity .3s ease}
-/* mobile overlay */
-.m-overlay{position:fixed;inset:0;z-index:60;background:rgba(10,15,12,0.97);backdrop-filter:blur(10px);display:flex;flex-direction:column;justify-content:center;padding:40px 32px;opacity:0;pointer-events:none;transition:opacity .3s ease}
+.burger div{height:1.5px;background:#fff;transition:background .35s}
+.nav.scrolled .burger div{background:var(--ink)}
+.m-overlay{position:fixed;inset:0;z-index:60;background:var(--blue-deep);display:flex;flex-direction:column;justify-content:center;padding:40px 28px;opacity:0;pointer-events:none;transition:opacity .3s}
 .m-overlay.open{opacity:1;pointer-events:auto}
-.m-overlay a{display:flex;align-items:baseline;gap:16px;font-family:var(--display);font-weight:700;font-size:32px;color:var(--cream);padding:14px 0;border-bottom:1px solid var(--line)}
-.m-overlay a .n{font-family:var(--mono);font-size:12px;color:var(--green)}
-.m-close{position:absolute;top:20px;right:24px;background:none;border:1px solid var(--line-hi);border-radius:50%;width:40px;height:40px;color:var(--cream);font-size:16px;cursor:pointer}
+.m-overlay a{display:flex;align-items:baseline;gap:16px;font-family:var(--display);font-weight:700;font-size:30px;color:#fff;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.14);letter-spacing:-0.02em}
+.m-overlay a .n{font-family:var(--mono);font-size:12px;color:var(--orange)}
+.m-close{position:absolute;top:18px;right:22px;background:none;border:1px solid rgba(255,255,255,0.3);border-radius:50%;width:40px;height:40px;color:#fff;font-size:16px;cursor:pointer}
+
 /* HERO */
-.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;background:url('az-9.png') center 62%/cover no-repeat}
-.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,15,12,0.92) 0%,rgba(10,15,12,0.66) 40%,rgba(10,15,12,0.18) 72%,rgba(10,15,12,0.45) 100%)}
-.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,#0A0F0C 2%,rgba(10,15,12,0) 34%),linear-gradient(to bottom,rgba(10,15,12,0.75) 0%,rgba(10,15,12,0) 22%)}
-.hero-inner{position:relative;z-index:1;padding:150px 48px 70px;max-width:900px}
-.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(44px,6.2vw,88px);line-height:0.94;letter-spacing:-0.04em;color:var(--cream);margin:24px 0 0}
-.hero h1 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--green-lt);letter-spacing:-0.02em}
-.hero-jp{font-family:var(--jp);font-size:clamp(15px,1.4vw,19px);color:var(--cream);margin-top:26px}
-.hud{position:absolute;top:110px;right:48px;z-index:1;font-family:var(--mono);font-size:11px;letter-spacing:0.1em;color:var(--green-lt);border:1px solid rgba(159,214,104,0.35);border-radius:10px;padding:12px 16px;line-height:1.9;background:rgba(10,15,12,0.5)}
-.operated{position:absolute;right:48px;bottom:44px;z-index:1;max-width:360px;text-align:right}
-.btn{display:inline-flex;align-items:center;gap:12px;background:var(--green);color:var(--bg);border:none;border-radius:999px;padding:16px 30px;font-size:15px;font-weight:600;font-family:inherit;cursor:pointer;transition:background .25s ease,transform .25s ease,box-shadow .25s ease}
-.btn:hover{background:var(--green-lt);transform:translateY(-2px);box-shadow:0 6px 24px rgba(123,193,66,0.35);color:var(--bg)}
-.btn:active{background:var(--green-dk);transform:none}
-.btn-ghost{display:inline-flex;align-items:center;gap:10px;background:transparent;border:1px solid var(--line-hi);color:var(--cream);border-radius:999px;padding:13px 26px;font-size:14px;font-weight:600;font-family:inherit;cursor:pointer;transition:border-color .25s ease,box-shadow .25s ease}
-.btn-ghost:hover{border-color:var(--green);box-shadow:0 0 20px rgba(123,193,66,0.2);color:var(--cream)}
-/* grid helpers */
-.g2{display:grid;grid-template-columns:0.85fr 1.15fr;gap:64px}
-h2.jp{font-family:var(--jp);font-weight:700;font-size:clamp(26px,2.8vw,40px);line-height:1.4;color:var(--cream);margin:20px 0 0}
-.lead{font-family:var(--jp);font-size:15px;line-height:2.2;color:var(--body);text-wrap:pretty}
+.hero{position:relative;min-height:760px;height:100svh;display:flex;flex-direction:column;justify-content:space-between;padding:150px 48px 48px;overflow:hidden;color:#fff}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(180deg,#06133A 0%,#0B2158 24%,#2B4C8A 46%,#8E5340 60%,#E8762D 70%,#C0592A 74%,#2A3E6E 86%,#08183F 100%)}
+.hero-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%;opacity:0;transition:opacity 1.4s ease}
+.hero-vid.ready{opacity:1}
+.hero-grade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,19,58,0.82) 0%,rgba(11,33,88,0.46) 26%,rgba(43,76,138,0.26) 46%,rgba(232,118,45,0.28) 64%,rgba(192,89,42,0.40) 74%,rgba(8,24,63,0.90) 100%)}
+@media (prefers-reduced-motion: reduce){.hero-vid{display:none}}
+.hero-sun{position:absolute;left:50%;top:70%;width:min(46vw,520px);aspect-ratio:1;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(255,196,120,0.85) 0%,rgba(232,118,45,0.45) 34%,rgba(232,118,45,0) 68%);pointer-events:none}
+.hero-in{position:relative;z-index:2;max-width:620px}
+.hero-eye{font-family:var(--mono);font-size:11px;letter-spacing:0.14em;color:rgba(255,255,255,0.75)}
+.hero-msg{font-family:var(--display);font-weight:700;font-size:clamp(22px,2.5vw,34px);line-height:1.22;letter-spacing:-0.02em;margin:18px 0 0}
+.hero-msg em{font-family:var(--serif);font-style:italic;font-weight:400;color:#FFC98A}
+.hero-sub{font-family:var(--jp);font-size:14px;line-height:2;color:rgba(255,255,255,0.82);margin:18px 0 0;max-width:460px}
+.hero-link{display:inline-flex;align-items:center;gap:10px;margin-top:24px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.4);color:#fff;font-size:14px;font-weight:600;transition:gap .25s,border-color .25s}
+.hero-link:hover{gap:16px;color:#fff;border-bottom-color:var(--orange)}
+.hero-foot{position:relative;z-index:2}
+.next-chip{display:inline-flex;align-items:center;gap:12px;background:rgba(10,31,85,0.42);border:1px solid rgba(255,255,255,0.28);backdrop-filter:blur(8px);border-radius:999px;padding:8px 20px 8px 10px;font-family:var(--mono);font-size:11.5px;letter-spacing:0.1em;color:#fff}
+.next-chip .dot{width:9px;height:9px;border-radius:50%;background:var(--orange);box-shadow:0 0 12px var(--orange);animation:blink 2.2s ease-in-out infinite;margin-left:6px}
+@keyframes blink{50%{opacity:.35}}
+.wordmark{font-family:var(--display);font-weight:800;font-size:clamp(56px,14.5vw,230px);line-height:0.82;letter-spacing:-0.05em;margin:18px 0 0;color:#fff}
+
+/* CONCEPT */
+.concept{text-align:center;padding:120px 64px 108px}
+.concept .lbl{color:var(--orange)}
+.concept h2{font-family:var(--jp);font-weight:700;font-size:clamp(30px,5vw,72px);line-height:1.32;letter-spacing:0.045em;margin:24px 0 0;color:var(--ink)}
+.concept .en{font-family:var(--display);font-weight:700;font-size:clamp(13px,1.3vw,18px);letter-spacing:-0.01em;color:var(--mute);margin-top:22px}
+
+/* THE NAME */
+.name-head{text-align:center;max-width:840px;margin:0 auto}
+.name-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:60px;align-items:center;margin-top:60px}
+.name-fig{background:var(--white);border:1px solid var(--hair);border-radius:24px;padding:34px 26px}
+.name-fig svg{width:100%;height:auto;display:block}
+.name-txt p{font-family:var(--jp);font-size:14.5px;line-height:2.1;color:var(--ink2);margin:0}
+.name-txt p + p{margin-top:20px}
+.name-txt b{color:var(--ink);font-weight:500}
+
+/* MANIFESTO */
+.mani{background:var(--blue-deep);color:#fff;position:relative;overflow:hidden}
+.mani::before{content:'';position:absolute;right:-120px;top:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(232,118,45,0.28),rgba(232,118,45,0) 68%)}
+.mani-grid{display:grid;grid-template-columns:200px 1fr;gap:64px;position:relative;z-index:1}
+.mani h2{font-family:var(--jp);font-weight:500;font-size:clamp(26px,3.4vw,48px);line-height:1.42;letter-spacing:0.01em;margin:0;color:#fff}
+.mani h2 b{font-weight:700;color:var(--orange-lt)}
+.mani p{font-family:var(--jp);font-size:15.5px;line-height:2.15;color:rgba(255,255,255,0.78);margin:32px 0 0;max-width:660px}
+.vals{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px;padding-top:36px;border-top:1px solid rgba(255,255,255,0.16)}
+.val .t{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:-0.01em;color:var(--orange-lt)}
+.val .d{font-family:var(--jp);font-size:13.5px;line-height:1.95;color:rgba(255,255,255,0.72);margin-top:10px}
+
+/* STEPS */
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:52px}
+.step{background:var(--white);border:1px solid var(--hair);border-radius:22px;padding:34px 34px 30px;min-height:230px;display:flex;flex-direction:column;transition:border-color .3s,transform .3s}
+.step:hover{border-color:var(--orange);transform:translateY(-3px)}
+.step .n{font-family:var(--mono);font-size:11px;letter-spacing:0.14em;color:var(--orange)}
+.step h3{font-family:var(--jp);font-weight:500;font-size:22px;letter-spacing:0.02em;margin:14px 0 0}
+.step p{font-family:var(--jp);font-size:13.5px;line-height:2;color:var(--ink2);margin:auto 0 0;padding-top:22px}
+.step-img{position:relative;isolation:isolate;border-radius:22px;overflow:hidden;min-height:230px;display:flex;align-items:flex-end;padding:28px}
+.step-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 60%;z-index:-2}
+.step-img::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(10,31,85,0.15),rgba(10,31,85,0.72))}
+
 /* UPCOMING */
-.up-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:18px;margin-top:32px}
-.card-main{position:relative;border:1px solid rgba(243,239,229,0.12);border-radius:26px;overflow:hidden;background:url('az-9.png') center 58%/cover no-repeat;min-height:560px;display:flex;flex-direction:column;justify-content:flex-end;transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
-.card-main:hover{transform:translateY(-6px);border-color:var(--green);box-shadow:0 16px 40px rgba(0,0,0,0.5),0 0 24px rgba(123,193,66,0.12)}
-.card-main::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,15,12,0.35) 0%,rgba(10,15,12,0.1) 35%,rgba(10,15,12,0.94) 78%)}
-.card-main-body{position:relative;padding:30px 32px}
-.card-main h3{font-family:var(--display);font-weight:800;font-size:clamp(34px,3.6vw,52px);line-height:0.94;letter-spacing:-0.04em;color:var(--cream);margin:0}
-.tagline{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--green-lt);margin-top:10px}
-.meta{display:grid;grid-template-columns:96px 1fr;gap:6px 16px;margin-top:18px;padding-top:16px;border-top:1px solid rgba(243,239,229,0.14);font-size:13px;max-width:520px}
-.meta dt{font-family:var(--mono);font-size:11px;letter-spacing:0.1em;color:var(--green-lt);margin:0}
-.meta dd{color:var(--cream);font-family:var(--jp);margin:0}
-.teasers{display:grid;grid-template-rows:1fr 1fr;gap:18px}
-.teaser{position:relative;border:1px solid rgba(243,239,229,0.12);border-radius:26px;overflow:hidden;display:flex;flex-direction:column}
-.teaser::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,15,12,0.55),rgba(10,15,12,0.9))}
-.teaser-body{position:relative;padding:26px 28px;display:flex;flex-direction:column;flex:1}
-.teaser h3{font-family:var(--display);font-weight:800;font-size:28px;line-height:1.02;letter-spacing:-0.03em;color:var(--cream);margin:auto 0 0}
-.teaser-foot{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid rgba(243,239,229,0.14)}
-/* archive timeline */
-.tl{display:flex;align-items:flex-start}
-.tl-node .dot-on{width:16px;height:16px;background:var(--green);border-radius:50%;box-shadow:0 0 14px rgba(123,193,66,0.55)}
-.tl-node .dot-off{width:16px;height:16px;border:1.5px dashed rgba(243,239,229,0.35);border-radius:50%}
-.tl-line{flex:1;border-top:1px dashed rgba(243,239,229,0.2);margin:8px 14px 0}
-/* tags */
-.tags{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.tag{border:1px solid var(--line-md);border-radius:14px;padding:20px 0;text-align:center;font-family:var(--mono);font-size:12px;letter-spacing:0.1em;color:var(--cream);transition:border-color .25s ease,color .25s ease}
-.tag:hover{border-color:rgba(123,193,66,0.55);color:var(--green)}
-.tag.on{border-color:rgba(123,193,66,0.55);color:var(--green);box-shadow:0 0 24px rgba(123,193,66,0.15)}
-/* notify + contact form */
-.field{display:flex;align-items:center;background:var(--card);border:1px solid rgba(243,239,229,0.15);border-radius:999px;padding:5px 5px 5px 22px;transition:border-color .25s ease,box-shadow .25s ease}
-.field:focus-within{border-color:var(--green);box-shadow:0 0 18px rgba(123,193,66,0.18)}
-.field input{flex:1;background:none;border:none;outline:none;color:var(--cream);font-size:14px;font-family:inherit;min-width:0}
-.field input::placeholder{color:var(--mute)}
-.field .btn{padding:11px 22px;font-size:13px}
-.form-input,.form-ta{width:100%;background:var(--card);border:1px solid rgba(243,239,229,0.15);border-radius:16px;padding:14px 18px;color:var(--cream);font-size:14px;font-family:var(--jp);outline:none;transition:border-color .25s ease,box-shadow .25s ease}
-.form-input:focus,.form-ta:focus{border-color:var(--green);box-shadow:0 0 18px rgba(123,193,66,0.15)}
-.form-ta{min-height:120px;resize:vertical;border-radius:20px}
-.form-label{font-family:var(--mono);font-size:11px;letter-spacing:0.1em;color:var(--mute);display:block;margin:0 0 8px 4px}
-/* footer */
-.footer{padding:64px 48px 36px}
-.f-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px}
-.f-head{font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--mute);margin-bottom:12px}
-.f-grid a{display:block;color:var(--body);font-size:13px;line-height:2.4;font-family:var(--jp)}
-.f-grid a:hover{color:var(--green-lt)}
-.ig{width:32px;height:32px;border:1px solid rgba(243,239,229,0.2);border-radius:8px;margin-top:16px;display:inline-flex;align-items:center;justify-content:center;transition:border-color .25s ease}
-.ig:hover{border-color:var(--green)}
-/* toast */
-.toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,80px);z-index:80;background:var(--card);border:1px solid var(--green);border-radius:999px;padding:14px 28px;color:var(--cream);font-family:var(--jp);font-size:14px;box-shadow:0 10px 40px rgba(0,0,0,0.5),0 0 24px rgba(123,193,66,0.2);opacity:0;transition:transform .4s ease,opacity .4s ease;pointer-events:none}
+.card{margin-top:48px;display:grid;grid-template-columns:190px 1fr 320px;gap:44px;background:var(--white);border:1px solid var(--hair);border-radius:24px;padding:40px;transition:border-color .3s,transform .3s}
+.card:hover{border-color:var(--orange);transform:translateY(-2px)}
+.d-week{font-family:var(--mono);font-size:11px;letter-spacing:0.14em;color:var(--orange)}
+.d-day{font-family:var(--display);font-weight:800;font-size:clamp(62px,5.8vw,88px);line-height:0.9;letter-spacing:-0.045em;margin-top:8px}
+.d-time{font-family:var(--mono);font-size:13px;letter-spacing:0.08em;margin-top:16px}
+.d-sub{font-family:var(--jp);font-size:11.5px;color:var(--mute);margin-top:4px}
+.c-num{font-family:var(--mono);font-size:11px;letter-spacing:0.14em;color:var(--orange)}
+.card h3{font-family:var(--display);font-weight:800;font-size:clamp(30px,3.1vw,44px);line-height:0.96;letter-spacing:-0.04em;margin:12px 0 0}
+.tagline{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--blue);margin-top:10px}
+.card p{font-family:var(--jp);font-size:14px;line-height:2.05;color:var(--ink2);margin:16px 0 0;max-width:560px}
+.meta{display:grid;grid-template-columns:96px 1fr;gap:8px 16px;margin-top:22px;padding-top:18px;border-top:1px solid var(--hair);font-size:13.5px}
+.meta dt{font-family:var(--mono);font-size:11px;letter-spacing:0.1em;color:var(--mute);margin:0;padding-top:2px}
+.meta dd{font-family:var(--jp);margin:0}
+.c-act{display:flex;align-items:center;gap:18px;margin-top:26px;flex-wrap:wrap}
+.c-act small{font-family:var(--jp);font-size:11.5px;color:var(--mute)}
+.thumb{position:relative;isolation:isolate;aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:var(--blue-deep);align-self:start}
+.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 60%}
+.thumb .lbl2{position:absolute;left:16px;bottom:14px;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.85)}
+.ph{margin-top:16px;border:1px dashed var(--hair2);border-radius:22px;padding:26px 40px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.ph .n{font-family:var(--mono);font-size:12px;letter-spacing:0.14em;color:var(--mute)}
+.ph .t{font-family:var(--jp);font-size:14px;color:var(--mute);flex:1}
+.ph a{font-family:var(--jp);font-size:13px;font-weight:500}
+
+/* TWO COLUMN */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.panel{background:var(--white);border:1px solid var(--hair);border-radius:24px;padding:28px}
+.panel svg{width:100%;height:auto;display:block}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+.tag{font-family:var(--mono);font-size:12px;letter-spacing:0.12em;border:1px solid var(--hair2);border-radius:999px;padding:12px 22px;color:var(--ink2)}
+.tag.on{background:var(--orange-mist);border-color:transparent;color:#B4551C}
+
+/* ARCHIVE — セクションは一時的に非掲載。001 開催後に戻す（CSSは保持） */
+.counters{display:flex;gap:40px}
+.counters div{text-align:right}
+.counters .k{font-family:var(--mono);font-size:10.5px;letter-spacing:0.12em;color:var(--mute)}
+.counters .v{font-family:var(--display);font-weight:700;font-size:28px;margin-top:4px}
+.empty{margin-top:44px;text-align:center;padding:52px 24px 46px;border:1px solid var(--hair);border-radius:24px;background:var(--white)}
+.empty .en{font-family:var(--display);font-weight:700;font-size:clamp(25px,2.5vw,34px);letter-spacing:-0.02em}
+.empty .ja{font-family:var(--jp);font-weight:500;font-size:16px;margin-top:12px}
+.empty .p{font-family:var(--jp);font-size:13.5px;line-height:2;color:var(--mute);margin-top:10px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.slot{aspect-ratio:4/3;border:1px dashed var(--hair2);border-radius:20px;display:flex;flex-direction:column;justify-content:space-between;padding:18px 20px}
+.slot .n{font-family:var(--mono);font-size:11px;letter-spacing:0.14em;color:var(--mute)}
+.slot .t{font-family:var(--jp);font-size:12px;color:var(--mute)}
+
+/* LOOP */
+.loop{background:var(--blue-deep);color:#fff;border-radius:28px;margin:0 16px;padding:88px 48px;text-align:center;position:relative;overflow:hidden}
+.loop::before{content:'';position:absolute;left:50%;bottom:-180px;width:640px;height:360px;transform:translateX(-50%);background:radial-gradient(ellipse at center,rgba(232,118,45,0.35),rgba(232,118,45,0) 70%)}
+.loop-in{position:relative;z-index:1;max-width:620px;margin:0 auto}
+.loop h2{font-family:var(--jp);font-weight:500;font-size:clamp(25px,2.9vw,40px);color:#fff;margin:14px 0 0}
+.loop p{font-family:var(--jp);font-size:14.5px;line-height:2;color:rgba(255,255,255,0.78);margin:14px 0 0}
+.loop .lbl{color:rgba(255,255,255,0.6)}
+.field{display:flex;align-items:center;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.3);border-radius:999px;padding:5px 5px 5px 22px;max-width:460px;margin:30px auto 0;transition:border-color .25s}
+.field:focus-within{border-color:var(--orange)}
+.field input{flex:1;background:none;border:none;outline:none;color:#fff;font-size:14px;font-family:var(--body);min-width:0}
+.field input::placeholder{color:rgba(255,255,255,0.55)}
+.field .pill{padding:11px 20px;font-size:13px}
+.fine{font-family:var(--jp);font-size:11.5px;line-height:1.95;color:rgba(255,255,255,0.6);margin-top:18px}
+.fine a{color:rgba(255,255,255,0.85);text-decoration:underline;text-underline-offset:3px}
+
+/* CONTACT */
+.f-label{font-family:var(--mono);font-size:11px;letter-spacing:0.1em;color:var(--mute);display:block;margin:0 0 8px 4px}
+.f-in,.f-ta{width:100%;background:var(--white);border:1px solid var(--hair2);border-radius:16px;padding:14px 18px;color:var(--ink);font-size:14px;font-family:var(--jp);outline:none;transition:border-color .25s,box-shadow .25s}
+.f-in:focus,.f-ta:focus{border-color:var(--orange);box-shadow:0 0 0 4px var(--orange-mist)}
+.f-ta{min-height:130px;resize:vertical;border-radius:20px}
+.form{display:flex;flex-direction:column;gap:18px}
+.mail{margin-top:30px;padding-top:22px;border-top:1px solid var(--hair)}
+.mail .k{font-family:var(--mono);font-size:10.5px;letter-spacing:0.12em;color:var(--mute)}
+.mail a{font-size:16px;font-weight:500;display:inline-block;margin-top:6px}
+
+/* FOOTER */
+.footer{border-top:1px solid var(--hair);padding:68px 64px 34px}
+.f-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:48px}
+.f-head{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;color:var(--mute);margin-bottom:14px}
+.f-grid a,.f-grid span{display:block;color:var(--ink2);font-size:13px;line-height:2.3;font-family:var(--jp)}
+.f-grid a:hover{color:var(--orange)}
+.f-grid span{color:var(--mute)}
+.f-brand p{font-family:var(--jp);font-size:12.5px;line-height:2.1;color:var(--ink2);margin:16px 0 0}
+.f-brand .logo{color:var(--ink)}
+.ig{width:34px;height:34px;border:1px solid var(--hair2);border-radius:9px;margin-top:18px;display:inline-flex;align-items:center;justify-content:center;transition:border-color .25s}
+.ig:hover{border-color:var(--orange)}
+.f-bot{margin-top:42px;padding-top:18px;border-top:1px solid var(--hair);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--mute)}
+.toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,80px);z-index:80;background:var(--white);border:1px solid var(--orange);border-radius:999px;padding:14px 28px;color:var(--ink);font-family:var(--jp);font-size:14px;box-shadow:0 10px 40px rgba(15,26,56,0.16);opacity:0;transition:transform .4s,opacity .4s;pointer-events:none}
 .toast.show{transform:translate(-50%,0);opacity:1}
+
 @media(max-width:900px){
-  .section{padding:64px 20px}
-  .nav{padding:14px 20px}
-  .nav-links,.nav-cta{display:none}
+  .sec{padding:80px 20px}
+  .nav,.nav.scrolled{padding:14px 20px}
+  .nav-links,.nav .pill{display:none}
   .burger{display:flex}
-  .hero-inner{padding:120px 20px 40px}
-  .hud{top:auto;bottom:auto;position:static;display:inline-block;margin:20px 48px 0 20px}
-  .hero .hud{display:none}
-  .operated{position:static;text-align:left;padding:0 20px 40px;max-width:none}
-  .g2{grid-template-columns:1fr;gap:28px}
-  .up-grid{grid-template-columns:1fr;margin-top:20px}
-  .card-main{min-height:460px}
-  .teasers{grid-template-rows:none}
-  .teaser{min-height:220px}
-  .tl{flex-direction:column;gap:0}
-  .tl-line{border-top:none;border-left:1px dashed rgba(243,239,229,0.2);margin:6px 0 6px 7px;height:26px;flex:none}
-  .f-grid{grid-template-columns:1fr;gap:28px}
-  .footer{padding:44px 20px 26px}
+  .hero{min-height:640px;padding:110px 20px 32px}
+  .hero-msg{font-size:24px}
+  .wordmark{font-size:clamp(46px,17vw,90px)}
+  .mani-grid{grid-template-columns:1fr;gap:20px}
+  .vals{grid-template-columns:1fr;gap:22px;margin-top:38px}
+  .steps{grid-template-columns:1fr}
+  .step,.step-img{min-height:auto}
+  .step{padding:26px 24px}
+  .step-img{min-height:190px;padding:22px}
+  .card{grid-template-columns:1fr;gap:24px;padding:26px 22px;margin-top:32px}
+  .d-day{font-size:62px}
+  .thumb{aspect-ratio:16/10}
+  .ph{padding:22px}
+  .concept{padding:72px 20px 66px}
+  .name-grid{grid-template-columns:1fr;gap:28px;margin-top:34px}
+  .name-fig{padding:20px 14px}
+  .two{grid-template-columns:1fr;gap:34px}
+  .tags{display:grid;grid-template-columns:repeat(3,1fr)}
+  .tag{text-align:center;padding:14px 0}
+  .counters{gap:24px;margin-top:18px}
+  .counters div{text-align:left}
+  .grid3{grid-template-columns:1fr}
+  .slot{aspect-ratio:auto;min-height:84px;flex-direction:row;align-items:center}
+  .loop{margin:0 8px;padding:56px 22px;border-radius:20px}
+  .footer{padding:52px 20px 28px}
+  .f-grid{grid-template-columns:1fr 1fr;gap:30px}
+  .f-brand{grid-column:1/3}
 }
 </style>
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="y-logo" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="5"/>
+    <path d="M 30 30 L 50 54 L 70 30 M 50 54 L 50 76" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </symbol>
+</svg>
+
 <nav class="nav" id="nav">
-  <a href="#top" class="nav-logo"><span class="a-mark">A</span><b>Azur Hour</b></a>
+  <a href="index.html" class="logo"><svg><use href="#y-logo"/></svg>Yoshida gumi</a>
   <div class="nav-links">
-    <a href="#upcoming">Upcoming</a>
-    <a href="#archive">Archive</a>
-    <a href="#about">About</a>
-    <a href="https://kimino-yoshidagumi.com" target="_blank" rel="noopener">Yoshida gumi ↗</a>
+    <a href="index.html">Home</a>
+    <a href="azur-hour.html" class="on">Azur Hour</a>
+    <a href="index.html#works">Business</a>
+    <a href="index.html#works">Works</a>
+    <a href="index.html#licenses">Company</a>
   </div>
-  <a href="#contact" class="nav-cta">Get in touch <span class="dot">→</span></a>
+  <a href="#loop" class="pill">参加する <span>→</span></a>
   <button class="burger" id="burger" aria-label="メニュー"><div></div><div></div></button>
 </nav>
 
 <div class="m-overlay" id="mOverlay">
-  <button class="m-close" id="mClose">✕</button>
-  <a href="#upcoming"><span class="n">01</span>Upcoming</a>
-  <a href="#archive"><span class="n">02</span>Archive</a>
-  <a href="#about"><span class="n">03</span>About</a>
-  <a href="#contact"><span class="n">04</span>Contact</a>
-  <a href="https://kimino-yoshidagumi.com" target="_blank" rel="noopener"><span class="n">05</span>Yoshida gumi ↗</a>
+  <button class="m-close" id="mClose" aria-label="閉じる">✕</button>
+  <a href="#why"><span class="n">01</span>Why</a>
+  <a href="#how"><span class="n">02</span>How</a>
+  <a href="#upcoming"><span class="n">03</span>Upcoming</a>
+  <a href="#name"><span class="n">04</span>The name</a>
+  <a href="#contact"><span class="n">05</span>Contact</a>
+  <a href="index.html"><span class="n">06</span>Yoshida gumi</a>
 </div>
 
+<!-- HERO -->
 <header class="hero" id="top">
-  <div class="hud">LAT&nbsp;&nbsp;34°41'<br>LONG&nbsp;135°30'<br>WATER LEVEL : <span style="color:var(--green)">LIVE</span></div>
-  <div class="hero-inner">
-    <div class="eyebrow">◇ AZUR HOUR · 001</div>
-    <h1>Where people meet,<br><em>something begins.</em></h1>
-    <p class="hero-jp">人と人が出会うと、次の何かが始まる。</p>
-    <a href="#upcoming" class="btn" style="margin-top:36px">Explore upcoming events <span>↓</span></a>
+  <div class="hero-bg">
+    <video class="hero-vid" id="heroVid" autoplay muted loop playsinline preload="none" poster="az-hero-poster.jpg" aria-hidden="true"></video>
+    <div class="hero-grade"></div>
   </div>
-  <div class="operated">
-    <div class="mono" style="font-size:10px;color:var(--green-lt)">OPERATED BY</div>
-    <div style="font-family:var(--display);font-weight:700;font-size:15px;color:var(--cream);margin-top:4px">YOSHIDA GUMI</div>
-    <div style="font-family:var(--jp);font-size:11.5px;color:var(--body);margin-top:8px;line-height:1.9">Azur Hour は株式会社吉田組が運営しています。<br>2027年4月「株式会社Azur」へ商号変更予定。</div>
+  <div class="hero-sun"></div>
+  <div class="hero-in">
+    <div class="hero-eye">AN EVENT SERIES BY YOSHIDA GUMI</div>
+    <h1 class="hero-msg">Where people meet,<br><em>something begins.</em></h1>
+    <p class="hero-sub">音楽、食、会話、場所。組み合わせを変えながら、人が自然に出会える時間をつくっています。</p>
+    <a href="#upcoming" class="hero-link">次の開催を見る <span>→</span></a>
+  </div>
+  <div class="hero-foot">
+    <div class="next-chip"><span class="dot"></span>NEXT · 001 · 10.17 SAT · OSAKA</div>
+    <div class="wordmark">Azur Hour</div>
   </div>
 </header>
 
-<section class="section g2 wrap" id="about">
-  <div class="reveal">
-    <div class="eyebrow">◇ WHY AZUR HOUR</div>
-  </div>
-  <p class="lead reveal" style="align-self:center;margin:0">Azur Hour は、日没直後、空と水が深い紺碧に変わる時間から生まれた、人が集まり、つながり、新しい何かが始まるイベントシリーズです。夜だけを意味する名前ではなく、日常から少し切り替わった「集まる時間」の呼び名です。</p>
+<!-- CONCEPT -->
+<section class="sec concept" id="concept">
+  <span class="lbl">CONCEPT</span>
+  <h2>次代の体験と挑戦を創る</h2>
+  <div class="en">Creating the experiences and challenges of the next generation.</div>
 </section>
 
-<section class="section wrap" id="upcoming">
-  <div class="eyebrow reveal">◇ UPCOMING HOURS</div>
-  <div class="up-grid">
-    <article class="card-main reveal">
-      <div style="position:absolute;top:22px;left:26px;z-index:1" class="mono"><span style="font-size:11px;color:var(--green-lt)">001 / UPCOMING EVENT</span></div>
-      <div style="position:absolute;top:22px;right:26px;z-index:1;text-align:right;line-height:1.8;background:rgba(10,15,12,0.55);border:1px solid rgba(159,214,104,0.3);border-radius:8px;padding:8px 12px" class="mono"><span style="font-size:10px;color:var(--green-lt)">LAT 34°41' · LONG 135°30'<br>WATER LEVEL : <span style="color:var(--green)">LIVE</span></span></div>
-      <div class="card-main-body">
-        <h3>OSAKA DJ<br>NIGHT CRUISE</h3>
-        <div class="tagline">Music on water, after sunset.</div>
-        <p style="font-family:var(--jp);font-size:13px;line-height:2.05;color:var(--body);margin:14px 0 0;max-width:520px">クルーズ船を貸し切り、DJ・食事・ドリンクとともに大阪の夜を航行するナイトイベント。その夜、その船に乗った人だけが共有できる時間をつくります。</p>
-        <dl class="meta">
-          <dt>日時</dt><dd>2026.10.17（土）18:00–20:00</dd>
-          <dt>場所</dt><dd>大阪・淀川リバークルーズ</dd>
-          <dt>内容</dt><dd>DJ ／ クルーズ ／ ビュッフェ ／ ドリンク</dd>
-        </dl>
-        <a href="https://peatix.com/event/5163108" target="_blank" rel="noopener" class="btn-ghost" style="margin-top:20px;background:rgba(10,15,12,0.4)">イベント詳細・申込（Peatix） <span style="width:20px;height:20px;background:var(--green);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:var(--bg);font-size:12px">↗</span></a>
-      </div>
-    </article>
-    <div class="teasers">
-      <article class="teaser reveal" style="background:url('az-7.png') center/cover no-repeat">
-        <div class="teaser-body">
-          <div class="mono" style="font-size:11px;color:var(--green-lt)">002 / COMING SOON</div>
-          <h3>Music brings<br>people together.</h3>
-          <div style="font-family:var(--jp);font-size:13px;color:var(--body);margin-top:10px">音楽が、人をつなぐ。</div>
-          <div class="teaser-foot"><span class="mono" style="font-size:10px;color:var(--mute)">MUSIC / TALK / NIGHT</span><span style="font-family:var(--jp);font-size:11px;color:var(--mute)">開催決定次第、ここでお知らせ</span></div>
-        </div>
-      </article>
-      <article class="teaser reveal" style="background:url('az-8.png') center/cover no-repeat">
-        <div class="teaser-body">
-          <div class="mono" style="font-size:11px;color:var(--green-lt)">003 / COMING SOON</div>
-          <h3>A new day<br>on the water.</h3>
-          <div style="font-family:var(--jp);font-size:13px;color:var(--body);margin-top:10px">まだ見ぬ景色へ。</div>
-          <div class="teaser-foot"><span class="mono" style="font-size:10px;color:var(--mute)">CRUISE / FOOD / DAY</span><span style="font-family:var(--jp);font-size:11px;color:var(--mute)">開催決定次第、ここでお知らせ</span></div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section g2 wrap" id="archive" style="align-items:center">
-  <div class="reveal">
-    <div class="eyebrow">◇ PAST HOURS / ARCHIVE</div>
-    <h2 class="jp" style="font-size:clamp(24px,2.4vw,34px)">記録は、<span style="font-family:var(--display);letter-spacing:-0.02em">001</span> から。</h2>
-    <p class="lead reveal" style="font-size:13.5px;margin:16px 0 0">開催のたびに、その夜の写真と場所をここに刻んでいきます。</p></p>
-  </div>
-  <div class="tl reveal">
-    <div class="tl-node">
-      <div class="dot-on"></div>
-      <div class="mono" style="font-size:11px;color:var(--green-lt);margin-top:14px">001 · 2026.10.17</div>
-      <div style="font-family:var(--display);font-weight:700;font-size:14px;color:var(--cream);margin-top:6px">OSAKA DJ NIGHT CRUISE</div>
-      <div class="mono" style="font-size:10px;color:var(--mute);margin-top:4px">UPCOMING</div>
-    </div>
-    <div class="tl-line"></div>
-    <div class="tl-node">
-      <div class="dot-off"></div>
-      <div class="mono" style="font-size:11px;color:var(--mute);margin-top:14px">002 · TBD</div>
-      <div class="mono" style="font-size:10px;color:var(--mute);margin-top:6px">COMING SOON</div>
-    </div>
-    <div class="tl-line"></div>
-    <div class="tl-node">
-      <div class="dot-off"></div>
-      <div class="mono" style="font-size:11px;color:var(--mute);margin-top:14px">003 · TBD</div>
-      <div class="mono" style="font-size:10px;color:var(--mute);margin-top:6px">COMING SOON</div>
-    </div>
-  </div>
-</section>
-
-<section class="section wrap" style="background:url('az-3.png') center 90%/100% auto no-repeat">
-  <div class="g2" style="grid-template-columns:1fr 1fr;align-items:center">
+<!-- MANIFESTO -->
+<section class="sec mani" id="why">
+  <div class="wrap mani-grid">
+    <div class="reveal"><span class="lbl" style="color:rgba(255,255,255,0.6)">WHY WE GATHER</span></div>
     <div class="reveal">
-      <div class="eyebrow">◇ WHAT WE CREATE</div>
-      <h2 style="font-family:var(--display);font-weight:800;font-size:clamp(32px,3.4vw,48px);line-height:0.96;letter-spacing:-0.04em;color:var(--cream);margin:20px 0 0">Different events.<br><em style="font-family:var(--serif);font-style:italic;font-weight:400;color:var(--green-lt)">Same reason to gather.</em></h2>
-      <p style="font-family:var(--jp);font-size:14px;color:var(--body);margin:18px 0 0">形は変わっても、つくりたいのは人が自然に交わる場。</p>
-    </div>
-    <div class="tags reveal">
-      <div class="tag">MUSIC</div><div class="tag">FOOD</div><div class="tag">CRUISE</div>
-      <div class="tag">TALK</div><div class="tag">DAY</div><div class="tag on">NIGHT</div>
-    </div>
-  </div>
-</section>
-
-<section class="section wrap" style="background:url('az-1.png') center bottom/100% auto no-repeat">
-  <div style="max-width:600px;margin:0 auto;text-align:center" class="reveal">
-    <div class="eyebrow">◇ NEXT HOUR · STAY IN THE LOOP</div>
-    <h2 class="jp" style="font-size:clamp(24px,2.5vw,34px)">次の案内を、逃さない。</h2>
-    <p class="lead" style="font-size:14px;margin:12px 0 0">開催が決まり次第、次回イベントと申込開始のお知らせをお送りします。</p>
-    <form id="notifyForm" class="field" style="max-width:420px;margin:28px auto 0">
-      <input type="email" name="email" placeholder="your@email.com" required aria-label="メールアドレス">
-      <input type="hidden" name="_subject" value="【Azur Hour】次回案内の登録">
-      <button class="btn" type="submit" id="notifyBtn">Notify me</button>
-    </form>
-    <p style="font-family:var(--jp);font-size:11px;line-height:1.9;color:var(--mute);margin-top:18px">ご登録いただいた連絡先は、Azur Hour の開催案内・申込開始のお知らせにのみ使用します。配信停止はいつでも可能です。</p>
-  </div>
-</section>
-
-<section class="section wrap" id="contact">
-  <div class="g2">
-    <div class="reveal">
-      <div class="eyebrow">◇ GET IN TOUCH</div>
-      <h2 class="jp">イベントのこと、<br>お気軽にどうぞ。</h2>
-      <p class="lead" style="font-size:14px;margin:18px 0 0">参加のご相談、企画・会場のご提案、出演のご希望など、まずはご連絡ください。</p>
-      <div style="margin-top:28px;padding-top:20px;border-top:1px solid var(--line)">
-        <div class="mono" style="font-size:10px;color:var(--mute)">MAIL</div>
-        <a href="mailto:info@azurworks.com" style="font-size:15px">info@azurworks.com</a>
+      <h2>AIがどれだけ進化しても、<br><b>人の心を動かすこと</b>だけは、<br>人にしかできない。</h2>
+      <p>調べればすぐ答えが出る時代に、答えのない時間をつくりたい。同じ船に乗って、同じ音を聴いて、名前も知らなかった人と話す。その夜に起きたことは、あとから検索しても出てきません。<br>
+      Azur Hour は、次の世代をつくる人たちが、わくわくした気持ちのまま集まれる場所です。肩書きも業種も関係なく、おもしろい人がおもしろい人と出会う。</p>
+      <div class="vals">
+        <div class="val"><div class="t">Not searchable.</div><div class="d">その夜の会話は、どこにも載っていない。実際にその場にいた人だけのものです。</div></div>
+        <div class="val"><div class="t">No titles.</div><div class="d">肩書きも年齢も持ち込まない。ひとりでの参加が一番多い場をつくっています。</div></div>
+        <div class="val"><div class="t">Something next.</div><div class="d">出会いで終わらせない。次の場所、次のプロジェクトへつながる入口にします。</div></div>
       </div>
     </div>
-    <form id="contactForm" class="reveal" style="display:flex;flex-direction:column;gap:18px">
-      <div><label class="form-label" for="cName">お名前 *</label><input class="form-input" id="cName" name="name" type="text" placeholder="山田 太郎" required></div>
-      <div><label class="form-label" for="cEmail">メールアドレス *</label><input class="form-input" id="cEmail" name="email" type="email" placeholder="example@email.com" required></div>
-      <div><label class="form-label" for="cMsg">ご相談内容 *</label><textarea class="form-ta" id="cMsg" name="message" placeholder="例: 10/17 のクルーズに参加したい ／ イベントの企画相談" required></textarea></div>
-      <input type="hidden" name="_subject" value="【Azur Hour】お問い合わせ">
-      <button class="btn" type="submit" id="contactBtn" style="justify-content:center">送信する <span>→</span></button>
-    </form>
   </div>
 </section>
 
-<footer class="footer wrap">
-  <div class="f-grid">
+<!-- HOW -->
+<section class="sec wrap" id="how">
+  <div class="head reveal">
     <div>
-      <a href="#top" class="nav-logo"><span class="a-mark" style="width:28px;height:28px;font-size:14px">A</span><b style="font-size:17px">Azur Hour</b></a>
-      <div style="font-family:var(--jp);font-size:12px;line-height:2.1;color:var(--mute);margin-top:14px">運営: 株式会社吉田組（法人番号 1170001005996）<br>和歌山県海草郡紀美野町<br><a href="mailto:info@azurworks.com" style="font-size:12px">info@azurworks.com</a></div>
-      <a class="ig" href="#" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C7C2B5" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="#C7C2B5" stroke="none"/></svg></a>
+      <span class="lbl">HOW IT WORKS</span>
+      <h2 class="dsp">Joining is <em class="s">simple.</em></h2>
     </div>
-    <div>
-      <div class="f-head">OUR BUSINESS</div>
-      <a href="https://kimino-yoshidagumi.com" target="_blank" rel="noopener">Yoshida gumi ↗</a>
-      <a href="#top">Azur Hour</a>
-      <span style="display:block;color:var(--mute);font-size:13px;line-height:2.4;font-family:var(--jp)">Root X（準備中）<br>Studio Azur（準備中）</span>
+    <p class="lead" style="max-width:320px;font-size:14px">はじめての方も、ひとりの方も。<br>特別な準備はいりません。</p>
+  </div>
+  <div class="steps">
+    <div class="step reveal">
+      <div class="n">01</div>
+      <h3>見つける</h3>
+      <p>開催予定から、気になる回を選ぶ。テーマも場所も毎回変わります。ひとりでの参加も歓迎です。</p>
     </div>
-    <div>
-      <div class="f-head">LEGAL</div>
-      <a href="legal.html">特定商取引法に基づく表記</a>
-      <a href="legal.html#privacy">プライバシーポリシー</a>
-      <a href="legal.html#cancel">キャンセルポリシー</a>
+    <div class="step reveal">
+      <div class="n">02</div>
+      <h3>申し込む</h3>
+      <p>Peatix でチケットを取るだけ。事前のやりとりや面談はありません。当日の流れは申込後にご案内します。</p>
+    </div>
+    <div class="step reveal">
+      <div class="n">03</div>
+      <h3>集まる</h3>
+      <p>当日、集合場所へ。あとはその時間を過ごすだけ。話したい人と話して、聴きたい音を聴いてください。</p>
+    </div>
+    <div class="step-img reveal">
+      <img src="az-9.jpg" alt="" loading="lazy" width="1800" height="1350">
+      <a href="#loop" class="pill">次の案内を受け取る <span>→</span></a>
     </div>
   </div>
-  <div style="margin-top:40px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px" class="mono">
-    <span style="font-size:10px;color:var(--mute)">© 2026 YOSHIDA GUMI CO., LTD.</span>
-    <span style="font-size:10px;color:var(--mute)">2027.04 → AZUR INC.</span>
+</section>
+
+<!-- UPCOMING -->
+<section class="sec wrap" id="upcoming">
+  <div class="head reveal">
+    <div>
+      <span class="lbl">UPCOMING</span>
+      <h2 class="dsp">Next <em class="s">hour.</em></h2>
+    </div>
+    <div class="lbl" style="padding-bottom:10px">001 / 開催予定</div>
+  </div>
+
+  <article class="card reveal">
+    <div>
+      <div class="d-week">SAT · 2026</div>
+      <div class="d-day">10.17</div>
+      <div class="d-time">18:00 – 20:00</div>
+      <div class="d-sub">受付 17:30〜</div>
+    </div>
+    <div>
+      <div class="c-num">001 / UPCOMING EVENT</div>
+      <h3>OSAKA NIGHT<br>CRUISE</h3>
+      <div class="tagline">Music on water, after sunset.</div>
+      <p>クルーズ船を一隻貸し切り、DJ・食事・ドリンクとともに大阪の夜を航行するナイトイベント。陸上の会場ではつくれない距離感と、移動する景色。その夜、その船に乗った人だけが共有できる時間をつくります。</p>
+      <dl class="meta">
+        <dt>LOCATION</dt><dd>八軒家浜（大阪）集合 ／ 航路：大阪城〜淀川</dd>
+        <dt>FORMAT</dt><dd>DJ ／ クルーズ ／ ビュッフェ ／ ドリンク</dd>
+      </dl>
+      <div class="c-act">
+        <a href="https://peatix.com/event/5163108" target="_blank" rel="noopener" class="pill">View on Peatix <span>↗</span></a>
+        <small>チケット・価格・申込は Peatix に掲載しています</small>
+      </div>
+    </div>
+    <div class="thumb">
+      <img src="az-9-m.jpg" alt="OSAKA NIGHT CRUISE" loading="lazy" width="900" height="675">
+      <div class="lbl2">AZUR HOUR · 001</div>
+    </div>
+  </article>
+
+  <div class="ph reveal">
+    <span class="n">002</span>
+    <span class="t">開催が決まり次第、順次追加します。</span>
+    <a href="#loop">次回の案内を受け取る ↓</a>
+  </div>
+</section>
+
+<!-- THE NAME -->
+<section class="sec wrap" id="name">
+  <div class="name-head reveal">
+    <span class="lbl">THE NAME</span>
+    <h2 class="jp">橙と青が、入れ替わる時間から。</h2>
+    <p class="lead" style="margin-top:20px">ふたつの「Hour」が重なるところに、この名前を置きました。</p>
+  </div>
+  <div class="name-grid">
+    <div class="name-fig reveal" aria-label="Azur と Hour が交わる図">
+      <svg viewBox="150 86 560 296" xmlns="http://www.w3.org/2000/svg" role="img">
+        <defs>
+          <linearGradient id="loopgrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#0A1F55"/>
+            <stop offset="38%" stop-color="#23509E"/>
+            <stop offset="62%" stop-color="#C0592A"/>
+            <stop offset="100%" stop-color="#E8762D"/>
+          </linearGradient>
+        </defs>
+
+        <path d="M 430,190 C 380,92 216,92 196,190 C 176,288 380,288 430,190 C 480,92 644,92 664,190 C 684,288 480,288 430,190"
+              fill="none" stroke="url(#loopgrad)" stroke-width="17" stroke-linecap="round" opacity="0.92"/>
+
+        <polygon points="292,96 306,104 292,112" fill="#23509E" opacity="0.9"/>
+        <polygon points="568,284 554,276 568,268" fill="#E8762D" opacity="0.9"/>
+
+        <text x="295" y="178" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="34" letter-spacing="-1" fill="#0A1F55">AZUR</text>
+        <text x="295" y="204" text-anchor="middle" font-family="Courier New, monospace" font-size="12" letter-spacing="1.6" fill="#828AA0">BLUE HOUR</text>
+
+        <text x="565" y="178" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="34" letter-spacing="-1" fill="#C0592A">HOUR</text>
+        <text x="565" y="204" text-anchor="middle" font-family="Courier New, monospace" font-size="12" letter-spacing="1.6" fill="#828AA0">HAPPY HOUR</text>
+
+        <rect x="348" y="170" width="164" height="40" rx="20" fill="#FFFFFF" stroke="rgba(15,26,56,0.12)"/>
+        <text x="430" y="196" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-weight="500" font-size="15" fill="#0F1A38">集まる時間</text>
+
+        <text x="295" y="348" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="13" fill="#3C4766">空と水が、青に沈む20分</text>
+        <text x="565" y="348" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="13" fill="#3C4766">人が集まり、一杯を囲む時間</text>
+      </svg>
+    </div>
+    <div class="name-txt reveal">
+      <p>Azur は、日没直後、空と水がいちばん深い青に沈む <b>Blue Hour</b> から取りました。昼でも夜でもない、20分ほどしかない時間です。</p>
+      <p>Hour には、人が集まって一杯を囲む <b>Happy Hour</b> の気配も重ねています。このふたつが交わるところ、日常から少し切り替わる「集まる時間」が Azur Hour です。</p>
+      <p>さらに語源を遡ると、azur は <b>ラピスラズリ</b> という石に行き着きます。石のままでは、かつて金より高いとされたあの青にはなりません。掘り出して、砕いて、練って、精製して、はじめて色になる。</p>
+      <p>人が集まる場所も、同じだと思っています。<b>ただ集めるだけでは、何も起きない。</b></p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE CREATE -->
+<section class="sec wrap" id="create">
+  <div class="head reveal">
+    <div>
+      <span class="lbl">WHAT WE CREATE</span>
+      <h2 class="dsp">Different events.<br><em class="s">Same reason to gather.</em></h2>
+      <p class="lead" style="margin-top:20px">形は変わっても、つくりたいのは人が自然に交わる場。</p>
+    </div>
+    <div class="lbl" style="padding-bottom:10px">PEOPLE · PLACES · CONVERSATIONS</div>
+  </div>
+  <div class="tags reveal">
+    <span class="tag on">MUSIC</span><span class="tag">FOOD</span><span class="tag on">CRUISE</span>
+    <span class="tag">TALK</span><span class="tag">DAY</span><span class="tag on">NIGHT</span>
+  </div>
+</section>
+
+<!-- LOOP -->
+<section class="sec" id="loop" style="padding-left:0;padding-right:0">
+  <div class="loop">
+    <div class="loop-in reveal">
+      <span class="lbl">STAY IN THE LOOP</span>
+      <h2>次の案内を、逃さない。</h2>
+      <p>開催が決まり次第、次回イベントと申込開始のお知らせをお届けします。</p>
+      <form id="notifyForm" class="field">
+        <input type="email" name="email" placeholder="your@email.com" required aria-label="メールアドレス">
+        <input type="hidden" name="_subject" value="【Azur Hour】次回案内の登録">
+        <button class="pill" type="submit" id="notifyBtn">登録する</button>
+      </form>
+      <div style="margin-top:16px"><a href="https://azur0.peatix.com/" target="_blank" rel="noopener" class="pill on-dark">Follow on Peatix <span>↗</span></a></div>
+      <p class="fine">ご登録いただいた連絡先は、Azur Hour の開催案内、申込開始、開催に関する重要なお知らせ、および当社の関連事業（Root X など）のご案内に使用します。配信停止はいつでも可能です。<a href="legal.html#privacy">プライバシーポリシー</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec wrap two" id="contact" style="align-items:start">
+  <div class="reveal">
+    <span class="lbl">GET IN TOUCH</span>
+    <h2 class="dsp">Have an idea<br>worth <em class="s">gathering</em> for?</h2>
+    <p class="lead" style="margin-top:22px">人が集まる理由を、一緒につくりませんか。<br>イベント企画、会場提供、出演、法人交流会など、まずはお気軽にご相談ください。</p>
+    <div class="mail">
+      <div class="k">MAIL</div>
+      <a href="mailto:info@azurworks.com">info@azurworks.com</a>
+    </div>
+  </div>
+  <form id="contactForm" class="form reveal">
+    <div><label class="f-label" for="cName">お名前 *</label><input class="f-in" id="cName" name="name" type="text" placeholder="山田 太郎" required></div>
+    <div><label class="f-label" for="cEmail">メールアドレス *</label><input class="f-in" id="cEmail" name="email" type="email" placeholder="example@email.com" required></div>
+    <div><label class="f-label" for="cMsg">ご相談内容 *</label><textarea class="f-ta" id="cMsg" name="message" placeholder="例：10/17 のクルーズについて ／ イベントの企画相談" required></textarea></div>
+    <input type="hidden" name="_subject" value="【Azur Hour】お問い合わせ">
+    <button class="pill" type="submit" id="contactBtn" style="justify-content:center">送信する <span>→</span></button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <a href="index.html" class="logo"><svg><use href="#y-logo"/></svg>Yoshida gumi</a>
+        <p>Azur Hour は株式会社吉田組が企画・運営するイベント事業です。<br>
+        株式会社吉田組（法人番号 1170001005996）<br>
+        和歌山県海草郡紀美野町松瀬459<br>
+        TEL <a href="tel:0734893178" style="display:inline;line-height:inherit">073-489-3178</a><br>
+        <a href="mailto:info@azurworks.com" style="display:inline;line-height:inherit">info@azurworks.com</a><br>
+        2027年4月「Azur Works株式会社」へ商号変更予定</p>
+        <a class="ig" href="https://www.instagram.com/noah.palmz/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0F1A38" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="#0F1A38" stroke="none"/></svg></a>
+      </div>
+      <div>
+        <div class="f-head">SITE</div>
+        <a href="index.html">Home</a><a href="azur-hour.html">Azur Hour</a>
+        <a href="index.html#works">Works</a><a href="index.html#licenses">Company</a><a href="#contact">Contact</a>
+      </div>
+      <div>
+        <div class="f-head">OUR BUSINESS</div>
+        <span>Root X（2026.11 始動予定）</span><span>Studio Azur</span><a href="azur-hour.html">Azur Hour</a>
+      </div>
+      <div>
+        <div class="f-head">LEGAL</div>
+        <a href="legal.html">特定商取引法に基づく表記</a>
+        <a href="legal.html#privacy">プライバシーポリシー</a>
+        <a href="legal.html#cancel">キャンセルポリシー</a>
+      </div>
+    </div>
+    <div class="f-bot">
+      <span>© 2026 YOSHIDA GUMI CO., LTD.</span>
+      <span>2027.04 → AZUR WORKS INC.</span>
+    </div>
   </div>
 </footer>
 
-<div class="toast" id="toast"></div>
+<div class="toast" id="toast" role="status"></div>
 
 <script>
+(function(){var v=document.getElementById('heroVid');if(!v)return;
+if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+v.src=innerWidth<=900?'az-hero-m.mp4':'az-hero.mp4';
+v.addEventListener('loadeddata',function(){v.classList.add('ready')});
+v.load();var p=v.play();if(p&&p.catch)p.catch(function(){});})();
 const nav=document.getElementById('nav');
-addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60),{passive:true});
 const ov=document.getElementById('mOverlay');
 document.getElementById('burger').onclick=()=>ov.classList.add('open');
 document.getElementById('mClose').onclick=()=>ov.classList.remove('open');
 ov.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>ov.classList.remove('open')));
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:0.12});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-function toast(msg,ok){const t=document.getElementById('toast');t.textContent=msg;t.style.borderColor=ok?'var(--green)':'#c14242';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),4000)}
+function toast(msg,ok){const t=document.getElementById('toast');t.textContent=msg;t.style.borderColor=ok?'#E8762D':'#C0392B';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),4200)}
 async function sendForm(form,btn,okMsg){
   const orig=btn.innerHTML;btn.disabled=true;btn.innerHTML='送信中…';
   try{
