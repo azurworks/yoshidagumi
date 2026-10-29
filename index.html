@@ -2188,66 +2188,7 @@ footer {
   to   { background-position: 0 140%; }
 }
 
-/* Boxed white header (reference: separate white tiles + green contact tile) */
-.nav, .nav.nav-dark {
-  padding: 22px clamp(16px, 4.5vw, 64px);
-  gap: 8px;
-  justify-content: flex-start;
-  background: none;
-  box-shadow: none;
-}
-.nav .nav-logo, .nav.nav-dark .nav-logo {
-  background: #fff;
-  color: var(--ink);
-  height: 68px;
-  padding: 0 26px;
-  border-radius: 3px;
-  font-size: 20px;
-}
-.nav .nav-links, .nav.nav-dark .nav-links {
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  gap: clamp(8px, 2vw, 34px);
-  height: 68px;
-  padding: 0 24px;
-  background: rgba(255,255,255,0.96);
-  border: none;
-  border-radius: 3px;
-}
-.nav .nav-links a, .nav.nav-dark .nav-links a {
-  padding: 8px 4px;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: var(--ink);
-  background: none;
-  border-radius: 0;
-}
-.nav .nav-links a:hover, .nav.nav-dark .nav-links a:hover { color: var(--brand-deep); background: none; }
-.nav .nav-cta, .nav.nav-dark .nav-cta {
-  height: 68px;
-  min-width: 190px;
-  padding: 0 26px;
-  border-radius: 3px;
-  background: var(--brand-deep);
-  color: #fff;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2px;
-  transition: background .3s;
-}
-.nav .nav-cta:hover { background: var(--brand); transform: none; }
-.nav .nav-cta::after { content: none; }
-.nav-cta .en { font-family: var(--wide-thin); font-size: 10px; letter-spacing: 0.14em; opacity: 0.85; }
-.nav-cta .jp { font-family: var(--mincho); font-size: 15px; font-weight: 600; letter-spacing: 0.14em; }
-.nav .nav-burger, .nav.nav-dark .nav-burger { margin-left: auto; background: #fff; border-radius: 3px; }
-.nav .nav-burger span, .nav.nav-dark .nav-burger span { background: var(--ink); }
-
 @media (max-width: 900px) {
-  .nav .nav-logo, .nav.nav-dark .nav-logo { height: 52px; padding: 0 16px; font-size: 18px; }
-  .nav .nav-burger, .nav.nav-dark .nav-burger { width: 52px; height: 52px; }
   .hv-dots { top: 100px; }
   .hv-scrim { background: linear-gradient(0deg, rgba(14,22,18,0.78) 0%, rgba(14,22,18,0.5) 45%, rgba(14,22,18,0) 72%); }
   .hv-copy { right: auto; left: 20px; bottom: 34vw; width: min(400px, calc(100% - 60px)); }
@@ -2275,6 +2216,186 @@ footer {
 .ww-map rect[fill="rgba(252,254,242,0.75)"] { fill: rgba(10,15,12,0.75); }
 @media (max-width: 900px) {
   .ww-layout { grid-template-columns: 1fr; gap: 32px; }
+}
+
+/* ============================================================
+   Unified header bar (2026-10-29) — same on index / contact / azur-hour
+   One rounded dark bar: logo left, small uppercase links + CONTACT right
+   ============================================================ */
+.nav, .nav.nav-dark {
+  top: 0; left: 0; right: 0;
+  margin: 14px auto 0;
+  width: min(1240px, calc(100% - 28px));
+  height: 60px;
+  padding: 0 24px;
+  gap: 28px;
+  justify-content: flex-start;
+  background: rgba(14,21,17,0.9);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  box-shadow: none;
+}
+.nav .nav-logo, .nav.nav-dark .nav-logo {
+  height: auto;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  color: #B5DB62;
+  font-size: 17px;
+  gap: 10px;
+}
+.nav .nav-logo .y-mark { width: 24px; height: 24px; }
+.nav .nav-links, .nav.nav-dark .nav-links {
+  margin-left: auto;
+  flex: none;
+  height: auto;
+  padding: 0;
+  gap: 28px;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+.nav .nav-links a, .nav.nav-dark .nav-links a,
+.nav .nav-cta, .nav.nav-dark .nav-cta {
+  padding: 6px 0;
+  font-family: var(--body);
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #B5DB62;
+  background: none;
+  border-radius: 0;
+  transition: color .25s;
+}
+.nav .nav-links a:hover, .nav.nav-dark .nav-links a:hover,
+.nav .nav-cta:hover, .nav.nav-dark .nav-cta:hover { color: #FFFFFF; background: none; transform: none; }
+.nav .nav-cta, .nav.nav-dark .nav-cta {
+  height: auto;
+  min-width: 0;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+.nav .nav-cta::after { content: none; }
+.nav .nav-cta svg { width: 13px; height: 13px; }
+.nav .nav-burger, .nav.nav-dark .nav-burger {
+  margin-left: auto;
+  width: 40px; height: 40px;
+  background: none;
+  border: 1px solid rgba(181,219,98,0.4);
+  border-radius: 8px;
+}
+.nav .nav-burger span, .nav.nav-dark .nav-burger span { background: #B5DB62; }
+@media (max-width: 900px) {
+  .nav, .nav.nav-dark { margin-top: 10px; width: calc(100% - 20px); height: 54px; padding: 0 8px 0 16px; }
+}
+
+/* ============================================================
+   Light rounded panel holding the four generation cards (2026-10-29)
+   ============================================================ */
+:root { --lime: #B5DB62; --lime-ink: #10170F; --paper: #ECECE6; }
+.gen-panel {
+  background: var(--paper);
+  border-radius: 28px;
+  padding: clamp(36px, 5vw, 72px) clamp(20px, 4.5vw, 64px) clamp(36px, 5vw, 64px);
+  margin-bottom: 100px;
+  color: var(--lime-ink);
+}
+.gen-panel-head { text-align: center; margin-bottom: clamp(32px, 4vw, 48px); }
+.gen-panel-head h3 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(36px, 5vw, 64px);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+.gen-panel-head p {
+  margin-top: 16px;
+  font-family: var(--body);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4A5248;
+}
+.gen-panel .generations { margin-bottom: 0; gap: 10px; }
+.gen-panel .gen-card {
+  background: var(--lime);
+  border: none;
+  border-radius: 10px;
+  padding: 26px 22px 30px;
+  color: var(--lime-ink);
+}
+.gen-panel .gen-card:hover { transform: translateY(-4px); border: none; }
+.gen-panel .gen-card::after { display: none; }
+.gen-panel .gen-card.is-now { background: #FFFFFF; }
+.gen-panel .gen-year, .gen-panel .gen-marker { color: var(--lime-ink); opacity: 0.7; }
+.gen-panel .gen-card.is-now .gen-marker { color: var(--brand-deep); opacity: 1; }
+.gen-panel .gen-card h3 { color: var(--lime-ink); }
+.gen-panel .gen-card h3 .gen-name { color: var(--lime-ink); }
+.gen-panel .gen-card.is-now h3 .gen-name { color: var(--brand-deep); }
+.gen-panel .gen-card p { color: #2A3328; }
+.gen-panel .gen-card p strong { color: var(--lime-ink); }
+
+/* ============================================================
+   Mission as a lime highlights row, black type (2026-10-29)
+   ============================================================ */
+.mission-row {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(32px, 5vw, 80px);
+  background: var(--lime);
+  color: var(--lime-ink);
+  border-radius: 24px;
+  padding: clamp(36px, 5vw, 72px) clamp(24px, 5vw, 72px);
+  margin-bottom: 60px;
+}
+.mission-row .mr-label {
+  font-family: var(--body);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+  opacity: 0.7;
+}
+.mission-row .mr-title {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  font-size: clamp(30px, 3.6vw, 52px);
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+}
+.mission-row .mr-title .ln { display: block; white-space: nowrap; }
+.mission-row .mr-title em {
+  font-family: var(--mincho);
+  font-style: normal;
+  font-weight: 500;
+}
+.mr-list { list-style: none; display: flex; flex-direction: column; }
+.mr-item { padding: 22px 0 26px; border-bottom: 1.5px solid var(--lime-ink); }
+.mr-item:first-child { padding-top: 4px; }
+.mr-item h4 {
+  display: flex; align-items: center; gap: 14px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  font-size: clamp(18px, 1.7vw, 23px);
+  letter-spacing: 0.02em;
+}
+.mr-item h4 svg { width: 26px; height: 26px; flex: none; }
+.mr-item p {
+  margin-top: 12px;
+  font-size: 13.5px;
+  line-height: 1.85;
+  color: #2A3328;
+}
+@media (max-width: 900px) {
+  .mission-row { grid-template-columns: 1fr; border-radius: 20px; }
+  .mission-row .mr-title { font-size: min(30px, 7.4vw); }
+  .gen-panel { border-radius: 20px; margin-bottom: 60px; }
 }
 
 /* RIGHT COLUMN - visual */
@@ -2306,6 +2427,229 @@ footer {
   .kpi-num { font-size: 22px; }
   .kpi-lbl { font-size: 8.5px; }
 }
+/* phrase-wrap (2026-10-29) */
+body { word-break: keep-all; overflow-wrap: break-word; line-break: strict; }
+p, li, dd, td { text-wrap: pretty; }
+
+/* Small-phone fit (2026-10-29): grids may shrink below their text's min-content, no sideways scroll at 320px */
+@media (max-width: 900px) {
+  .news-grid, .works-grid, .lic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .news-grid > *, .works-grid > *, .lic-grid > *, .lic > *, .tl-row > *, .work-meta > * { min-width: 0; }
+  .tl-row { grid-template-columns: minmax(0, 1fr); }
+  .ng-img-overlay { padding: 16px; }
+  .ng-img-title { font-size: min(22px, 6vw); white-space: nowrap; }
+  .ng-meta h4, .work-meta h4 { overflow-wrap: anywhere; }
+  .lic .lic-num { flex: none; min-width: 22px; white-space: nowrap; }
+}
+@media (max-width: 400px) {
+  .news-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+.nw { white-space: nowrap; }
+
+/* ============================================================
+   Luxe palette (2026-10-29): black 70% / forest green 25% / champagne gold 5%
+   - black  : page base, cards inside green panels
+   - green  : large surfaces (hero photo, mission, generations, director, footer)
+   - gold   : small accents only (labels, italics, numbers, rules, CTA)
+   --brand now means "accent" (gold); the logo keeps the brand green.
+   ============================================================ */
+:root {
+  --mincho: "Shippori Mincho", "Yu Mincho", serif;
+  --bg: #0A0C0B;
+  --bg-2: #101412;
+  --bg-3: #161B18;
+  --text: #EEEAE1;
+  --text-2: #B9B4A8;
+  --mute: #7D8580;
+  --hair: rgba(238,234,225,0.09);
+
+  --green: #7BC142;          /* logo / brand mark */
+  --forest: #12291D;         /* main green surface */
+  --forest-2: #183626;       /* raised green surface */
+  --forest-hair: rgba(198,164,96,0.22);
+
+  --gold: #C6A460;
+  --gold-soft: #D8BE86;
+  --brand: var(--gold);
+  --brand-deep: #A88A4E;
+  --brand-bright: var(--gold-soft);
+}
+.y-mark { color: var(--green) !important; }
+
+/* Type: Japanese headings in mincho (same voice as the hero), English display stays grotesque */
+.mr-title, .ww-title, .director-text h3, .gen-card h3, .tl-body, .cta-section p:first-of-type {
+  font-family: var(--mincho);
+  font-weight: 500;
+}
+.section-h em, .ww-title em, .director-text h3 em, .cta-section h2 em, .stat .n em { color: var(--gold); }
+
+/* Hero: same display face as the sections, and fade the photo into the black below */
+.hv-giant {
+  font-family: var(--display);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  color: rgba(123,193,66,0.55);
+}
+.hv-scrim {
+  background:
+    linear-gradient(0deg, var(--bg) 0%, rgba(10,12,11,0.6) 14%, rgba(10,12,11,0) 40%),
+    linear-gradient(270deg, rgba(10,12,11,0.5) 0%, rgba(10,12,11,0.15) 40%, rgba(10,12,11,0) 60%);
+}
+
+/* Header bar: cream links, gold CONTACT */
+.nav .nav-logo, .nav.nav-dark .nav-logo { color: var(--text); }
+.nav .nav-links a, .nav.nav-dark .nav-links a { color: rgba(238,234,225,0.72); }
+.nav .nav-cta, .nav.nav-dark .nav-cta { color: var(--gold); }
+.nav .nav-links a:hover, .nav .nav-cta:hover { color: var(--gold-soft); }
+.nav .nav-burger, .nav.nav-dark .nav-burger { border-color: rgba(198,164,96,0.45); }
+.nav .nav-burger span, .nav.nav-dark .nav-burger span { background: var(--gold); }
+
+/* Mission: forest panel, cream type, gold details */
+.mission-row { background: var(--forest); color: var(--text); border: 1px solid var(--forest-hair); }
+.mission-row .mr-label { color: var(--gold); opacity: 1; }
+.mission-row .mr-title em { color: var(--gold-soft); }
+.mr-item { border-bottom: 1px solid var(--forest-hair); }
+.mr-item h4 { color: var(--text); }
+.mr-item h4 svg { color: var(--gold); }
+.mr-item p { color: var(--text-2); }
+
+/* Generations: forest panel, black cards, the current generation outlined in gold */
+.gen-panel { background: var(--forest); color: var(--text); border: 1px solid var(--forest-hair); }
+.gen-panel-head h3 { color: var(--text); }
+.gen-panel-head p { color: var(--gold); }
+.gen-panel .gen-card { background: var(--bg); color: var(--text); border: 1px solid var(--hair); }
+.gen-panel .gen-card:hover { border: 1px solid var(--forest-hair); }
+.gen-panel .gen-card.is-now { background: var(--bg); border: 1px solid var(--gold); }
+.gen-panel .gen-year, .gen-panel .gen-marker,
+.gen-panel .gen-card.is-now .gen-marker { color: var(--gold); opacity: 1; }
+.gen-panel .gen-card h3, .gen-panel .gen-card p strong { color: var(--text); }
+.gen-panel .gen-card h3 .gen-name,
+.gen-panel .gen-card.is-now h3 .gen-name { color: var(--gold-soft); }
+.gen-panel .gen-card p { color: var(--text-2); }
+
+/* Rooted-in block and timeline sit on raised black; director on forest */
+.why-wakayama { border-color: var(--hair); }
+.director { background: var(--forest); border-color: var(--forest-hair); }
+.director-card {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid rgba(198,164,96,0.4);
+}
+.director-card .dc-name, .director-card .dc-logo-text .name { color: var(--text); }
+.director-card .dc-role, .director-card .dc-name-en, .director-card .dc-logo-text .biz,
+.director-card .dc-logo-text .en, .director-card .dc-quals { color: var(--text-2); }
+
+/* Badges: quiet forest chips with gold type */
+.ng-badge, .work-tag-real { background: var(--forest); color: var(--gold-soft); border: 1px solid var(--forest-hair); }
+
+/* CTA: gold primary button */
+.btn-primary { background: var(--gold); color: var(--bg); }
+.btn-primary .arr { background: var(--bg); color: var(--gold); }
+
+/* History timeline on forest too, so green carries ~25% of the page */
+.timeline { background: var(--forest); border-color: var(--forest-hair); }
+.tl-row { border-bottom-color: var(--forest-hair); }
+.tl-row::before { background: var(--forest); border-color: var(--gold); }
+
+/* Footer: deep forest */
+footer { background: var(--forest); }
+.foot-heritage { border-bottom-color: var(--forest-hair); }
+
+/* Green back to the earlier brand lime (2026-10-29 owner): lime surfaces with black type,
+   black base and gold accents stay. The deep forest green is no longer used. */
+:root { --lime: #B5DB62; --lime-ink: #10170F; }
+.mission-row { background: var(--lime); color: var(--lime-ink); border: none; }
+.mission-row .mr-label { color: var(--lime-ink); opacity: 0.7; }
+.mission-row .mr-title em { color: var(--lime-ink); }
+.mr-item { border-bottom: 1.5px solid var(--lime-ink); }
+.mr-item h4, .mr-item h4 svg { color: var(--lime-ink); }
+.mr-item p { color: #2A3328; }
+.gen-panel { background: var(--lime); color: var(--lime-ink); border: none; }
+.gen-panel-head h3 { color: var(--lime-ink); }
+.gen-panel-head p { color: #2A3328; }
+.timeline { background: var(--bg-2); border-color: var(--hair); }
+.tl-row { border-bottom-color: var(--hair); }
+.tl-row::before { background: var(--bg-2); border-color: var(--lime); }
+.director { background: var(--bg-2); border-color: var(--hair); }
+.ng-badge, .work-tag-real { background: var(--lime); color: var(--lime-ink); border: none; }
+footer { background: var(--bg-2); }
+.foot-heritage { border-bottom-color: var(--hair); }
+
+/* Works cards: free stock photos (CC0 / public domain, see works-photo-credits.md), marked as illustrative (2026-10-29) */
+.work:nth-child(1) .work-img { background: linear-gradient(180deg, rgba(10,12,11,0) 55%, rgba(10,12,11,0.5) 100%), url(work-1.jpg) 40% center / cover; }
+.work:nth-child(2) .work-img { background: linear-gradient(180deg, rgba(10,12,11,0) 55%, rgba(10,12,11,0.5) 100%), url(work-2.jpg) 35% center / cover; }
+.work:nth-child(3) .work-img { background: linear-gradient(180deg, rgba(10,12,11,0) 55%, rgba(10,12,11,0.5) 100%), url(work-3.jpg) 30% center / cover; }
+.work:nth-child(4) .work-img { background: linear-gradient(180deg, rgba(10,12,11,0) 55%, rgba(10,12,11,0.5) 100%), url(work-4.jpg) 30% center / cover; }
+.work:nth-child(5) .work-img { background: linear-gradient(180deg, rgba(10,12,11,0) 55%, rgba(10,12,11,0.5) 100%), url(work-5.jpg) 45% center / cover; }
+.work:nth-child(6) .work-img { background: linear-gradient(180deg, rgba(10,12,11,0) 55%, rgba(10,12,11,0.5) 100%), url(work-6.jpg) 40% center / cover; }
+.work-img::after {
+  content: "※写真はイメージです";
+  position: absolute; right: 12px; bottom: 10px;
+  font-size: 10px; letter-spacing: 0.04em;
+  color: rgba(238,234,225,0.78);
+}
+
+/* History: compact, centred around the line so the whole timeline fits one PC screen (2026-10-29) */
+@media (min-width: 901px) {
+  .timeline { padding: 64px 56px 56px; text-align: center; }
+  .timeline .eyebrow { margin-bottom: 14px; }
+  .timeline .section-h { font-size: clamp(30px, 3vw, 42px); }
+  .timeline-list { max-width: 960px; margin: 36px auto 0; }
+  .timeline-list::before { left: 50%; }
+  .tl-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 56px;
+    padding: 12px 0;
+    align-items: center;
+    border-bottom: none;
+  }
+  .tl-row::before { left: calc(50% - 5px); top: 50%; transform: translateY(-50%); }
+  .tl-year {
+    display: flex; justify-content: flex-end; align-items: baseline; gap: 10px;
+    font-size: 26px;
+    text-align: right;
+  }
+  .tl-year .era { display: inline; margin-top: 0; font-size: 13px; }
+  .tl-body { text-align: left; font-size: 15px; line-height: 1.6; }
+  .tl-body .month { font-size: 13px; }
+}
+@media (max-width: 900px) {
+  .tl-body { font-size: 15px; }
+}
+
+/* History v2 (2026-10-29 owner): left-aligned, one line per entry on PC */
+@media (min-width: 901px) {
+  .timeline { text-align: left; }
+  .timeline-list { max-width: none; margin: 36px 0 0; }
+  .timeline-list::before { left: 0; }
+  .tl-row { grid-template-columns: 210px 1fr; gap: 0 32px; padding: 12px 0 12px 32px; }
+  .tl-row::before { left: -5px; }
+  .tl-year { justify-content: flex-start; text-align: left; }
+}
+@media (min-width: 1100px) {
+  .tl-body { white-space: nowrap; }
+}
+
+/* Replacement photos closer to the real sites + CC BY-SA credit (2026-10-29) */
+.work:nth-child(1) .work-img { background-position: center, 42% center; }
+.work:nth-child(2) .work-img { background-position: center, 50% center; }
+.work:nth-child(3) .work-img { background-position: center, 68% center; }
+.works-credit { margin-top: 18px; font-size: 11px; line-height: 1.7; color: var(--mute); }
+
+/* 住宅新築 card removed (2026-10-29 owner): 5 cards — photos shift up one slot; PC 3+2 layout, phone last card full width */
+.work:nth-child(4) .work-img { background: linear-gradient(180deg, rgba(10,12,11,0) 55%, rgba(10,12,11,0.5) 100%), url(work-5.jpg) 45% center / cover; }
+.work:nth-child(5) .work-img { background: linear-gradient(180deg, rgba(10,12,11,0) 55%, rgba(10,12,11,0.5) 100%), url(work-6.jpg) 40% center / cover; }
+@media (min-width: 901px) {
+  .works-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .works-grid > .work { grid-column: span 2; }
+  .works-grid > .work:nth-child(n+4) { grid-column: span 3; }
+  .works-grid > .work:nth-child(n+4) .work-img { aspect-ratio: 16 / 10; }
+}
+@media (max-width: 900px) {
+  .works-grid > .work:nth-child(5) { grid-column: 1 / -1; }
+  .works-grid > .work:nth-child(5) .work-img { aspect-ratio: 16 / 10; }
+}
 </style>
 </head>
 <body>
@@ -2333,13 +2677,13 @@ footer {
     Yoshida gumi
   </a>
   <div class="nav-links">
-    <a href="index.html#about">吉田組について</a>
-    <a href="index.html#works">事業紹介</a>
-    <a href="index.html#works">施工実績</a>
+    <a href="index.html">Home</a>
     <a href="azur-hour.html">Azur Hour</a>
-    <a href="index.html#licenses">会社概要</a>
+    <a href="index.html#works">Business</a>
+    <a href="index.html#works">Works</a>
+    <a href="index.html#licenses">Company</a>
   </div>
-  <a href="contact.html" class="nav-cta"><span class="en">CONTACT</span><span class="jp">お問い合わせ</span></a>
+  <a href="contact.html" class="nav-cta">Contact <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   <button class="nav-burger" aria-label="Open menu">
     <span></span><span></span><span></span>
   </button>
@@ -2390,12 +2734,12 @@ footer {
 
   <div class="hv-copy">
     <h1 class="hv-title">
-      <span class="ln"><span>暮らしの土台をつくる。</span></span>
+      <span class="ln"><span>暮らしの<wbr>土台を<wbr>つくる。</span></span>
     </h1>
     <p class="hv-lead">
-      <span class="ln">土木・建築・解体まで、21業種の許可。</span>
-      <span class="ln">和歌山・紀美野町に根ざし、</span>
-      <span class="ln">1952年から地域をつくる建設会社です。</span>
+      <span class="ln">土木・建築・解体まで、<wbr>21業種の許可。</span>
+      <span class="ln">和歌山・紀<wbr>美野町に<wbr>根ざし、</span>
+      <span class="ln">1952年から<wbr>地域を<wbr>つくる<wbr>建設会社です。</span>
     </p>
   </div>
 
@@ -2408,42 +2752,68 @@ footer {
   <h2 class="section-h reveal">Shaping the ground<br>others <em>build on.</em></h2>
 
   <div class="story-lead reveal">
-    <p>目の前の現場を一つずつ丁寧に。創業から七十余年、私たちは和歌山・紀美野町という小さな町で、住宅・道路・橋・解体と、暮らしの基盤になる仕事をひたすら積み重ねてきました。</p>
-    <p>派手な仕事ではないかもしれません。でも、私たちが手がけた橋を渡り、私たちが整えた道を歩き、私たちが建てた家で誰かが眠る──その積み重ねこそが、吉田組の誇りです。</p>
+    <p>目の前の<wbr>現場を<wbr>一つずつ<wbr>丁寧に。<wbr>創業から<wbr>七十余年、<wbr>私たちは<wbr>和歌山・紀<wbr>美野町という<wbr>小さな町で、<wbr>住宅・道路・橋・解体と、<wbr>暮らしの<wbr>基盤になる<wbr>仕事を<wbr>ひたすら<wbr>積み重ねてきました。</p>
+    <p>派手な<wbr>仕事ではないかもしれません。でも、<wbr>私たちが手がけた橋を渡り、<wbr>私たちが<wbr>整えた道を歩き、<wbr>私たちが<wbr>建てた家で<wbr>誰かが眠る──その<wbr>積み重ねこそが、<wbr>吉田組の<wbr>誇りです。</p>
   </div>
 
   <!-- Mission CTA -->
-  <div class="mission-cta reveal">
-    <div class="mission-cta-label">— Our Mission</div>
-    <h3 class="mission-cta-title">地域に必要とされる仕事を、<br><em>確かな手</em>で、次の世代へ。</h3>
+  <div class="mission-row reveal">
+    <div>
+      <div class="mr-label">— Our Mission</div>
+      <h3 class="mr-title">
+        <span class="ln">地域に<wbr>必要と<wbr>される</span>
+        <span class="ln">仕事を、<em>確かな手</em>で、</span>
+        <span class="ln">次の世代へ。</span>
+      </h3>
+    </div>
+    <ul class="mr-list">
+      <li class="mr-item">
+        <h4><svg viewBox="0 0 26 26" aria-hidden="true"><path fill="currentColor" d="M2 24h22v-4H2zM6 18h18v-4H6zM10 12h14V8H10zM14 6h10V2H14z"/></svg>21業種の建設業許可</h4>
+        <p>土木・建築・解体から<wbr>専門工事まで。<wbr>一つの<wbr>窓口で<wbr>相談を<wbr>受けられる幅を<wbr>持っています。</p>
+      </li>
+      <li class="mr-item">
+        <h4><svg viewBox="0 0 26 26" aria-hidden="true"><path fill="currentColor" d="M3 2h20v3h-2.5c0 4-3 6.2-5.5 8 2.5 1.8 5.5 4 5.5 8H23v3H3v-3h2.5c0-4 3-6.2 5.5-8-2.5-1.8-5.5-4-5.5-8H3z"/></svg>1952年から、紀美野で</h4>
+        <p>創業から<wbr>七十余年。この町を<wbr>離れず、<wbr>目の前の<wbr>現場を<wbr>一つずつ<wbr>積み重ねてきました。</p>
+      </li>
+      <li class="mr-item">
+        <h4><svg viewBox="0 0 26 26" aria-hidden="true"><path fill="currentColor" d="M13 2a5 5 0 0 1 5 5 5 5 0 0 1 5 5 5 5 0 0 1-5 5v-.1A5 5 0 0 1 13 24a5 5 0 0 1-5-7.1A5 5 0 0 1 3 12a5 5 0 0 1 5-5 5 5 0 0 1 5-5zm0 7.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z"/></svg>次の世代へ手渡す</h4>
+        <p>四代に<wbr>わたって<wbr>受け継い<wbr>できた<wbr>家業を、<wbr>これからの<wbr>和歌山に<wbr>必要と<wbr>される形へ<wbr>更新していきます。</p>
+      </li>
+    </ul>
   </div>
 
-  <!-- Four generations -->
+  <!-- Four generations, on a light rounded panel -->
+  <div class="gen-panel reveal">
+  <div class="gen-panel-head">
+    <h3>Four generations</h3>
+    <p>1952年の<wbr>創業から、<wbr>四代で<wbr>受け継い<wbr>できた<wbr>吉田組</p>
+  </div>
   <div class="generations">
     <div class="gen-card reveal">
       <div class="gen-year">1st · ~1952</div>
       <div class="gen-marker">●○○○</div>
       <h3>初代<br><span class="gen-name">吉田 一郎</span></h3>
-      <p>戦後の和歌山・紀美野町で「吉田組」を自営として創業。土木建築の現場一筋で、地域のインフラ復興と暮らしの再建に従事した、すべての始まりの人。</p>
+      <p>戦後の<wbr>和歌山・紀<wbr>美野町で<wbr>「吉田組」を<wbr>自営として創業。<wbr>土木建築の<wbr>現場一筋で、<wbr>地域の<wbr>インフラ復興と<wbr>暮らしの<wbr>再建に<wbr>従事した、<wbr>すべての<wbr>始まりの人。</p>
     </div>
     <div class="gen-card reveal">
       <div class="gen-year">2nd · 1964</div>
       <div class="gen-marker">●●○○</div>
       <h3>二代目<br><span class="gen-name">吉田 順亮</span></h3>
-      <p>1964年に父・一郎より家業を継承、1976年に株式会社化。和歌山県発注の道路・橋梁工事を多数手がけ、海南地方建設業協会会長を長年務めた功績で、<strong>2014年に黄綬褒章を受章</strong>。</p>
+      <p>1964年に<wbr>父・一郎より<wbr>家業を継承、<wbr>1976年に<wbr>株式会社化。<wbr>和歌山県発注の<wbr>道路・橋梁工事を<wbr>多数手がけ、<wbr>海南地方<wbr>建設業協会会長を<wbr>長年務めた<wbr>功績で、<strong>2014年に<wbr>黄綬褒章を受章</strong>。</p>
     </div>
     <div class="gen-card reveal">
       <div class="gen-year">3rd</div>
       <div class="gen-marker">●●●○</div>
       <h3>三代目<br><span class="gen-name">吉田 美佳</span></h3>
-      <p>二代にわたる家業を引き継ぎ、吉田組を率いる。地域とのつながりを守りながら、次の世代へ会社を手渡す準備を進めてきた。</p>
+      <p>二代に<wbr>わたる<wbr>家業を<wbr>引き継ぎ、<wbr>吉田組を<wbr>率いる。<wbr>地域との<wbr>つながりを<wbr>守りながら、次の<wbr>世代へ<wbr>会社を<wbr>手渡す<wbr>準備を<wbr>進めてきた。</p>
     </div>
-    <div class="gen-card reveal">
+    <div class="gen-card is-now reveal">
       <div class="gen-year">4th · Present</div>
       <div class="gen-marker">●●●●</div>
       <h3>四代目<br><span class="gen-name">吉田 乃晟</span></h3>
-      <p>三代から受け継いだ吉田組を、これからの和歌山にも必要とされる会社へとアップデート中。建設業の知見を起点に、土地活用・次世代事業へも展開していく。また建設業にとどまらず、ツアー事業やデザイン事業も手掛ける。</p>
+      <p>三代から<wbr>受け継いだ吉田組を、<wbr>これからの<wbr>和歌山にも<wbr>必要と<wbr>される<wbr>会社へと<wbr>アップデート中。<wbr>建設業の<wbr>知見を<wbr>起点に、<wbr>土地活用・次世代事業へも<wbr>展開していく。また<wbr>建設業にとどまらず、<wbr>ツアー事業や<wbr>デザイン事業も<wbr>手掛ける。</p>
     </div>
+  </div>
   </div>
 
   <!-- Why Wakayama -->
@@ -2453,8 +2823,8 @@ footer {
     <div class="ww-eyebrow">Rooted in</div>
     <h3 class="ww-title">紀美野町という、<em>小さな町。</em></h3>
     <div class="ww-grid">
-      <p>和歌山県のほぼ中央、紀の川と海南をつなぐ山あいに位置する紀美野町。<br>人口は約8,000人、棚田と杉林が広がる典型的な里山の町です。</p>
-      <p>大企業の建設会社が手を出さないような小規模な工事、災害復旧、住宅の建て替え——そういう「地域にとって本当に必要な仕事」が、私たちの主戦場です。だから、ここを離れず、ここで百年以上残る仕事を手掛けていきます。</p>
+      <p>和歌山県のほぼ中央、紀の川と<wbr>海南を<wbr>つなぐ<wbr>山あいに<wbr>位置する紀<wbr>美野町。<br>人口は<wbr>約8,000人、<wbr>棚田と<wbr>杉林が<wbr>広がる<wbr>典型的な<wbr>里山の<wbr>町です。</p>
+      <p>大企業の<wbr>建設会社が手を<wbr>出さないような<wbr>小規模な工事、<wbr>災害復旧、<wbr>住宅の建て替え<wbr>——そういう<wbr>「地域に<wbr>とって<wbr>本当に<wbr>必要な<wbr>仕事」が、<wbr>私たちの<wbr>主戦場です。<wbr>だから、<wbr>ここを<wbr>離れず、<wbr>ここで<wbr>百年以上残る<wbr>仕事を<wbr>手掛けていきます。</p>
     </div>
     </div>
     <div class="ww-map">
@@ -2685,8 +3055,8 @@ footer {
       </div>
       <div class="ng-meta">
         <span class="ng-date">2014.04</span>
-        <h4>二代目・吉田順亮が黄綬褒章を受章</h4>
-        <p>半世紀以上にわたる地元建設業への貢献と、和歌山県・海南地方建設業協会会長としての功績が認められて。</p>
+        <h4>二代目・吉田順亮が<wbr>黄綬褒章を受章</h4>
+        <p>半世紀以上に<wbr>わたる<wbr>地元建設業への<wbr>貢献と、<wbr>和歌山県・<wbr>海南地方<wbr>建設業協会会長と<wbr>しての<wbr>功績が<wbr>認められて。</p>
       </div>
     </a>
 
@@ -2702,8 +3072,8 @@ footer {
       </div>
       <div class="ng-meta">
         <span class="ng-date">2025.07</span>
-        <h4>四代目取締役 吉田 乃晟 就任</h4>
-        <p>初代・一郎、二代目・順亮、三代目・美佳から受け継いだ吉田組。次の七十年を見据えた事業展開を始動。</p>
+        <h4>四代目取締役 吉田&nbsp;乃晟&nbsp;就任</h4>
+        <p>初代・一郎、<wbr>二代目・順亮、<wbr>三代目・<wbr>美佳から<wbr>受け継いだ吉田組。次の<wbr>七十年を<wbr>見据えた<wbr>事業展開を始動。</p>
       </div>
     </a>
 
@@ -2719,8 +3089,8 @@ footer {
       </div>
       <div class="ng-meta">
         <span class="ng-date">2025.06</span>
-        <h4>海南金屋線道路改良工事 完了</h4>
-        <p>和歌山県発注の道路改良工事を元請として完了。地域の交通インフラ整備に貢献。</p>
+        <h4>海南金屋線<wbr>道路改良<wbr>工事&nbsp;完了</h4>
+        <p>和歌山県発注の<wbr>道路改良工事を<wbr>元請として完了。<wbr>地域の<wbr>交通インフラ整備に貢献。</p>
       </div>
     </a>
 
@@ -2736,8 +3106,8 @@ footer {
       </div>
       <div class="ng-meta">
         <span class="ng-date">2026.02</span>
-        <h4>創業74周年を迎えました</h4>
-        <p>1952年の創業から74年。地域とともに歩み続けられたのは、お客様と紀美野町の皆様のおかげです。</p>
+        <h4>創業74<wbr>周年を<wbr>迎えました</h4>
+        <p>1952年の<wbr>創業から<wbr>74年。<wbr>地域とともに<wbr>歩み続けられたのは、<wbr>お客様と<wbr>紀美野町の<wbr>皆様の<wbr>おかげです。</p>
       </div>
     </a>
   </div>
@@ -2752,15 +3122,15 @@ footer {
     <div class="timeline-list">
       <div class="tl-row reveal">
         <div class="tl-year">1952<span class="era">昭和 27年</span></div>
-        <div class="tl-body"><span class="month">April</span>初代・吉田一郎自営の吉田組にて、土木建築技術を修得。</div>
+        <div class="tl-body"><span class="month">April</span>初代・吉田一郎<wbr>自営の<wbr>吉田組にて、<wbr>土木建築技術を修得。</div>
       </div>
       <div class="tl-row reveal">
         <div class="tl-year">1964<span class="era">昭和 39年</span></div>
-        <div class="tl-body"><span class="month">July</span>吉田組を初代・吉田一郎から引継ぎ、代表者に就任。</div>
+        <div class="tl-body"><span class="month">July</span>吉田組を<wbr>初代・吉田一郎から<wbr>引継ぎ、<wbr>代表者に就任。</div>
       </div>
       <div class="tl-row reveal">
         <div class="tl-year">1976<span class="era">昭和 51年</span></div>
-        <div class="tl-body"><span class="month">January</span>株式会社吉田組を設立。同年12月、代表取締役に就任。</div>
+        <div class="tl-body"><span class="month">January</span>株式会社吉田組を設立。<wbr>同年12月、<wbr>代表取締役に就任。</div>
       </div>
       <div class="tl-row reveal">
         <div class="tl-year">1997<span class="era">平成 9年</span></div>
@@ -2768,11 +3138,11 @@ footer {
       </div>
       <div class="tl-row reveal">
         <div class="tl-year">2008<span class="era">平成 20年</span></div>
-        <div class="tl-body"><span class="month">May</span>本店を紀美野町福田より、現住所（紀美野町松瀬459）へ移転。</div>
+        <div class="tl-body"><span class="month">May</span>本店を<wbr>紀美野町福田より、<wbr>現住所（紀<wbr>美野町松瀬459）へ移転。</div>
       </div>
       <div class="tl-row reveal">
         <div class="tl-year">2014<span class="era">平成 26年</span></div>
-        <div class="tl-body"><span class="month">April</span>二代目・吉田順亮が春の褒章で<strong style="color:var(--brand);">黄綬褒章を受章</strong>。半世紀以上にわたる地元建設業への貢献が認められる。</div>
+        <div class="tl-body"><span class="month">April</span>二代目・吉田順亮が春の<wbr>褒章で<strong style="color:var(--brand);">黄綬褒章を受章</strong>。半世紀以上に<wbr>わたる<wbr>地元建設業への<wbr>貢献が<wbr>認められる。</div>
       </div>
     </div>
   </div>
@@ -2789,7 +3159,7 @@ footer {
       <span class="work-tag-real">和歌山県</span>
       <div class="work-meta">
         <div>
-          <h4>海南金屋線<br>道路改良合併工事</h4>
+          <h4>海南金屋線<br>道路改良<wbr>合併工事</h4>
           <div class="cat">Civil Engineering · 和歌山県</div>
         </div>
         <span class="year">令和元</span>
@@ -2800,7 +3170,7 @@ footer {
       <span class="work-tag-real">和歌山県</span>
       <div class="work-meta">
         <div>
-          <h4>野上清水線<br>道路災害復旧外合併工事</h4>
+          <h4>野上清水線<br>道路災害<wbr>復旧外<wbr>合併工事</h4>
           <div class="cat">Civil Engineering · 和歌山県</div>
         </div>
         <span class="year">令和元</span>
@@ -2812,16 +3182,6 @@ footer {
         <div>
           <h4>河川護岸工事</h4>
           <div class="cat">Civil Engineering</div>
-        </div>
-        <span class="year">2024</span>
-      </div>
-    </div>
-    <div class="work reveal">
-      <div class="work-img"></div>
-      <div class="work-meta">
-        <div>
-          <h4>住宅新築工事</h4>
-          <div class="cat">Architecture</div>
         </div>
         <span class="year">2024</span>
       </div>
@@ -2847,6 +3207,7 @@ footer {
       </div>
     </div>
   </div>
+  <p class="works-credit">※施工事例の写真はイメージです。写真出典：Wikimedia Commons ― Alpsdake「Gifu Prefectural Road Route 25」(CC BY-SA 4.0)／NALA Wiki「Fukui Prefectural Road Route 225」(CC BY-SA 3.0)／Ramon FVelasquez「Rodriguez, Rizal」(CC BY-SA 3.0)。いずれも色調を補正しています。その他はCC0・パブリックドメイン。</p>
 </section>
 
 <!-- ============== DIRECTOR / 取締役 ============== -->
@@ -2871,7 +3232,7 @@ footer {
     <div class="director-text">
       <div class="role-label reveal">Meet the Director</div>
       <h3 class="reveal">四代目として、<br><em>次の七十年</em>を築く。</h3>
-      <p class="reveal">初代・吉田一郎、二代目・吉田順亮、三代目・吉田美佳から受け継いだ吉田組を、これからの和歌山に必要とされる建設会社へとアップデートしていきます。</p>
+      <p class="reveal">初代・吉田一郎、<wbr>二代目・吉田順亮、<wbr>三代目・吉田<wbr>美佳から<wbr>受け継いだ吉田組を、<wbr>これからの<wbr>和歌山に<wbr>必要と<wbr>される<wbr>建設会社へと<wbr>アップデートしていきます。</p>
     </div>
   </div>
 </section>
@@ -2881,7 +3242,7 @@ footer {
   <div class="eyebrow reveal">Licensed disciplines</div>
   <div class="licenses-intro">
     <h2 class="section-h reveal" style="margin-bottom: 0;">Licensed across<br>all <em>21 disciplines.</em></h2>
-    <p class="reveal">和歌山県知事より、建設業許可として21種類の工事業種を取得しています。土木・建築の主要分野はもちろん、特殊な専門工事まで一貫対応可能です。</p>
+    <p class="reveal">和歌山県知事より、<wbr>建設業許可として<wbr>21種類の<wbr>工事業種を<wbr>取得しています。<wbr>土木・建築の<wbr>主要分野は<wbr>もちろん、<wbr>特殊な<wbr>専門工事まで<wbr>一貫対応可能です。</p>
   </div>
 
   <div class="lic-grid">
@@ -2889,22 +3250,22 @@ footer {
     <div class="lic reveal"><span class="lic-num">02</span><span class="lic-name">建築工事業</span></div>
     <div class="lic reveal"><span class="lic-num">03</span><span class="lic-name">大工工事業</span></div>
     <div class="lic reveal"><span class="lic-num">04</span><span class="lic-name">左官工事業</span></div>
-    <div class="lic reveal"><span class="lic-num">05</span><span class="lic-name">とび・土工工事業</span></div>
+    <div class="lic reveal"><span class="lic-num">05</span><span class="lic-name">とび・土工<wbr>工事業</span></div>
     <div class="lic reveal"><span class="lic-num">06</span><span class="lic-name">石工事業</span></div>
     <div class="lic reveal"><span class="lic-num">07</span><span class="lic-name">屋根工事業</span></div>
     <div class="lic reveal"><span class="lic-num">08</span><span class="lic-name">鉄筋工事業</span></div>
-    <div class="lic reveal"><span class="lic-num">09</span><span class="lic-name">タイル・れんが・ブロック工事業</span></div>
-    <div class="lic reveal"><span class="lic-num">10</span><span class="lic-name">鋼構造物工事業</span></div>
+    <div class="lic reveal"><span class="lic-num">09</span><span class="lic-name">タイル・れんが<wbr>・ブロック<wbr>工事業</span></div>
+    <div class="lic reveal"><span class="lic-num">10</span><span class="lic-name">鋼構造物<wbr>工事業</span></div>
     <div class="lic reveal"><span class="lic-num">11</span><span class="lic-name">舗装工事業</span></div>
-    <div class="lic reveal"><span class="lic-num">12</span><span class="lic-name">しゅんせつ工事業</span></div>
+    <div class="lic reveal"><span class="lic-num">12</span><span class="lic-name">しゅんせつ<wbr>工事業</span></div>
     <div class="lic reveal"><span class="lic-num">13</span><span class="lic-name">板金工事業</span></div>
-    <div class="lic reveal"><span class="lic-num">14</span><span class="lic-name">ガラス工事業</span></div>
+    <div class="lic reveal"><span class="lic-num">14</span><span class="lic-name">ガラス<wbr>工事業</span></div>
     <div class="lic reveal"><span class="lic-num">15</span><span class="lic-name">塗装工事業</span></div>
     <div class="lic reveal"><span class="lic-num">16</span><span class="lic-name">防水工事業</span></div>
-    <div class="lic reveal"><span class="lic-num">17</span><span class="lic-name">内装仕上工事業</span></div>
-    <div class="lic reveal"><span class="lic-num">18</span><span class="lic-name">熱絶縁工事業</span></div>
+    <div class="lic reveal"><span class="lic-num">17</span><span class="lic-name">内装仕上<wbr>工事業</span></div>
+    <div class="lic reveal"><span class="lic-num">18</span><span class="lic-name">熱絶縁<wbr>工事業</span></div>
     <div class="lic reveal"><span class="lic-num">19</span><span class="lic-name">建具工事業</span></div>
-    <div class="lic reveal"><span class="lic-num">20</span><span class="lic-name">水道施設工事業</span></div>
+    <div class="lic reveal"><span class="lic-num">20</span><span class="lic-name">水道施設<wbr>工事業</span></div>
     <div class="lic reveal"><span class="lic-num">21</span><span class="lic-name">解体工事業</span></div>
   </div>
 </section>
@@ -2926,7 +3287,7 @@ footer {
 <!-- ============== CTA (links to contact.html) ============== -->
 <section class="cta-section" id="contact-cta">
   <h2>Let's build<br>something <em>that lasts.</em></h2>
-  <p>土木、解体、土地活用、なんでも構いません。<br>和歌山に関わるご相談は、まず私たちまで。</p>
+  <p>土木、解体、<wbr>土地活用、<wbr>なんでも<wbr>構いません。<br>和歌山に<wbr>関わる<wbr>ご相談は、まず<wbr>私たちまで。</p>
   <div class="cta-buttons">
     <a href="contact.html" class="btn btn-primary">Get in touch <span class="arr">→</span></a>
     <a href="#licenses" class="btn btn-ghost">View our services</a>
@@ -2974,7 +3335,7 @@ footer {
         Yoshida<span class="stop">.</span>
       </div>
       <p class="foot-tag">A Wakayama-based general contractor. Building the everyday since 1952. Incorporated 1976.</p>
-      <p class="foot-tag-jp">和歌山・紀美野町に根ざし、四代にわたって暮らしの骨格をつくり続けています。</p>
+      <p class="foot-tag-jp">和歌山・紀<wbr>美野町に<wbr>根ざし、<wbr>四代に<wbr>わたって<wbr>暮らしの<wbr>骨格を<wbr>つくり続けています。</p>
     </div>
 
     <div class="foot-col">
@@ -2988,7 +3349,7 @@ footer {
 
     <div class="foot-col">
       <h5>Contact</h5>
-      <p>TEL (073) 489-3178 (代)<br>FAX (073) 489-4779</p>
+      <p>TEL <span class="nw">(073) 489-3178&nbsp;(代)</span><br>FAX <span class="nw">(073) 489-4779</span></p>
       <p>info@azurworks.com</p>
       <p>平日 8:30 – 17:30</p>
     </div>

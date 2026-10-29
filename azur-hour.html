@@ -256,6 +256,36 @@ em.s{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--oran
   .f-grid{grid-template-columns:1fr 1fr;gap:30px}
   .f-brand{grid-column:1/3}
 }
+
+/* Unified header bar (2026-10-29) — same look and labels as index / contact */
+.nav,.nav.scrolled{top:0;left:0;right:0;margin:14px auto 0;width:min(1240px,calc(100% - 28px));height:60px;padding:0 24px;gap:28px;justify-content:flex-start;background:rgba(14,21,17,0.9);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.07);border-radius:12px}
+.nav .logo,.nav.scrolled .logo{color:#B5DB62;font-family:'Bricolage Grotesque',sans-serif;font-size:17px}
+.nav .logo svg{color:#B5DB62}
+.nav .nav-links,.nav.scrolled .nav-links{margin-left:auto;gap:28px;padding:0;background:none;border:none;border-radius:0}
+.nav .nav-links a,.nav.scrolled .nav-links a,.nav .pill{padding:6px 0;font-family:'Hanken Grotesk',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;color:#B5DB62;background:none;border:none;border-radius:0;box-shadow:none}
+.nav .nav-links a:hover,.nav.scrolled .nav-links a:hover,.nav .pill:hover{color:#fff;background:none;transform:none}
+.nav .nav-links a.on,.nav.scrolled .nav-links a.on{color:#fff;background:none}
+.nav .pill{display:inline-flex;align-items:center;gap:6px}
+.nav .pill svg{width:13px;height:13px}
+.nav .burger{margin-left:auto}
+.nav .burger div,.nav.scrolled .burger div{background:#B5DB62}
+@media (max-width:900px){.nav,.nav.scrolled{margin-top:10px;width:calc(100% - 20px);height:54px;padding:0 12px 0 16px}.nav .pill{display:none}}
+/* phrase-wrap (2026-10-29) */
+body { word-break: keep-all; overflow-wrap: break-word; line-break: strict; }
+p, li, dd, td { text-wrap: pretty; }
+
+/* Mobile fit (2026-10-29): keep the NEXT chip on one line on small phones */
+@media (max-width: 400px){.next-chip{white-space:nowrap;font-size:9.5px;letter-spacing:0.06em}}
+
+/* Header bar in the luxe palette (2026-10-29): cream links, gold CONTACT, green mark */
+.nav .logo,.nav.scrolled .logo{color:#EEEAE1}
+.nav .logo svg{color:#7BC142}
+.nav .nav-links a,.nav.scrolled .nav-links a{color:rgba(238,234,225,0.72)}
+.nav .nav-links a.on,.nav.scrolled .nav-links a.on{color:#C6A460}
+.nav .pill{color:#C6A460}
+.nav .nav-links a:hover,.nav.scrolled .nav-links a:hover,.nav .pill:hover{color:#D8BE86}
+.nav .burger div,.nav.scrolled .burger div{background:#C6A460}
+.nav,.nav.scrolled{background:rgba(10,12,11,0.9)}
 </style>
 </head>
 <body>
@@ -271,12 +301,12 @@ em.s{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--oran
   <a href="index.html" class="logo"><svg><use href="#y-logo"/></svg>Yoshida gumi</a>
   <div class="nav-links">
     <a href="index.html">Home</a>
-    <a href="azur-hour.html" class="on">Azur Hour</a>
+    <a href="azur-hour.html" class="on" aria-current="page">Azur Hour</a>
     <a href="index.html#works">Business</a>
     <a href="index.html#works">Works</a>
     <a href="index.html#licenses">Company</a>
   </div>
-  <a href="#loop" class="pill">参加する <span>→</span></a>
+  <a href="contact.html" class="pill">Contact <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   <button class="burger" id="burger" aria-label="メニュー"><div></div><div></div></button>
 </nav>
 
@@ -300,7 +330,7 @@ em.s{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--oran
   <div class="hero-in">
     <div class="hero-eye">AN EVENT SERIES BY YOSHIDA GUMI</div>
     <h1 class="hero-msg">Where people meet,<br><em>something begins.</em></h1>
-    <p class="hero-sub">音楽、食、会話、場所。組み合わせを変えながら、人が自然に出会える時間をつくっています。</p>
+    <p class="hero-sub">音楽、食、会話、場所。<wbr>組み合わせを<wbr>変えながら、人が<wbr>自然に<wbr>出会える<wbr>時間を<wbr>つくっています。</p>
     <a href="#upcoming" class="hero-link">次の開催を見る <span>→</span></a>
   </div>
   <div class="hero-foot">
@@ -312,7 +342,7 @@ em.s{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--oran
 <!-- CONCEPT -->
 <section class="sec concept" id="concept">
   <span class="lbl">CONCEPT</span>
-  <h2>次代の体験と挑戦を創る</h2>
+  <h2>次代の<wbr>体験と<wbr>挑戦を創る</h2>
   <div class="en">Creating the experiences and challenges of the next generation.</div>
 </section>
 
@@ -321,13 +351,13 @@ em.s{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--oran
   <div class="wrap mani-grid">
     <div class="reveal"><span class="lbl" style="color:rgba(255,255,255,0.6)">WHY WE GATHER</span></div>
     <div class="reveal">
-      <h2>AIがどれだけ進化しても、<br><b>人の心を動かすこと</b>だけは、<br>人にしかできない。</h2>
-      <p>調べればすぐ答えが出る時代に、答えのない時間をつくりたい。同じ船に乗って、同じ音を聴いて、名前も知らなかった人と話す。その夜に起きたことは、あとから検索しても出てきません。<br>
-      Azur Hour は、次の世代をつくる人たちが、わくわくした気持ちのまま集まれる場所です。肩書きも業種も関係なく、おもしろい人がおもしろい人と出会う。</p>
+      <h2>AIが<wbr>どれだけ<wbr>進化しても、<br><b>人の心を<wbr>動かすこと</b>だけは、<br>人にしかできない。</h2>
+      <p>調べればすぐ<wbr>答えが出る<wbr>時代に、<wbr>答えのない<wbr>時間を<wbr>つくりたい。同じ船に<wbr>乗って、同じ音を<wbr>聴いて、<wbr>名前も<wbr>知らなかった人と話す。その夜に<wbr>起きた<wbr>ことは、<wbr>あとから<wbr>検索しても<wbr>出てきません。<br>
+      Azur Hour は、次の<wbr>世代を<wbr>つくる<wbr>人たちが、わく<wbr>わくした<wbr>気持ちのまま<wbr>集まれる<wbr>場所です。<wbr>肩書きも<wbr>業種も関係なく、<wbr>おもしろい人が<wbr>おもしろい人と<wbr>出会う。</p>
       <div class="vals">
-        <div class="val"><div class="t">Not searchable.</div><div class="d">その夜の会話は、どこにも載っていない。実際にその場にいた人だけのものです。</div></div>
-        <div class="val"><div class="t">No titles.</div><div class="d">肩書きも年齢も持ち込まない。ひとりでの参加が一番多い場をつくっています。</div></div>
-        <div class="val"><div class="t">Something next.</div><div class="d">出会いで終わらせない。次の場所、次のプロジェクトへつながる入口にします。</div></div>
+        <div class="val"><div class="t">Not searchable.</div><div class="d">その夜の<wbr>会話は、<wbr>どこにも<wbr>載っていない。<wbr>実際にその場にいた<wbr>人だけの<wbr>ものです。</div></div>
+        <div class="val"><div class="t">No titles.</div><div class="d">肩書きも<wbr>年齢も<wbr>持ち込まない。<wbr>ひとりでの<wbr>参加が一番多い場を<wbr>つくっています。</div></div>
+        <div class="val"><div class="t">Something next.</div><div class="d">出会いで<wbr>終わらせない。次の場所、次の<wbr>プロジェクトへ<wbr>つながる<wbr>入口に<wbr>します。</div></div>
       </div>
     </div>
   </div>
@@ -340,27 +370,27 @@ em.s{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--oran
       <span class="lbl">HOW IT WORKS</span>
       <h2 class="dsp">Joining is <em class="s">simple.</em></h2>
     </div>
-    <p class="lead" style="max-width:320px;font-size:14px">はじめての方も、ひとりの方も。<br>特別な準備はいりません。</p>
+    <p class="lead" style="max-width:320px;font-size:14px">はじめての方も、<wbr>ひとりの方も。<br>特別な<wbr>準備は<wbr>いりません。</p>
   </div>
   <div class="steps">
     <div class="step reveal">
       <div class="n">01</div>
       <h3>見つける</h3>
-      <p>開催予定から、気になる回を選ぶ。テーマも場所も毎回変わります。ひとりでの参加も歓迎です。</p>
+      <p>開催予定から、気に<wbr>なる回を選ぶ。<wbr>テーマも<wbr>場所も毎回<wbr>変わります。<wbr>ひとりでの<wbr>参加も<wbr>歓迎です。</p>
     </div>
     <div class="step reveal">
       <div class="n">02</div>
       <h3>申し込む</h3>
-      <p>Peatix でチケットを取るだけ。事前のやりとりや面談はありません。当日の流れは申込後にご案内します。</p>
+      <p>Peatix でチケットを<wbr>取るだけ。<wbr>事前の<wbr>やりとりや<wbr>面談は<wbr>ありません。<wbr>当日の<wbr>流れは<wbr>申込後に<wbr>ご案内します。</p>
     </div>
     <div class="step reveal">
       <div class="n">03</div>
       <h3>集まる</h3>
-      <p>当日、集合場所へ。あとはその時間を過ごすだけ。話したい人と話して、聴きたい音を聴いてください。</p>
+      <p>当日、集合場所へ。<wbr>あとはその<wbr>時間を<wbr>過ごすだけ。<wbr>話したい人と<wbr>話して、<wbr>聴きたい音を<wbr>聴いてください。</p>
     </div>
     <div class="step-img reveal">
       <img src="az-9.jpg" alt="" loading="lazy" width="1800" height="1350">
-      <a href="#loop" class="pill">次の案内を受け取る <span>→</span></a>
+      <a href="#loop" class="pill">次の案内を<wbr>受け取る <span>→</span></a>
     </div>
   </div>
 </section>
@@ -386,7 +416,7 @@ em.s{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--oran
       <div class="c-num">001 / UPCOMING EVENT</div>
       <h3>OSAKA NIGHT<br>CRUISE</h3>
       <div class="tagline">Music on water, after sunset.</div>
-      <p>クルーズ船を一隻貸し切り、DJ・食事・ドリンクとともに大阪の夜を航行するナイトイベント。陸上の会場ではつくれない距離感と、移動する景色。その夜、その船に乗った人だけが共有できる時間をつくります。</p>
+      <p>クルーズ船を<wbr>一隻貸し切り、<wbr>DJ・食事・ドリンクとともに<wbr>大阪の夜を<wbr>航行する<wbr>ナイトイベント。<wbr>陸上の<wbr>会場では<wbr>つくれない<wbr>距離感と、<wbr>移動する景色。その夜、その船に<wbr>乗った<wbr>人だけが<wbr>共有できる<wbr>時間を<wbr>つくります。</p>
       <dl class="meta">
         <dt>LOCATION</dt><dd>八軒家浜（大阪）集合 ／ 航路：大阪城〜淀川</dd>
         <dt>FORMAT</dt><dd>DJ ／ クルーズ ／ ビュッフェ ／ ドリンク</dd>
@@ -404,8 +434,8 @@ em.s{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--oran
 
   <div class="ph reveal">
     <span class="n">002</span>
-    <span class="t">開催が決まり次第、順次追加します。</span>
-    <a href="#loop">次回の案内を受け取る ↓</a>
+    <span class="t">開催が<wbr>決まり次第、<wbr>順次追加します。</span>
+    <a href="#loop">次回の<wbr>案内を<wbr>受け取る ↓</a>
   </div>
 </section>
 
@@ -413,8 +443,8 @@ em.s{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--oran
 <section class="sec wrap" id="name">
   <div class="name-head reveal">
     <span class="lbl">THE NAME</span>
-    <h2 class="jp">橙と青が、入れ替わる時間から。</h2>
-    <p class="lead" style="margin-top:20px">ふたつの「Hour」が重なるところに、この名前を置きました。</p>
+    <h2 class="jp">橙と青が、<wbr>入れ替わる<wbr>時間から。</h2>
+    <p class="lead" style="margin-top:20px">ふたつの<wbr>「Hour」が<wbr>重なる<wbr>ところに、この<wbr>名前を<wbr>置きました。</p>
   </div>
   <div class="name-grid">
     <div class="name-fig reveal" aria-label="Azur と Hour が交わる図">
@@ -448,10 +478,10 @@ em.s{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--oran
       </svg>
     </div>
     <div class="name-txt reveal">
-      <p>Azur は、日没直後、空と水がいちばん深い青に沈む <b>Blue Hour</b> から取りました。昼でも夜でもない、20分ほどしかない時間です。</p>
-      <p>Hour には、人が集まって一杯を囲む <b>Happy Hour</b> の気配も重ねています。このふたつが交わるところ、日常から少し切り替わる「集まる時間」が Azur Hour です。</p>
-      <p>さらに語源を遡ると、azur は <b>ラピスラズリ</b> という石に行き着きます。石のままでは、かつて金より高いとされたあの青にはなりません。掘り出して、砕いて、練って、精製して、はじめて色になる。</p>
-      <p>人が集まる場所も、同じだと思っています。<b>ただ集めるだけでは、何も起きない。</b></p>
+      <p>Azur は、日没直後、空と水が<wbr>いちばん深い青に沈む <b>Blue Hour</b> から取りました。<wbr>昼でも<wbr>夜でもない、<wbr>20分ほどしかない<wbr>時間です。</p>
+      <p>Hour には、人が<wbr>集まって<wbr>一杯を囲む <b>Happy Hour</b> の気配も<wbr>重ねています。この<wbr>ふたつが<wbr>交わる<wbr>ところ、<wbr>日常から少し<wbr>切り替わる<wbr>「集まる<wbr>時間」が Azur Hour です。</p>
+      <p>さらに<wbr>語源を<wbr>遡ると、<wbr>azur は <b>ラピスラズリ</b> という石に<wbr>行き着きます。石の<wbr>ままでは、<wbr>かつて<wbr>金より<wbr>高いとされたあの<wbr>青には<wbr>なりません。<wbr>掘り出して、<wbr>砕いて、<wbr>練って、<wbr>精製して、<wbr>はじめて色になる。</p>
+      <p>人が集まる<wbr>場所も、<wbr>同じだと<wbr>思っています。<b>ただ集めるだけでは、何も<wbr>起きない。</b></p>
     </div>
   </div>
 </section>
@@ -462,7 +492,7 @@ em.s{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--oran
     <div>
       <span class="lbl">WHAT WE CREATE</span>
       <h2 class="dsp">Different events.<br><em class="s">Same reason to gather.</em></h2>
-      <p class="lead" style="margin-top:20px">形は変わっても、つくりたいのは人が自然に交わる場。</p>
+      <p class="lead" style="margin-top:20px">形は変わっても、<wbr>つくりたいのは人が<wbr>自然に<wbr>交わる場。</p>
     </div>
     <div class="lbl" style="padding-bottom:10px">PEOPLE · PLACES · CONVERSATIONS</div>
   </div>
@@ -477,15 +507,15 @@ em.s{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--oran
   <div class="loop">
     <div class="loop-in reveal">
       <span class="lbl">STAY IN THE LOOP</span>
-      <h2>次の案内を、逃さない。</h2>
-      <p>開催が決まり次第、次回イベントと申込開始のお知らせをお届けします。</p>
+      <h2>次の案内を、<wbr>逃さない。</h2>
+      <p>開催が<wbr>決まり次第、<wbr>次回イベントと<wbr>申込開始の<wbr>お知らせを<wbr>お届けします。</p>
       <form id="notifyForm" class="field">
         <input type="email" name="email" placeholder="your@email.com" required aria-label="メールアドレス">
         <input type="hidden" name="_subject" value="【Azur Hour】次回案内の登録">
         <button class="pill" type="submit" id="notifyBtn">登録する</button>
       </form>
       <div style="margin-top:16px"><a href="https://azur0.peatix.com/" target="_blank" rel="noopener" class="pill on-dark">Follow on Peatix <span>↗</span></a></div>
-      <p class="fine">ご登録いただいた連絡先は、Azur Hour の開催案内、申込開始、開催に関する重要なお知らせ、および当社の関連事業（Root X など）のご案内に使用します。配信停止はいつでも可能です。<a href="legal.html#privacy">プライバシーポリシー</a></p>
+      <p class="fine">ご登録いただいた<wbr>連絡先は、<wbr>Azur Hour の開催案内、<wbr>申込開始、<wbr>開催に<wbr>関する<wbr>重要な<wbr>お知らせ、<wbr>および当社の関連事業<wbr>（Root X など）の<wbr>ご案内に<wbr>使用します。<wbr>配信停止は<wbr>いつでも<wbr>可能です。<a href="legal.html#privacy">プライバシーポリシー</a></p>
     </div>
   </div>
 </section>
@@ -495,7 +525,7 @@ em.s{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--oran
   <div class="reveal">
     <span class="lbl">GET IN TOUCH</span>
     <h2 class="dsp">Have an idea<br>worth <em class="s">gathering</em> for?</h2>
-    <p class="lead" style="margin-top:22px">人が集まる理由を、一緒につくりませんか。<br>イベント企画、会場提供、出演、法人交流会など、まずはお気軽にご相談ください。</p>
+    <p class="lead" style="margin-top:22px">人が集まる<wbr>理由を、<wbr>一緒に<wbr>つくりませんか。<br>イベント企画、<wbr>会場提供、出演、<wbr>法人交流会など、<wbr>まずは<wbr>お気軽に<wbr>ご相談ください。</p>
     <div class="mail">
       <div class="k">MAIL</div>
       <a href="mailto:info@azurworks.com">info@azurworks.com</a>
@@ -516,12 +546,12 @@ em.s{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--oran
     <div class="f-grid">
       <div class="f-brand">
         <a href="index.html" class="logo"><svg><use href="#y-logo"/></svg>Yoshida gumi</a>
-        <p>Azur Hour は株式会社吉田組が企画・運営するイベント事業です。<br>
+        <p>Azur Hour は株式会社吉田組が<wbr>企画・運営する<wbr>イベント事業です。<br>
         株式会社吉田組（法人番号 1170001005996）<br>
-        和歌山県海草郡紀美野町松瀬459<br>
+        和歌山県海草郡紀<wbr>美野町松瀬459<br>
         TEL <a href="tel:0734893178" style="display:inline;line-height:inherit">073-489-3178</a><br>
         <a href="mailto:info@azurworks.com" style="display:inline;line-height:inherit">info@azurworks.com</a><br>
-        2027年4月「Azur Works株式会社」へ商号変更予定</p>
+        2027年4月<wbr>「Azur Works株式会社」へ<wbr>商号変更予定</p>
         <a class="ig" href="https://www.instagram.com/noah.palmz/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0F1A38" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="#0F1A38" stroke="none"/></svg></a>
       </div>
       <div>
@@ -535,7 +565,7 @@ em.s{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--oran
       </div>
       <div>
         <div class="f-head">LEGAL</div>
-        <a href="legal.html">特定商取引法に基づく表記</a>
+        <a href="legal.html">特定商取引法に<wbr>基づく表記</a>
         <a href="legal.html#privacy">プライバシーポリシー</a>
         <a href="legal.html#cancel">キャンセルポリシー</a>
       </div>
