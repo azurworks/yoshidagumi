@@ -2663,6 +2663,30 @@ footer { background: var(--bg-2); }
   .ww-map .mc-tag { white-space: nowrap; }
 }
 
+
+/* ============================================================
+   Lando-style light sections (2026-10-30)
+   Cream sections with olive text; dark olive kept for hero, cards, marquee, CTA, footer.
+   Accent italics turn deep olive-lime on cream (lime text is unreadable there).
+   ============================================================ */
+.lx-light {
+  --bg: #F4F4ED; --bg-2: #EBEEE0; --bg-3: #DDE1D2;
+  --text: #282C20; --text-2: #3B3C38; --mute: #6A6D60;
+  --hair: rgba(40,44,32,0.14);
+  --gold: #5F6E00; --gold-soft: #5F6E00; --brand: #5F6E00; --brand-deep: #5F6E00; --brand-bright: #5F6E00;
+  background: #F4F4ED; color: #282C20;
+}
+.lx-light .why-wakayama, .lx-dark {
+  --bg: #282C20; --bg-2: #2F3327; --bg-3: #3B3C38;
+  --text: #F4F4ED; --text-2: #C8CBBD; --mute: #9EA290;
+  --hair: rgba(244,244,237,0.12);
+  --gold: #D2FF00; --gold-soft: #D2FF00; --brand: #D2FF00; --brand-deep: #B2C73A; --brand-bright: #D2FF00;
+  background: #282C20; color: #F4F4ED;
+}
+.lx-light .why-wakayama { border-color: transparent; }
+.lx-light .section-label, .lx-light .eyebrow { color: #282C20; }
+.lx-light .ng-img-eyebrow { color: #D2FF00; }
+.lx-light .ng-image { border-color: transparent; }
 </style>
 </head>
 <body>
@@ -2760,7 +2784,7 @@ footer { background: var(--bg-2); }
 </section>
 
 <!-- ============== ABOUT ============== -->
-<section id="about">
+<section id="about" class="lx-light">
   <div class="eyebrow reveal">— Story</div>
   <h2 class="section-h reveal">Shaping the ground<br>others <em>build on.</em></h2>
 
@@ -3030,7 +3054,7 @@ footer { background: var(--bg-2); }
 </section>
 
 <!-- ============== STATS ============== -->
-<div class="stats">
+<div class="stats lx-light">
   <div class="stat reveal">
     <div class="n">70<em>+</em></div>
     <div class="l">Years of building<br>across Wakayama<br><span class="accent">Since 1952</span></div>
@@ -3051,7 +3075,7 @@ footer { background: var(--bg-2); }
 
 
 <!-- ============== FEATURED STORIES / NEWS GRID ============== -->
-<section id="news-grid" style="padding-top: 80px;">
+<section id="news-grid" class="lx-light" style="padding-top: 80px;">
   <div class="eyebrow reveal">— Featured Stories</div>
   <h2 class="section-h reveal">Learn about<br><em>Yoshida gumi.</em></h2>
 
@@ -3162,7 +3186,7 @@ footer { background: var(--bg-2); }
 </section>
 
 <!-- ============== WORKS ============== -->
-<section id="works">
+<section id="works" class="lx-light">
   <div class="eyebrow reveal">Selected works</div>
   <h2 class="section-h reveal">A few things<br>we've <em>built</em> recently.</h2>
 
@@ -3251,7 +3275,7 @@ footer { background: var(--bg-2); }
 </section>
 
 <!-- ============== LICENSES ============== -->
-<section id="licenses">
+<section id="licenses" class="lx-light">
   <div class="eyebrow reveal">Licensed disciplines</div>
   <div class="licenses-intro">
     <h2 class="section-h reveal" style="margin-bottom: 0;">Licensed across<br>all <em>21 disciplines.</em></h2>
