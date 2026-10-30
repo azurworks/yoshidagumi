@@ -14,13 +14,13 @@
 <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Hanken+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Hanken+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --white:#FFFFFF; --bone:#FAF8F4;
-  --ink:#0F1A38; --ink2:#3C4766; --mute:#828AA0;
-  --hair:rgba(15,26,56,0.10); --hair2:rgba(15,26,56,0.18);
-  --blue-deep:#0A1F55; --blue:#23509E; --blue-mist:#E7EDF9;
+  --white:#FFFFFF; --bone:#F4F4ED;
+  --ink:#282C20; --ink2:#3B3C38; --mute:#6A6D60;
+  --hair:rgba(40,44,32,0.10); --hair2:rgba(40,44,32,0.18);
+  --blue-deep:#282C20; --blue:#23509E; --blue-mist:#E7EDF9;
   --orange:#E8762D; --orange-lt:#F4A363; --orange-mist:#FDF0E4;
   --display:'Bricolage Grotesque','Noto Sans JP',sans-serif;
   --serif:'Instrument Serif',Georgia,serif;
@@ -55,7 +55,7 @@ em.s{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--oran
 
 /* NAV */
 .nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:20px 40px;transition:background .35s,border-color .35s,padding .35s;border-bottom:1px solid transparent}
-.nav.scrolled{background:rgba(250,248,244,0.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom-color:var(--hair);padding:14px 40px}
+.nav.scrolled{background:rgba(244,244,237,0.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom-color:var(--hair);padding:14px 40px}
 .logo{display:flex;align-items:center;gap:11px;color:#fff;font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:-0.02em;transition:color .35s}
 .logo svg{width:28px;height:28px;color:var(--orange);transition:transform .5s}
 .logo:hover svg{transform:rotate(180deg)}
@@ -66,7 +66,7 @@ em.s{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--oran
 .nav-links a.on{color:#fff;background:var(--orange)}
 .nav.scrolled .nav-links{background:var(--white);border-color:var(--hair)}
 .nav.scrolled .nav-links a{color:var(--ink2)}
-.nav.scrolled .nav-links a:hover{color:var(--ink);background:rgba(15,26,56,0.05)}
+.nav.scrolled .nav-links a:hover{color:var(--ink);background:rgba(40,44,32,0.05)}
 .nav.scrolled .nav-links a.on{color:#fff;background:var(--orange)}
 .nav .pill{padding:11px 20px;font-size:13px}
 .burger{display:none;flex-direction:column;gap:5px;width:26px;background:none;border:none;cursor:pointer;padding:4px 0}
@@ -94,7 +94,7 @@ em.s{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--oran
 .hero-link{display:inline-flex;align-items:center;gap:10px;margin-top:24px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.4);color:#fff;font-size:14px;font-weight:600;transition:gap .25s,border-color .25s}
 .hero-link:hover{gap:16px;color:#fff;border-bottom-color:var(--orange)}
 .hero-foot{position:relative;z-index:2}
-.next-chip{display:inline-flex;align-items:center;gap:12px;background:rgba(10,31,85,0.42);border:1px solid rgba(255,255,255,0.28);backdrop-filter:blur(8px);border-radius:999px;padding:8px 20px 8px 10px;font-family:var(--mono);font-size:11.5px;letter-spacing:0.1em;color:#fff}
+.next-chip{display:inline-flex;align-items:center;gap:12px;background:rgba(40,44,32,0.42);border:1px solid rgba(255,255,255,0.28);backdrop-filter:blur(8px);border-radius:999px;padding:8px 20px 8px 10px;font-family:var(--mono);font-size:11.5px;letter-spacing:0.1em;color:#fff}
 .next-chip .dot{width:9px;height:9px;border-radius:50%;background:var(--orange);box-shadow:0 0 12px var(--orange);animation:blink 2.2s ease-in-out infinite;margin-left:6px}
 @keyframes blink{50%{opacity:.35}}
 .wordmark{font-family:var(--display);font-weight:800;font-size:clamp(56px,14.5vw,230px);line-height:0.82;letter-spacing:-0.05em;margin:18px 0 0;color:#fff}
@@ -135,7 +135,7 @@ em.s{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--oran
 .step p{font-family:var(--jp);font-size:13.5px;line-height:2;color:var(--ink2);margin:auto 0 0;padding-top:22px}
 .step-img{position:relative;isolation:isolate;border-radius:22px;overflow:hidden;min-height:230px;display:flex;align-items:flex-end;padding:28px}
 .step-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 60%;z-index:-2}
-.step-img::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(10,31,85,0.15),rgba(10,31,85,0.72))}
+.step-img::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(40,44,32,0.15),rgba(40,44,32,0.72))}
 
 /* UPCOMING */
 .card{margin-top:48px;display:grid;grid-template-columns:190px 1fr 320px;gap:44px;background:var(--white);border:1px solid var(--hair);border-radius:24px;padding:40px;transition:border-color .3s,transform .3s}
@@ -220,7 +220,7 @@ em.s{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--oran
 .ig{width:34px;height:34px;border:1px solid var(--hair2);border-radius:9px;margin-top:18px;display:inline-flex;align-items:center;justify-content:center;transition:border-color .25s}
 .ig:hover{border-color:var(--orange)}
 .f-bot{margin-top:42px;padding-top:18px;border-top:1px solid var(--hair);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--mute)}
-.toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,80px);z-index:80;background:var(--white);border:1px solid var(--orange);border-radius:999px;padding:14px 28px;color:var(--ink);font-family:var(--jp);font-size:14px;box-shadow:0 10px 40px rgba(15,26,56,0.16);opacity:0;transition:transform .4s,opacity .4s;pointer-events:none}
+.toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,80px);z-index:80;background:var(--white);border:1px solid var(--orange);border-radius:999px;padding:14px 28px;color:var(--ink);font-family:var(--jp);font-size:14px;box-shadow:0 10px 40px rgba(40,44,32,0.16);opacity:0;transition:transform .4s,opacity .4s;pointer-events:none}
 .toast.show{transform:translate(-50%,0);opacity:1}
 
 @media(max-width:900px){
@@ -286,6 +286,12 @@ p, li, dd, td { text-wrap: pretty; }
 .nav .nav-links a:hover,.nav.scrolled .nav-links a:hover,.nav .pill:hover{color:#D2FF00}
 .nav .burger div,.nav.scrolled .burger div{background:#D2FF00}
 .nav,.nav.scrolled{background:rgba(40,44,32,0.92)}
+
+/* Same feel as the top page (2026-10-30): Lando olive + off-white base; blue and orange stay as the accents */
+:root{ --white:#FBFBF6; --bone:#F4F4ED; --ink:#282C20; --ink2:#3B3C38; --mute:#6A6D60;
+  --hair:rgba(40,44,32,0.12); --hair2:rgba(40,44,32,0.2); --blue-deep:#282C20; }
+.mani,.loop,.m-overlay{background:#282C20}
+h2.jp,.concept h2,.mani h2,.loop h2,.step h3{font-family:"Shippori Mincho","Yu Mincho",serif;font-weight:600}
 </style>
 </head>
 <body>

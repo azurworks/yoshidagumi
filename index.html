@@ -2687,6 +2687,15 @@ footer { background: var(--bg-2); }
 .lx-light .section-label, .lx-light .eyebrow { color: #282C20; }
 .lx-light .ng-img-eyebrow { color: #D2FF00; }
 .lx-light .ng-image { border-color: transparent; }
+/* Story lead: one span per line as the owner wrote it; phones wrap only at the <wbr> phrase points (2026-10-30) */
+.story-lead .sl { display: block; }
+.story-lead .sp-br { display: none; }
+@media (max-width: 600px) { .story-lead .sp-br { display: inline; } .story-lead p { font-size: min(17px, 5.1vw); } }
+/* 21 license cards in the same lime as the mission / generations panels (2026-10-30) */
+#licenses .lic { background: #D2FF00; border-color: #D2FF00; color: #282C20; }
+#licenses .lic:hover { background: #DCFF3D; border-color: #282C20; }
+#licenses .lic-num { color: rgba(40,44,32,0.6); }
+#licenses .lic-name { color: #282C20; }
 </style>
 </head>
 <body>
@@ -2789,8 +2798,8 @@ footer { background: var(--bg-2); }
   <h2 class="section-h reveal">Shaping the ground<br>others <em>build on.</em></h2>
 
   <div class="story-lead reveal">
-    <p>目の前の<wbr>現場を<wbr>一つずつ<wbr>丁寧に。<wbr>創業から<wbr>七十余年、<wbr>私たちは<wbr>和歌山・紀<wbr>美野町という<wbr>小さな町で、<wbr>住宅・道路・橋・解体と、<wbr>暮らしの<wbr>基盤になる<wbr>仕事を<wbr>ひたすら<wbr>積み重ねてきました。</p>
-    <p>派手な<wbr>仕事ではないかもしれません。でも、<wbr>私たちが手がけた橋を渡り、<wbr>私たちが<wbr>整えた道を歩き、<wbr>私たちが<wbr>建てた家で<wbr>誰かが眠る──その<wbr>積み重ねこそが、<wbr>吉田組の<wbr>誇りです。</p>
+    <p><span class="sl">目の前の現場を一つずつ丁寧に。</span><span class="sl">創業から七十余年、私たちは<br class="sp-br">和歌山・紀美野町という町を中心に、</span><span class="sl">住宅・道路・橋・解体と、<br class="sp-br">暮らしの基盤になる仕事をひたすら</span><span class="sl">積み重ねてきました。</span></p>
+    <p><span class="sl">派手な仕事ではないかもしれません。</span><span class="sl">でも、私たちが手がけた橋を渡り、<br class="sp-br">私たちが整えた道を歩き、</span><span class="sl">私たちが建てた家で誰かが眠る</span><span class="sl">その積み重ねこそが、<br class="sp-br">吉田組の誇りです。</span></p>
   </div>
 
   <!-- Mission CTA -->
