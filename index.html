@@ -2650,6 +2650,19 @@ footer { background: var(--bg-2); }
   .works-grid > .work:nth-child(5) { grid-column: 1 / -1; }
   .works-grid > .work:nth-child(5) .work-img { aspect-ratio: 16 / 10; }
 }
+
+/* Rooted-in card: keep the map card inside the frame on iPhone (2026-10-30).
+   Safari sizes a grid "1fr" track to the SVG's min-content, so pin tracks to minmax(0, …). */
+.ww-layout { grid-template-columns: minmax(0,1.1fr) minmax(0,1fr); }
+.ww-text, .ww-map, .ww-map .hero-map-card { min-width: 0; }
+.ww-map .map-svg { display: block; width: 100%; height: auto; max-width: 100%; }
+@media (max-width: 900px) {
+  .ww-layout { grid-template-columns: minmax(0,1fr); }
+  .why-wakayama { padding: 36px 20px; }
+  .ww-map .map-card-head, .ww-map .map-card-foot { flex-wrap: wrap; gap: 4px 10px; padding: 9px 12px; font-size: 9px; letter-spacing: 0.04em; }
+  .ww-map .mc-tag { white-space: nowrap; }
+}
+
 </style>
 </head>
 <body>
@@ -2821,7 +2834,7 @@ footer { background: var(--bg-2); }
     <div class="ww-layout">
     <div class="ww-text">
     <div class="ww-eyebrow">Rooted in</div>
-    <h3 class="ww-title">紀美野町という、<em>小さな町。</em></h3>
+    <h3 class="ww-title">紀美野町 <em>Kimino</em></h3>
     <div class="ww-grid">
       <p>和歌山県のほぼ中央、紀の川と<wbr>海南を<wbr>つなぐ<wbr>山あいに<wbr>位置する紀<wbr>美野町。<br>人口は<wbr>約8,000人、<wbr>棚田と<wbr>杉林が<wbr>広がる<wbr>典型的な<wbr>里山の<wbr>町です。</p>
       <p>大企業の<wbr>建設会社が手を<wbr>出さないような<wbr>小規模な工事、<wbr>災害復旧、<wbr>住宅の建て替え<wbr>——そういう<wbr>「地域に<wbr>とって<wbr>本当に<wbr>必要な<wbr>仕事」が、<wbr>私たちの<wbr>主戦場です。<wbr>だから、<wbr>ここを<wbr>離れず、<wbr>ここで<wbr>百年以上残る<wbr>仕事を<wbr>手掛けていきます。</p>
@@ -3065,15 +3078,15 @@ footer { background: var(--bg-2); }
         <div class="ng-badge">承継</div>
         <div class="ng-img-overlay">
           <div class="ng-img-text">
-            <div class="ng-img-eyebrow">New Director</div>
-            <div class="ng-img-title">四代目就任</div>
+            <div class="ng-img-eyebrow">Next Generation</div>
+            <div class="ng-img-title">四代目への歩み</div>
           </div>
         </div>
       </div>
       <div class="ng-meta">
         <span class="ng-date">2025.07</span>
-        <h4>四代目取締役 吉田&nbsp;乃晟&nbsp;就任</h4>
-        <p>初代・一郎、<wbr>二代目・順亮、<wbr>三代目・<wbr>美佳から<wbr>受け継いだ吉田組。次の<wbr>七十年を<wbr>見据えた<wbr>事業展開を始動。</p>
+        <h4>吉田&nbsp;乃晟&nbsp;取締役就任</h4>
+        <p>2025年7月、<wbr>乃晟が<wbr>取締役に就任。<wbr>現代表取締役・<wbr>吉田美佳のもと、<wbr>四代目への<wbr>事業承継を<wbr>見据え、<wbr>新たな<wbr>時代に<wbr>向けた<wbr>経営基盤<wbr>づくりを始動。</p>
       </div>
     </a>
 
