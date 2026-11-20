@@ -10,9 +10,11 @@
 <meta property="og:type" content="website">
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
 <link rel="apple-touch-icon" href="/favicon.png">
+<link rel="preload" as="image" href="hero-forest-road.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@500;600&family=Krona+One&family=Michroma&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@500;600&family=Krona+One&family=Michroma&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@500;600&family=Krona+One&family=Michroma&display=swap"></noscript>
 <style>
   :root {
     /* Brand */
@@ -2691,11 +2693,23 @@ footer { background: var(--bg-2); }
 .story-lead .sl { display: block; }
 .story-lead .sp-br { display: none; }
 @media (max-width: 600px) { .story-lead .sp-br { display: inline; } .story-lead p { font-size: min(17px, 5.1vw); } }
-/* 21 license cards in the same lime as the mission / generations panels (2026-10-30) */
-#licenses .lic { background: #D2FF00; border-color: #D2FF00; color: #282C20; }
-#licenses .lic:hover { background: #DCFF3D; border-color: #282C20; }
-#licenses .lic-num { color: rgba(40,44,32,0.6); }
-#licenses .lic-name { color: #282C20; }
+/* 21 license cards in dark olive on the cream section (2026-10-31 owner) */
+#licenses .lic { background: #282C20; border-color: #282C20; color: #F4F4ED; }
+#licenses .lic:hover { background: #2F3327; border-color: #D2FF00; }
+#licenses .lic-num { color: #D2FF00; }
+#licenses .lic-name { color: #F4F4ED; }
+</style>
+<style>
+/* 2026-11-20 表示速度・使いやすさの調整 */
+/* 丸ボタン：見た目の点は同じ大きさのまま、押せる範囲を 25px に */
+.hv-dots { gap: 18px; }
+.hv-dots button { position: relative; }
+.hv-dots button::before { content: ""; position: absolute; inset: -9px; border-radius: 50%; }
+/* フッターの薄い文字を、読みやすさの基準を満たす濃さに */
+.foot-tag { opacity: 0.8; }
+.foot-tag-jp { opacity: 0.78; }
+.foot-bottom { color: var(--paper); opacity: 0.58; }
+.foot-coord { opacity: 1; }
 </style>
 </head>
 <body>
@@ -2761,11 +2775,11 @@ footer { background: var(--bg-2); }
 <!-- ============== HERO (LIGHT) ============== -->
 <section class="hero hero-v5" id="home">
   <div class="hv-slides">
-    <img class="hv-photo is-active" src="hero-forest-road.jpg" alt="紀美野の杉林を縫う山あいの道路">
-    <img class="hv-photo" src="hero-site-crew.jpg" alt="山あいの道路工事現場を見渡す二人の作業員" style="object-position: 40% 60%;">
-    <img class="hv-photo" src="hero-earthworks.jpg" alt="造成現場で土砂を積み込む油圧ショベルとダンプ" style="object-position: 55% 60%;">
+    <img class="hv-photo is-active" src="hero-forest-road.webp" fetchpriority="high" alt="紀美野の杉林を縫う山あいの道路">
+    <img class="hv-photo" src="hero-site-crew.webp" fetchpriority="low" decoding="async" alt="山あいの道路工事現場を見渡す二人の作業員" style="object-position: 40% 60%;">
+    <img class="hv-photo" src="hero-earthworks.webp" fetchpriority="low" decoding="async" alt="造成現場で土砂を積み込む油圧ショベルとダンプ" style="object-position: 55% 60%;">
   </div>
-  <div class="hv-dots" role="tablist" aria-label="写真の切り替え">
+  <div class="hv-dots" role="group" aria-label="写真の切り替え">
     <button class="is-active" aria-label="1枚目"></button>
     <button aria-label="2枚目"></button>
     <button aria-label="3枚目"></button>
