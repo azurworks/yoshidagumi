@@ -3,619 +3,417 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Azur Hour｜次代の体験と挑戦を創るイベントシリーズ</title>
-<meta name="description" content="次代の体験と挑戦を創る。Azur Hour は株式会社吉田組が企画・運営するイベントシリーズです。AIがどれだけ進化しても、人の心を動かすのは人にしかできない。第1回は 2026年10月17日 OSAKA NIGHT CRUISE（大阪・八軒家浜）。">
+<title>Azur Hour｜Where people meet, something begins.</title>
+<meta name="description" content="Azur Hour は株式会社吉田組が企画・運営するイベントシリーズです。音楽、食、会話、場所を組み合わせ、人が自然に出会える時間をつくっています。次回 SWEET SESSION — WELLNESS NIGHT は 2026年12月18日（金）和歌山で開催。">
 <meta property="og:title" content="Azur Hour｜Where people meet, something begins.">
-<meta property="og:description" content="次代の体験と挑戦を創る。AIには作れない時間をつくる、人が集まるイベントシリーズ。第1回 2026.10.17 OSAKA NIGHT CRUISE。">
+<meta property="og:description" content="音楽、食、会話、場所。人が自然に出会える時間をつくるイベントシリーズ。次回 12.18 Fri SWEET SESSION。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kimino-yoshidagumi.com/azur-hour.html">
 <meta property="og:image" content="https://kimino-yoshidagumi.com/az-hero-poster.jpg">
+<meta name="theme-color" content="#FFFFFF">
 <link rel="canonical" href="https://kimino-yoshidagumi.com/azur-hour.html">
 <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Hanken+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Organization","@id":"https://kimino-yoshidagumi.com/#org","name":"株式会社吉田組","url":"https://kimino-yoshidagumi.com/","email":"info@azurworks.com","address":{"@type":"PostalAddress","addressRegion":"和歌山県","addressLocality":"海草郡紀美野町","streetAddress":"松瀬459","addressCountry":"JP"}},
+ {"@type":"Event","name":"Azur Hour 002 SWEET SESSION — WELLNESS NIGHT","startDate":"2026-12-18T19:00:00+09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"和歌山（会場は申込後にご案内）","address":{"@type":"PostalAddress","addressRegion":"和歌山県","addressCountry":"JP"}},"image":"https://kimino-yoshidagumi.com/az-002.jpg","description":"DJの音を聴きながら、スイーツとコーヒーを囲む夜。女性限定・8席。","offers":{"@type":"Offer","price":"5000","priceCurrency":"JPY","url":"https://ig.me/m/noah.palmz","availability":"https://schema.org/LimitedAvailability"},"organizer":{"@id":"https://kimino-yoshidagumi.com/#org"}},
+ {"@type":"Event","name":"Azur Hour 001 OSAKA NIGHT CRUISE","startDate":"2026-10-17T18:00:00+09:00","endDate":"2026-10-17T20:00:00+09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"八軒家浜","address":{"@type":"PostalAddress","addressLocality":"大阪市","addressCountry":"JP"}},"organizer":{"@id":"https://kimino-yoshidagumi.com/#org"}}
+]}
+</script>
 <style>
 :root{
-  --white:#FFFFFF; --bone:#F4F4ED;
-  --ink:#282C20; --ink2:#3B3C38; --mute:#6A6D60;
-  --hair:rgba(40,44,32,0.10); --hair2:rgba(40,44,32,0.18);
-  --blue-deep:#282C20; --blue:#23509E; --blue-mist:#E7EDF9;
-  --orange:#E8762D; --orange-lt:#F4A363; --orange-mist:#FDF0E4;
-  --display:'Bricolage Grotesque','Noto Sans JP',sans-serif;
-  --serif:'Instrument Serif',Georgia,serif;
-  --mono:'Courier New',monospace;
-  --jp:'Noto Sans JP',sans-serif;
-  --body:'Hanken Grotesk','Noto Sans JP',sans-serif;
+  --bg:#FFFFFF; --soft:#F2F7FB; --soft-2:#E6F0F7; --line:#E1EAF1;
+  --ink:#0E1114; --ink2:#4A5259; --mute:#858D94;
+  --sky:#BFE2F6; --orange:#FFA552;
+  --sans:'Inter Tight','Noto Sans JP',sans-serif; --jp:'Noto Sans JP',sans-serif;
+  --pad:clamp(16px,2.2vw,28px); --gap:clamp(96px,11vw,168px);
+  --ease:cubic-bezier(.2,.7,.2,1);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bone);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-a{color:var(--blue);text-decoration:none}
-a:hover{color:var(--orange)}
-img{max-width:100%;display:block}
-.wrap{max-width:1280px;margin:0 auto}
-.sec{padding:130px 64px}
-.lbl{font-family:var(--mono);font-size:11px;letter-spacing:0.14em;color:var(--mute)}
-.lbl::before{content:'[ '}.lbl::after{content:' ]'}
-h2.dsp{font-family:var(--display);font-weight:700;font-size:clamp(34px,4.2vw,60px);line-height:1.02;letter-spacing:-0.03em;margin:16px 0 0}
-h2.jp{font-family:var(--jp);font-weight:500;font-size:clamp(25px,2.9vw,40px);line-height:1.4;letter-spacing:0.02em;margin:16px 0 0}
-em.s{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--orange);letter-spacing:-0.01em}
-.lead{font-family:var(--jp);font-size:15.5px;line-height:2.05;color:var(--ink2);margin:0;text-wrap:pretty}
-.pill{display:inline-flex;align-items:center;gap:10px;background:var(--orange);color:#fff;border:1px solid var(--orange);border-radius:999px;padding:14px 26px;font-size:14px;font-weight:600;font-family:var(--body);cursor:pointer;transition:background .25s,transform .25s,border-color .25s;line-height:1}
-.pill:hover{background:#D0631F;border-color:#D0631F;color:#fff;transform:translateY(-2px)}
-.pill.ghost{background:transparent;color:var(--ink);border-color:var(--hair2)}
-.pill.ghost:hover{background:transparent;border-color:var(--orange);color:var(--orange)}
-.pill.on-dark{background:transparent;color:#fff;border-color:rgba(255,255,255,0.35)}
-.pill.on-dark:hover{background:var(--orange);border-color:var(--orange)}
-.pill.dim{background:var(--blue-mist);color:var(--blue-deep);border-color:transparent;cursor:default}
-.pill.dim:hover{transform:none;background:var(--blue-mist);color:var(--blue-deep)}
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .8s,transform .8s}
-.reveal.in{opacity:1;transform:none}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-feature-settings:"ss01","cv11";-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img,video{display:block;max-width:100%}
+::selection{background:var(--sky)}
+.jp{font-family:var(--jp);word-break:keep-all;overflow-wrap:anywhere}
+.lbl{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:500;color:var(--mute);letter-spacing:-0.005em}
+.lbl b{font-weight:500;color:var(--ink)}
+.lbl i{width:5px;height:5px;border-radius:50%;background:var(--orange)}
+.h2{font-weight:500;font-size:clamp(32px,4vw,60px);line-height:1;letter-spacing:-0.045em;margin:14px 0 0}
+.h2 span{color:var(--mute)}
+.rv{opacity:0;transform:translateY(18px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.rv{opacity:1;transform:none}}
 
-/* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:20px 40px;transition:background .35s,border-color .35s,padding .35s;border-bottom:1px solid transparent}
-.nav.scrolled{background:rgba(244,244,237,0.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom-color:var(--hair);padding:14px 40px}
-.logo{display:flex;align-items:center;gap:11px;color:#fff;font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:-0.02em;transition:color .35s}
-.logo svg{width:28px;height:28px;color:var(--orange);transition:transform .5s}
-.logo:hover svg{transform:rotate(180deg)}
-.nav.scrolled .logo{color:var(--ink)}
-.nav-links{display:flex;gap:2px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);border-radius:999px;padding:5px;transition:background .35s,border-color .35s}
-.nav-links a{padding:8px 16px;font-size:13px;font-weight:500;color:rgba(255,255,255,0.85);border-radius:999px;transition:all .25s}
-.nav-links a:hover{color:#fff;background:rgba(255,255,255,0.14)}
-.nav-links a.on{color:#fff;background:var(--orange)}
-.nav.scrolled .nav-links{background:var(--white);border-color:var(--hair)}
-.nav.scrolled .nav-links a{color:var(--ink2)}
-.nav.scrolled .nav-links a:hover{color:var(--ink);background:rgba(40,44,32,0.05)}
-.nav.scrolled .nav-links a.on{color:#fff;background:var(--orange)}
-.nav .pill{padding:11px 20px;font-size:13px}
-.burger{display:none;flex-direction:column;gap:5px;width:26px;background:none;border:none;cursor:pointer;padding:4px 0}
-.burger div{height:1.5px;background:#fff;transition:background .35s}
-.nav.scrolled .burger div{background:var(--ink)}
-.m-overlay{position:fixed;inset:0;z-index:60;background:var(--blue-deep);display:flex;flex-direction:column;justify-content:center;padding:40px 28px;opacity:0;pointer-events:none;transition:opacity .3s}
-.m-overlay.open{opacity:1;pointer-events:auto}
-.m-overlay a{display:flex;align-items:baseline;gap:16px;font-family:var(--display);font-weight:700;font-size:30px;color:#fff;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.14);letter-spacing:-0.02em}
-.m-overlay a .n{font-family:var(--mono);font-size:12px;color:var(--orange)}
-.m-close{position:absolute;top:18px;right:22px;background:none;border:1px solid rgba(255,255,255,0.3);border-radius:50%;width:40px;height:40px;color:#fff;font-size:16px;cursor:pointer}
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:6px;padding:11px 15px;font-size:13px;font-weight:500;letter-spacing:-0.01em;white-space:nowrap;transition:background .25s,color .25s,transform .25s}
+.btn .ar{display:inline-block;transition:transform .3s var(--ease)}
+.btn:hover .ar{transform:translate(2px,-2px)}
+.btn.glass{background:rgba(255,255,255,0.16);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#fff}
+.btn.glass:hover{background:rgba(255,255,255,0.28)}
+.btn.dark{background:var(--ink);color:#fff}
+.btn.dark:hover{background:#2A3036}
+.btn.or{background:var(--orange);color:var(--ink);font-weight:600}
+.btn.or:hover{background:#FFB46B}
+.btn.line{border:1px solid var(--line);color:var(--ink)}
+.btn.line:hover{border-color:var(--ink)}
 
 /* HERO */
-.hero{position:relative;min-height:760px;height:100svh;display:flex;flex-direction:column;justify-content:space-between;padding:150px 48px 48px;overflow:hidden;color:#fff}
-.hero-bg{position:absolute;inset:0;background:linear-gradient(180deg,#06133A 0%,#0B2158 24%,#2B4C8A 46%,#8E5340 60%,#E8762D 70%,#C0592A 74%,#2A3E6E 86%,#08183F 100%)}
-.hero-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%;opacity:0;transition:opacity 1.4s ease}
-.hero-vid.ready{opacity:1}
-.hero-grade{pointer-events:none;position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,19,58,0.82) 0%,rgba(11,33,88,0.46) 26%,rgba(43,76,138,0.26) 46%,rgba(232,118,45,0.28) 64%,rgba(192,89,42,0.40) 74%,rgba(8,24,63,0.90) 100%)}
-@media (prefers-reduced-motion: reduce){.hero-vid{display:none}}
-.hero-sun{position:absolute;left:50%;top:70%;width:min(46vw,520px);aspect-ratio:1;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(255,196,120,0.85) 0%,rgba(232,118,45,0.45) 34%,rgba(232,118,45,0) 68%);pointer-events:none}
-.hero-in{position:relative;z-index:2;max-width:620px}
-.hero-eye{font-family:var(--mono);font-size:11px;letter-spacing:0.14em;color:rgba(255,255,255,0.75)}
-.hero-msg{font-family:var(--display);font-weight:700;font-size:clamp(22px,2.5vw,34px);line-height:1.22;letter-spacing:-0.02em;margin:18px 0 0}
-.hero-msg em{font-family:var(--serif);font-style:italic;font-weight:400;color:#FFC98A}
-.hero-sub{font-family:var(--jp);font-size:14px;line-height:2;color:rgba(255,255,255,0.82);margin:18px 0 0;max-width:460px}
-.hero-link{display:inline-flex;align-items:center;gap:10px;margin-top:24px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.4);color:#fff;font-size:14px;font-weight:600;transition:gap .25s,border-color .25s}
-.hero-link:hover{gap:16px;color:#fff;border-bottom-color:var(--orange)}
-.hero-foot{position:relative;z-index:2}
-.next-chip{display:inline-flex;align-items:center;gap:12px;background:rgba(40,44,32,0.42);border:1px solid rgba(255,255,255,0.28);backdrop-filter:blur(8px);border-radius:999px;padding:8px 20px 8px 10px;font-family:var(--mono);font-size:11.5px;letter-spacing:0.1em;color:#fff}
-.next-chip .dot{width:9px;height:9px;border-radius:50%;background:var(--orange);box-shadow:0 0 12px var(--orange);animation:blink 2.2s ease-in-out infinite;margin-left:6px}
-@keyframes blink{50%{opacity:.35}}
-.wordmark{font-family:var(--display);font-weight:800;font-size:clamp(56px,14.5vw,230px);line-height:0.82;letter-spacing:-0.05em;margin:18px 0 0;color:#fff}
+.hero{position:relative;height:calc(100svh - 20px);min-height:620px;max-height:980px;margin:10px;border-radius:10px;overflow:hidden;color:#fff;isolation:isolate;background:#14171B}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transform:scale(1.02)}
+.hero::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,0.38) 0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0) 52%,rgba(0,0,0,0.55) 100%)}
+.nav{position:absolute;left:0;right:0;top:0;display:flex;align-items:center;gap:26px;padding:20px 22px;font-size:13px;font-weight:500;letter-spacing:-0.01em}
+.brand{font-weight:600;letter-spacing:-0.02em;font-size:14px}
+.nav a.l{opacity:.86;transition:opacity .2s}
+.nav a.l:hover{opacity:1}
+.nav .meta{margin-left:auto;display:flex;gap:22px;font-variant-numeric:tabular-nums;opacity:.86}
+.nav .meta span{white-space:nowrap}
+.stack{position:absolute;right:14px;top:62px;display:grid;gap:8px;width:300px}
+.pc{display:grid;grid-template-columns:36px minmax(0,1fr) auto;gap:12px;align-items:center;padding:9px 10px 9px 9px;border-radius:8px;background:rgba(244,244,240,0.78);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);color:var(--ink);transition:background .25s,transform .35s var(--ease)}
+.pc:hover{background:rgba(255,255,255,0.94);transform:translateY(-2px)}
+.pc img{width:36px;height:36px;border-radius:6px;object-fit:cover}
+.pc b{display:block;font-size:12.5px;font-weight:600;letter-spacing:-0.015em}
+.pc small{display:block;font-size:11.5px;color:var(--ink2);margin-top:1px;font-variant-numeric:tabular-nums}
+.pc i{font-style:normal;font-size:9.5px;font-weight:600;letter-spacing:0.06em;background:rgba(14,17,20,0.07);border-radius:4px;padding:4px 7px}
+.hero-copy{position:absolute;left:22px;right:22px;bottom:26px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+.hero-copy h1{font-weight:500;font-size:clamp(36px,4.6vw,68px);line-height:0.98;letter-spacing:-0.05em;margin:0}
+.hero-copy p{font-family:var(--jp);font-size:13px;line-height:1.9;margin:14px 0 18px;opacity:.86;word-break:keep-all;overflow-wrap:anywhere}
+.cue{font-size:12px;font-weight:500;opacity:.8;white-space:nowrap;display:flex;align-items:center;gap:10px}
+.cue i{width:1px;height:28px;background:rgba(255,255,255,0.6);position:relative;overflow:hidden}
+.cue i::after{content:'';position:absolute;left:0;top:-50%;width:1px;height:50%;background:#fff;animation:cue 2.2s var(--ease) infinite}
+@keyframes cue{to{top:100%}}
 
-/* CONCEPT */
-.concept{text-align:center;padding:120px 64px 108px}
-.concept .lbl{color:var(--orange)}
-.concept h2{font-family:var(--jp);font-weight:700;font-size:clamp(30px,5vw,72px);line-height:1.32;letter-spacing:0.045em;margin:24px 0 0;color:var(--ink)}
-.concept .en{font-family:var(--display);font-weight:700;font-size:clamp(13px,1.3vw,18px);letter-spacing:-0.01em;color:var(--mute);margin-top:22px}
+/* FLOATING NAV (after hero) */
+.fnav{position:fixed;left:50%;top:14px;z-index:50;transform:translate(-50%,-140%);transition:transform .5s var(--ease);display:flex;align-items:center;gap:4px;padding:5px;border-radius:10px;background:rgba(255,255,255,0.86);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);box-shadow:0 1px 0 rgba(14,17,20,0.06),0 10px 30px rgba(14,17,20,0.08);font-size:13px;font-weight:500;letter-spacing:-0.01em}
+.fnav.on{transform:translate(-50%,0)}
+.fnav a{padding:8px 12px;border-radius:7px;white-space:nowrap;transition:background .2s}
+.fnav a:hover{background:var(--soft)}
+.fnav .brand{padding-right:16px}
+.fnav .btn{padding:8px 12px;font-size:12.5px}
+.fnav .btn:hover{background:#FFB46B}
 
-/* THE NAME */
-.name-head{text-align:center;max-width:840px;margin:0 auto}
-.name-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:60px;align-items:center;margin-top:60px}
-.name-fig{background:var(--white);border:1px solid var(--hair);border-radius:24px;padding:34px 26px}
-.name-fig svg{width:100%;height:auto;display:block}
-.name-txt p{font-family:var(--jp);font-size:14.5px;line-height:2.1;color:var(--ink2);margin:0}
-.name-txt p + p{margin-top:20px}
-.name-txt b{color:var(--ink);font-weight:500}
+/* ABOUT */
+.about{padding:var(--gap) var(--pad) 0;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(32px,6vw,110px);align-items:end}
+.about .h2{max-width:13.5em}
+.about p{font-family:var(--jp);font-size:15px;line-height:2.1;color:var(--ink2);margin:0;word-break:keep-all;overflow-wrap:anywhere}
+.about p.k{font-weight:700;color:var(--ink);font-size:16px}
+.about p + p{margin-top:14px}
+.vals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:clamp(40px,5vw,64px) var(--pad) 0}
+.val{border-top:1px solid var(--ink);padding-top:16px}
+.val b{display:block;font-size:15px;font-weight:600;letter-spacing:-0.02em}
+.val span{display:block;font-family:var(--jp);font-size:13px;line-height:1.85;color:var(--ink2);margin-top:8px;word-break:keep-all;overflow-wrap:anywhere}
+.val small{display:block;font-size:11px;color:var(--mute);font-variant-numeric:tabular-nums}
 
-/* MANIFESTO */
-.mani{background:var(--blue-deep);color:#fff;position:relative;overflow:hidden}
-.mani::before{content:'';position:absolute;right:-120px;top:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(232,118,45,0.28),rgba(232,118,45,0) 68%)}
-.mani-grid{display:grid;grid-template-columns:200px 1fr;gap:64px;position:relative;z-index:1}
-.mani h2{font-family:var(--jp);font-weight:500;font-size:clamp(26px,3.4vw,48px);line-height:1.42;letter-spacing:0.01em;margin:0;color:#fff}
-.mani h2 b{font-weight:700;color:var(--orange-lt)}
-.mani p{font-family:var(--jp);font-size:15.5px;line-height:2.15;color:rgba(255,255,255,0.78);margin:32px 0 0;max-width:660px}
-.vals{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px;padding-top:36px;border-top:1px solid rgba(255,255,255,0.16)}
-.val .t{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:-0.01em;color:var(--orange-lt)}
-.val .d{font-family:var(--jp);font-size:13.5px;line-height:1.95;color:rgba(255,255,255,0.72);margin-top:10px}
+/* EVENTS: shelf */
+.events{padding:var(--gap) var(--pad) 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.tabs{display:flex;gap:4px;padding:4px;border-radius:8px;background:var(--soft)}
+.tabs button{border:0;background:none;font:inherit;font-size:12.5px;font-weight:500;color:var(--ink2);padding:8px 13px;border-radius:6px;cursor:pointer;transition:background .2s,color .2s}
+.tabs button[aria-pressed="true"]{background:#fff;color:var(--ink);box-shadow:0 1px 2px rgba(14,17,20,0.08)}
+.shelf{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:36px}
+.item{display:block}
+.item[hidden]{display:none}
+.item .ph{position:relative;aspect-ratio:4/5;border-radius:6px;overflow:hidden;background:var(--soft)}
+.item .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.item:hover .ph img{transform:scale(1.035)}
+.item .tag{position:absolute;left:10px;top:10px;font-size:11px;font-weight:600;letter-spacing:-0.005em;border-radius:5px;padding:5px 8px;background:#fff;color:var(--ink)}
+.item .tag.up{background:var(--orange)}
+.item .go{position:absolute;right:10px;bottom:10px;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#fff;color:var(--ink);font-size:15px;opacity:0;transform:translateY(6px);transition:opacity .3s,transform .4s var(--ease)}
+.item:hover .go{opacity:1;transform:none}
+.item .row{display:flex;justify-content:space-between;gap:12px;margin-top:14px;font-size:14px;font-weight:600;letter-spacing:-0.02em}
+.item .row span:last-child{font-variant-numeric:tabular-nums}
+.item .sub{display:flex;justify-content:space-between;gap:12px;margin-top:4px;font-family:var(--jp);font-size:12px;color:var(--mute)}
+.item.ghost .ph{display:flex;flex-direction:column;justify-content:space-between;padding:18px;background:#1B3A8C;isolation:isolate}
+.item.ghost .ph img{position:absolute;inset:0;z-index:-1}
+.item.ghost .ph b{font-size:clamp(44px,5vw,76px);font-weight:500;letter-spacing:-0.05em;color:#fff;line-height:1;-webkit-text-stroke:0}
+.item.ghost .ph span{font-family:var(--jp);font-size:13px;line-height:1.9;color:rgba(255,255,255,0.9);word-break:keep-all;overflow-wrap:anywhere}
 
-/* STEPS */
-.head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
-.steps{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:52px}
-.step{background:var(--white);border:1px solid var(--hair);border-radius:22px;padding:34px 34px 30px;min-height:230px;display:flex;flex-direction:column;transition:border-color .3s,transform .3s}
-.step:hover{border-color:var(--orange);transform:translateY(-3px)}
-.step .n{font-family:var(--mono);font-size:11px;letter-spacing:0.14em;color:var(--orange)}
-.step h3{font-family:var(--jp);font-weight:500;font-size:22px;letter-spacing:0.02em;margin:14px 0 0}
-.step p{font-family:var(--jp);font-size:13.5px;line-height:2;color:var(--ink2);margin:auto 0 0;padding-top:22px}
-.step-img{position:relative;isolation:isolate;border-radius:22px;overflow:hidden;min-height:230px;display:flex;align-items:flex-end;padding:28px}
-.step-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 60%;z-index:-2}
-.step-img::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(40,44,32,0.15),rgba(40,44,32,0.72))}
+/* CATS */
+.cats{display:flex;gap:10px;height:clamp(540px,78vh,800px);margin:clamp(56px,7vw,96px) var(--pad) 0}
+.cat{position:relative;flex:1 1 0;overflow:hidden;border-radius:6px;color:#fff;transition:flex-grow .9s var(--ease);isolation:isolate;background:#14171B}
+.cats:hover .cat{flex-grow:.82}
+.cats .cat:hover{flex-grow:1.5}
+.cat img,.cat video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease);z-index:-2}
+.cat:hover img,.cat:hover video{transform:scale(1.04)}
+.cat::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,0.32),rgba(0,0,0,0) 40%,rgba(0,0,0,0) 60%,rgba(0,0,0,0.46))}
+.cat-word{position:absolute;left:12px;top:14px;writing-mode:vertical-rl;transform:rotate(180deg);font-weight:500;font-size:clamp(60px,7.4vw,118px);line-height:.92;letter-spacing:-0.05em;white-space:nowrap}
+.cat-foot{position:absolute;left:18px;right:18px;bottom:18px;display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.cat-foot p{margin:0;font-family:var(--jp);font-size:13px;line-height:1.75;max-width:17em;word-break:keep-all;overflow-wrap:anywhere}
+.cat-foot p b{display:block;font-family:var(--sans);font-size:15px;font-weight:600;letter-spacing:-0.02em;margin-bottom:3px}
+.pill{background:#fff;color:var(--ink);border-radius:999px;padding:8px 15px;font-size:12px;font-weight:600;white-space:nowrap;transition:background .3s}
+.cat:hover .pill{background:var(--orange)}
 
-/* UPCOMING */
-.card{margin-top:48px;display:grid;grid-template-columns:190px 1fr 320px;gap:44px;background:var(--white);border:1px solid var(--hair);border-radius:24px;padding:40px;transition:border-color .3s,transform .3s}
-.card:hover{border-color:var(--orange);transform:translateY(-2px)}
-.d-week{font-family:var(--mono);font-size:11px;letter-spacing:0.14em;color:var(--orange)}
-.d-day{font-family:var(--display);font-weight:800;font-size:clamp(62px,5.8vw,88px);line-height:0.9;letter-spacing:-0.045em;margin-top:8px}
-.d-time{font-family:var(--mono);font-size:13px;letter-spacing:0.08em;margin-top:16px}
-.d-sub{font-family:var(--jp);font-size:11.5px;color:var(--mute);margin-top:4px}
-.c-num{font-family:var(--mono);font-size:11px;letter-spacing:0.14em;color:var(--orange)}
-.card h3{font-family:var(--display);font-weight:800;font-size:clamp(30px,3.1vw,44px);line-height:0.96;letter-spacing:-0.04em;margin:12px 0 0}
-.tagline{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--blue);margin-top:10px}
-.card p{font-family:var(--jp);font-size:14px;line-height:2.05;color:var(--ink2);margin:16px 0 0;max-width:560px}
-.meta{display:grid;grid-template-columns:96px 1fr;gap:8px 16px;margin-top:22px;padding-top:18px;border-top:1px solid var(--hair);font-size:13.5px}
-.meta dt{font-family:var(--mono);font-size:11px;letter-spacing:0.1em;color:var(--mute);margin:0;padding-top:2px}
-.meta dd{font-family:var(--jp);margin:0}
-.c-act{display:flex;align-items:center;gap:18px;margin-top:26px;flex-wrap:wrap}
-.c-act small{font-family:var(--jp);font-size:11.5px;color:var(--mute)}
-.thumb{position:relative;isolation:isolate;aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:var(--blue-deep);align-self:start}
-.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 60%}
-.thumb .lbl2{position:absolute;left:16px;bottom:14px;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.85)}
-.ph{margin-top:16px;border:1px dashed var(--hair2);border-radius:22px;padding:26px 40px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-.ph .n{font-family:var(--mono);font-size:12px;letter-spacing:0.14em;color:var(--mute)}
-.ph .t{font-family:var(--jp);font-size:14px;color:var(--mute);flex:1}
-.ph a{font-family:var(--jp);font-size:13px;font-weight:500}
-
-/* TWO COLUMN */
-.two{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.panel{background:var(--white);border:1px solid var(--hair);border-radius:24px;padding:28px}
-.panel svg{width:100%;height:auto;display:block}
-.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
-.tag{font-family:var(--mono);font-size:12px;letter-spacing:0.12em;border:1px solid var(--hair2);border-radius:999px;padding:12px 22px;color:var(--ink2)}
-.tag.on{background:var(--orange-mist);border-color:transparent;color:#B4551C}
-
-/* ARCHIVE — セクションは一時的に非掲載。001 開催後に戻す（CSSは保持） */
-.counters{display:flex;gap:40px}
-.counters div{text-align:right}
-.counters .k{font-family:var(--mono);font-size:10.5px;letter-spacing:0.12em;color:var(--mute)}
-.counters .v{font-family:var(--display);font-weight:700;font-size:28px;margin-top:4px}
-.empty{margin-top:44px;text-align:center;padding:52px 24px 46px;border:1px solid var(--hair);border-radius:24px;background:var(--white)}
-.empty .en{font-family:var(--display);font-weight:700;font-size:clamp(25px,2.5vw,34px);letter-spacing:-0.02em}
-.empty .ja{font-family:var(--jp);font-weight:500;font-size:16px;margin-top:12px}
-.empty .p{font-family:var(--jp);font-size:13.5px;line-height:2;color:var(--mute);margin-top:10px}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
-.slot{aspect-ratio:4/3;border:1px dashed var(--hair2);border-radius:20px;display:flex;flex-direction:column;justify-content:space-between;padding:18px 20px}
-.slot .n{font-family:var(--mono);font-size:11px;letter-spacing:0.14em;color:var(--mute)}
-.slot .t{font-family:var(--jp);font-size:12px;color:var(--mute)}
-
-/* LOOP */
-.loop{background:var(--blue-deep);color:#fff;border-radius:28px;margin:0 16px;padding:88px 48px;text-align:center;position:relative;overflow:hidden}
-.loop::before{content:'';position:absolute;left:50%;bottom:-180px;width:640px;height:360px;transform:translateX(-50%);background:radial-gradient(ellipse at center,rgba(232,118,45,0.35),rgba(232,118,45,0) 70%)}
-.loop-in{position:relative;z-index:1;max-width:620px;margin:0 auto}
-.loop h2{font-family:var(--jp);font-weight:500;font-size:clamp(25px,2.9vw,40px);color:#fff;margin:14px 0 0}
-.loop p{font-family:var(--jp);font-size:14.5px;line-height:2;color:rgba(255,255,255,0.78);margin:14px 0 0}
-.loop .lbl{color:rgba(255,255,255,0.6)}
-.field{display:flex;align-items:center;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.3);border-radius:999px;padding:5px 5px 5px 22px;max-width:460px;margin:30px auto 0;transition:border-color .25s}
-.field:focus-within{border-color:var(--orange)}
-.field input{flex:1;background:none;border:none;outline:none;color:#fff;font-size:14px;font-family:var(--body);min-width:0}
-.field input::placeholder{color:rgba(255,255,255,0.55)}
-.field .pill{padding:11px 20px;font-size:13px}
-.fine{font-family:var(--jp);font-size:11.5px;line-height:1.95;color:rgba(255,255,255,0.6);margin-top:18px}
-.fine a{color:rgba(255,255,255,0.85);text-decoration:underline;text-underline-offset:3px}
-
-/* CONTACT */
-.f-label{font-family:var(--mono);font-size:11px;letter-spacing:0.1em;color:var(--mute);display:block;margin:0 0 8px 4px}
-.f-in,.f-ta{width:100%;background:var(--white);border:1px solid var(--hair2);border-radius:16px;padding:14px 18px;color:var(--ink);font-size:14px;font-family:var(--jp);outline:none;transition:border-color .25s,box-shadow .25s}
-.f-in:focus,.f-ta:focus{border-color:var(--orange);box-shadow:0 0 0 4px var(--orange-mist)}
-.f-ta{min-height:130px;resize:vertical;border-radius:20px}
-.form{display:flex;flex-direction:column;gap:18px}
-.mail{margin-top:30px;padding-top:22px;border-top:1px solid var(--hair)}
-.mail .k{font-family:var(--mono);font-size:10.5px;letter-spacing:0.12em;color:var(--mute)}
-.mail a{font-size:16px;font-weight:500;display:inline-block;margin-top:6px}
+/* NEXT */
+.next{padding:var(--gap) var(--pad) 0}
+.card{display:grid;grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,88px);margin-top:36px;align-items:start}
+.poster{position:sticky;top:84px;background:var(--soft);border-radius:8px;padding:clamp(20px,3.4vw,52px);display:grid;place-items:center}
+.poster img{width:100%;max-width:400px;height:auto;aspect-ratio:1080/1919;object-fit:cover;border-radius:4px;box-shadow:0 30px 60px -28px rgba(30,60,90,0.45)}
+.info .lbl{margin-bottom:6px}
+.info h3{font-weight:500;font-size:clamp(40px,5vw,76px);line-height:.96;letter-spacing:-0.055em;margin:0}
+.info h3 span{color:var(--mute)}
+.info .lead{font-family:var(--jp);font-size:15px;line-height:2.05;color:var(--ink2);margin:22px 0 0;max-width:30em;word-break:keep-all;overflow-wrap:anywhere}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:20px}
+.chips span{font-size:12px;font-weight:500;border:1px solid var(--line);border-radius:999px;padding:6px 11px;color:var(--ink2)}
+.tt{margin:32px 0 0;border-top:1px solid var(--ink)}
+.tt div{display:grid;grid-template-columns:88px minmax(0,1fr) auto;gap:14px;align-items:baseline;padding:15px 0;border-bottom:1px solid var(--line);font-size:14px}
+.tt dt{font-weight:600;letter-spacing:-0.015em;font-variant-numeric:tabular-nums}
+.tt dd{margin:0;font-family:var(--jp);color:var(--ink2)}
+.tt dd.r{font-family:var(--sans);font-weight:500;color:var(--ink);text-align:right;white-space:nowrap}
+.buy{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;margin-top:28px;padding:18px 18px 18px 22px;border-radius:8px;background:var(--ink);color:#fff}
+.price{font-weight:500;font-size:34px;letter-spacing:-0.045em;font-variant-numeric:tabular-nums}
+.price small{font-family:var(--jp);font-size:12px;color:#A6AEB5;margin-left:8px;letter-spacing:0}
+.cd{font-size:12px;color:#A6AEB5;margin-top:2px;font-variant-numeric:tabular-nums}
+.cd b{color:var(--sky);font-weight:600}
+.note{font-family:var(--jp);font-size:12.5px;line-height:1.85;color:var(--mute);margin-top:12px}
+.dm{margin-top:12px;border:1px solid var(--line);border-radius:8px;padding:16px 16px 14px;background:#fff}
+.dm-h b{display:block;font-family:var(--jp);font-size:14px;font-weight:700}
+.dm-h span{display:block;font-family:var(--jp);font-size:12.5px;line-height:1.85;color:var(--ink2);margin-top:6px;word-break:keep-all;overflow-wrap:anywhere}
+.dm-h a{color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.dm-msg{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px;padding:10px 10px 10px 14px;border-radius:6px;background:var(--soft);font-family:var(--jp);font-size:13px;color:var(--ink)}
+.dm-msg button{flex:none;border:0;border-radius:5px;background:var(--ink);color:#fff;font:inherit;font-size:12px;font-weight:600;padding:7px 12px;cursor:pointer;transition:background .2s}
+.dm-msg button:hover{background:#2A3036}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:28px}
+.steps div{background:var(--soft);border-radius:6px;padding:14px 14px 16px}
+.steps small{display:block;font-size:11px;color:var(--mute);font-variant-numeric:tabular-nums}
+.steps b{display:block;font-family:var(--jp);font-size:14px;font-weight:700;margin-top:6px}
+.steps span{display:block;font-family:var(--jp);font-size:12px;line-height:1.75;color:var(--ink2);margin-top:4px;word-break:keep-all;overflow-wrap:anywhere}
 
 /* FOOTER */
-.footer{border-top:1px solid var(--hair);padding:68px 64px 34px}
-.f-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:48px}
-.f-head{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;color:var(--mute);margin-bottom:14px}
-.f-grid a,.f-grid span{display:block;color:var(--ink2);font-size:13px;line-height:2.3;font-family:var(--jp)}
-.f-grid a:hover{color:var(--orange)}
-.f-grid span{color:var(--mute)}
-.f-brand p{font-family:var(--jp);font-size:12.5px;line-height:2.1;color:var(--ink2);margin:16px 0 0}
-.f-brand .logo{color:var(--ink)}
-.ig{width:34px;height:34px;border:1px solid var(--hair2);border-radius:9px;margin-top:18px;display:inline-flex;align-items:center;justify-content:center;transition:border-color .25s}
-.ig:hover{border-color:var(--orange)}
-.f-bot{margin-top:42px;padding-top:18px;border-top:1px solid var(--hair);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--mute)}
-.toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,80px);z-index:80;background:var(--white);border:1px solid var(--orange);border-radius:999px;padding:14px 28px;color:var(--ink);font-family:var(--jp);font-size:14px;box-shadow:0 10px 40px rgba(40,44,32,0.16);opacity:0;transition:transform .4s,opacity .4s;pointer-events:none}
-.toast.show{transform:translate(-50%,0);opacity:1}
+.foot{margin:var(--gap) 10px 10px;border-radius:10px;background:var(--ink);color:#fff;padding:clamp(28px,4vw,48px) var(--pad) 0;overflow:hidden}
+.foot-top{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(2,minmax(0,1fr));gap:32px}
+.foot h2{font-weight:500;font-size:clamp(28px,3.2vw,46px);line-height:1;letter-spacing:-0.045em;margin:0}
+.foot h2 span{color:var(--sky)}
+.foot h2 + .btn{margin-top:22px}
+.foot .k{font-size:12px;color:#8D969E;margin-bottom:10px}
+.foot a.f{display:block;font-size:13.5px;line-height:2.15;color:#D9DEE2;transition:color .2s}
+.foot a.f:hover{color:#fff}
+.foot-bot{margin-top:44px;padding-top:16px;border-top:1px solid #262C32;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:var(--jp);font-size:11.5px;line-height:1.9;color:#8D969E}
+.foot-bot a{color:#C9D0D6;text-decoration:underline;text-underline-offset:3px}
+.mark{font-weight:500;font-size:clamp(64px,17.5vw,300px);line-height:.78;letter-spacing:-0.065em;margin:28px 0 0 -0.04em;white-space:nowrap;color:#1D2328;user-select:none}
 
-@media(max-width:900px){
-  .sec{padding:80px 20px}
-  .nav,.nav.scrolled{padding:14px 20px}
-  .nav-links,.nav .pill{display:none}
-  .burger{display:flex}
-  .hero{min-height:640px;padding:110px 20px 32px}
-  .hero-msg{font-size:24px}
-  .wordmark{font-size:clamp(46px,17vw,90px)}
-  .mani-grid{grid-template-columns:1fr;gap:20px}
-  .vals{grid-template-columns:1fr;gap:22px;margin-top:38px}
+@media (max-width:1000px){.nav .meta span:first-child{display:none}}
+@media (max-width:820px){
+  .hero{margin:8px;height:calc(100svh - 16px);min-height:560px}
+  .nav{gap:16px;padding:16px}
+  .nav .hide,.nav .meta{display:none}
+  .nav .back{margin-left:auto}
+  .stack{display:none}
+  .hero-copy{left:16px;right:16px;bottom:16px;flex-direction:column;align-items:flex-start}
+  .cue{display:none}
+  .fnav{left:8px;right:8px;transform:translateY(-140%);justify-content:space-between}
+  .fnav.on{transform:none}
+  .fnav a.hide{display:none}
+  .about,.card,.foot-top{grid-template-columns:1fr}
+  .vals{grid-template-columns:1fr;gap:18px}
+  .shelf{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin:28px calc(var(--pad) * -1) 0;padding:0 var(--pad);scroll-padding-inline:var(--pad);scrollbar-width:none}
+  .shelf::-webkit-scrollbar{display:none}
+  .item{flex:0 0 76%;scroll-snap-align:start}
+  .cats{flex-direction:column;height:auto}
+  .cat{flex:none;height:64vh}
+  .cats:hover .cat,.cats .cat:hover{flex-grow:0}
+  .poster{position:relative;top:auto}
   .steps{grid-template-columns:1fr}
-  .step,.step-img{min-height:auto}
-  .step{padding:26px 24px}
-  .step-img{min-height:190px;padding:22px}
-  .card{grid-template-columns:1fr;gap:24px;padding:26px 22px;margin-top:32px}
-  .d-day{font-size:62px}
-  .thumb{aspect-ratio:16/10}
-  .ph{padding:22px}
-  .concept{padding:72px 20px 66px}
-  .name-grid{grid-template-columns:1fr;gap:28px;margin-top:34px}
-  .name-fig{padding:20px 14px}
-  .two{grid-template-columns:1fr;gap:34px}
-  .tags{display:grid;grid-template-columns:repeat(3,1fr)}
-  .tag{text-align:center;padding:14px 0}
-  .counters{gap:24px;margin-top:18px}
-  .counters div{text-align:left}
-  .grid3{grid-template-columns:1fr}
-  .slot{aspect-ratio:auto;min-height:84px;flex-direction:row;align-items:center}
-  .loop{margin:0 8px;padding:56px 22px;border-radius:20px}
-  .footer{padding:52px 20px 28px}
-  .f-grid{grid-template-columns:1fr 1fr;gap:30px}
-  .f-brand{grid-column:1/3}
+  .tt div{grid-template-columns:64px minmax(0,1fr) auto}
 }
-
-/* Unified header bar (2026-10-29) — same look and labels as index / contact */
-.nav,.nav.scrolled{top:0;left:0;right:0;margin:14px auto 0;width:min(1240px,calc(100% - 28px));height:60px;padding:0 24px;gap:28px;justify-content:flex-start;background:rgba(40,44,32,0.92);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.07);border-radius:12px}
-.nav .logo,.nav.scrolled .logo{color:#D2FF00;font-family:'Bricolage Grotesque',sans-serif;font-size:17px}
-.nav .logo svg{color:#D2FF00}
-.nav .nav-links,.nav.scrolled .nav-links{margin-left:auto;gap:28px;padding:0;background:none;border:none;border-radius:0}
-.nav .nav-links a,.nav.scrolled .nav-links a,.nav .pill{padding:6px 0;font-family:'Hanken Grotesk',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;color:#D2FF00;background:none;border:none;border-radius:0;box-shadow:none}
-.nav .nav-links a:hover,.nav.scrolled .nav-links a:hover,.nav .pill:hover{color:#fff;background:none;transform:none}
-.nav .nav-links a.on,.nav.scrolled .nav-links a.on{color:#fff;background:none}
-.nav .pill{display:inline-flex;align-items:center;gap:6px}
-.nav .pill svg{width:13px;height:13px}
-.nav .burger{margin-left:auto}
-.nav .burger div,.nav.scrolled .burger div{background:#D2FF00}
-@media (max-width:900px){.nav,.nav.scrolled{margin-top:10px;width:calc(100% - 20px);height:54px;padding:0 12px 0 16px}.nav .pill{display:none}}
-/* phrase-wrap (2026-10-29) */
-body { word-break: keep-all; overflow-wrap: break-word; line-break: strict; }
-p, li, dd, td { text-wrap: pretty; }
-
-/* Mobile fit (2026-10-29): keep the NEXT chip on one line on small phones */
-@media (max-width: 400px){.next-chip{white-space:nowrap;font-size:9.5px;letter-spacing:0.06em}}
-
-/* Header bar in the luxe palette (2026-10-29): cream links, gold CONTACT, green mark */
-.nav .logo,.nav.scrolled .logo{color:#F4F4ED}
-.nav .logo svg{color:#7BC142}
-.nav .nav-links a,.nav.scrolled .nav-links a{color:rgba(238,234,225,0.72)}
-.nav .nav-links a.on,.nav.scrolled .nav-links a.on{color:#D2FF00}
-.nav .pill{color:#D2FF00}
-.nav .nav-links a:hover,.nav.scrolled .nav-links a:hover,.nav .pill:hover{color:#D2FF00}
-.nav .burger div,.nav.scrolled .burger div{background:#D2FF00}
-.nav,.nav.scrolled{background:rgba(40,44,32,0.92)}
-
-/* Same feel as the top page (2026-10-30): Lando olive + off-white base; blue and orange stay as the accents */
-:root{ --white:#FBFBF6; --bone:#F4F4ED; --ink:#282C20; --ink2:#3B3C38; --mute:#6A6D60;
-  --hair:rgba(40,44,32,0.12); --hair2:rgba(40,44,32,0.2); --blue-deep:#282C20; }
-.mani,.loop,.m-overlay{background:#282C20}
-h2.jp,.concept h2,.mani h2,.loop h2,.step h3{font-family:"Shippori Mincho","Yu Mincho",serif;font-weight:600}
+@media (min-width:821px){.nav .back{display:none}}
+@media (prefers-reduced-motion: reduce){.hero video,.cat video{display:none}.cue i::after{animation:none}}
 </style>
 </head>
 <body>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="y-logo" viewBox="0 0 100 100">
-    <circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="5"/>
-    <path d="M 30 30 L 50 54 L 70 30 M 50 54 L 50 76" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-  </symbol>
-</svg>
-
-<nav class="nav" id="nav">
-  <a href="index.html" class="logo"><svg><use href="#y-logo"/></svg>Yoshida gumi</a>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="azur-hour.html" class="on" aria-current="page">Azur Hour</a>
-    <a href="index.html#works">Business</a>
-    <a href="index.html#works">Works</a>
-    <a href="index.html#licenses">Company</a>
-  </div>
-  <a href="contact.html" class="pill">Contact <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-  <button class="burger" id="burger" aria-label="メニュー"><div></div><div></div></button>
-</nav>
-
-<div class="m-overlay" id="mOverlay">
-  <button class="m-close" id="mClose" aria-label="閉じる">✕</button>
-  <a href="#why"><span class="n">01</span>Why</a>
-  <a href="#how"><span class="n">02</span>How</a>
-  <a href="#upcoming"><span class="n">03</span>Upcoming</a>
-  <a href="#name"><span class="n">04</span>The name</a>
-  <a href="#contact"><span class="n">05</span>Contact</a>
-  <a href="index.html"><span class="n">06</span>Yoshida gumi</a>
-</div>
-
-<!-- HERO -->
 <header class="hero" id="top">
-  <div class="hero-bg">
-    <video class="hero-vid" id="heroVid" autoplay muted loop playsinline webkit-playsinline="true" disablepictureinpicture preload="metadata" poster="az-hero-poster.jpg" aria-hidden="true"></video>
-    <div class="hero-grade"></div>
+  <video id="heroVid" muted loop playsinline webkit-playsinline="true" disablepictureinpicture preload="metadata" poster="az-hero-poster.jpg" aria-hidden="true"></video>
+  <nav class="nav" aria-label="メイン">
+    <a href="#top" class="brand">Azur Hour</a>
+    <a href="#events" class="l">Events</a>
+    <a href="#about" class="l hide">About</a>
+    <a href="#next" class="l">Join</a>
+    <a href="index.html" class="l back">← Yoshida gumi</a>
+    <div class="meta"><span>Wakayama <span id="clk">--:--</span></span><a href="index.html" class="l">← Yoshida gumi</a></div>
+  </nav>
+  <div class="stack">
+    <a class="pc" href="#next"><img src="b-t-sweet.jpg" alt=""><span><b>Sweet Session</b><small>Dec 18 · Wakayama</small></span><i>JOIN</i></a>
+    <a class="pc" href="#events"><img src="b-t-cruise.jpg" alt=""><span><b>Night Cruise</b><small>Oct 17 · 30 guests</small></span><i>VIEW</i></a>
   </div>
-  <div class="hero-sun"></div>
-  <div class="hero-in">
-    <div class="hero-eye">AN EVENT SERIES BY YOSHIDA GUMI</div>
-    <h1 class="hero-msg">Where people meet,<br><em>something begins.</em></h1>
-    <p class="hero-sub">音楽、食、会話、場所。<wbr>組み合わせを<wbr>変えながら、人が<wbr>自然に<wbr>出会える<wbr>時間を<wbr>つくっています。</p>
-    <a href="#upcoming" class="hero-link">次の開催を見る <span>→</span></a>
-  </div>
-  <div class="hero-foot">
-    <div class="next-chip"><span class="dot"></span>NEXT · 001 · 10.17 SAT · OSAKA</div>
-    <div class="wordmark">Azur Hour</div>
+  <div class="hero-copy">
+    <div>
+      <h1>Where people meet,<br>something begins.</h1>
+      <p>音楽、<wbr>食、<wbr>会話、<wbr>場所。<wbr>人が<wbr>自然に<wbr>出会える<wbr>時間を<wbr>つくっています。</p>
+      <a href="#next" class="btn glass">Next hour — Dec 18 <span class="ar">↗</span></a>
+    </div>
+    <div class="cue">Scroll <i></i></div>
   </div>
 </header>
 
-<!-- CONCEPT -->
-<section class="sec concept" id="concept">
-  <span class="lbl">CONCEPT</span>
-  <h2>次代の<wbr>体験と<wbr>挑戦を創る</h2>
-  <div class="en">Creating the experiences and challenges of the next generation.</div>
-</section>
+<nav class="fnav" id="fnav" aria-label="ページ内">
+  <a href="#top" class="brand">Azur Hour</a>
+  <a href="#events" class="hide">Events</a>
+  <a href="#about" class="hide">About</a>
+  <a href="index.html" class="hide">Yoshida gumi</a>
+  <a href="#next" class="btn or">Join Dec 18</a>
+</nav>
 
-<!-- MANIFESTO -->
-<section class="sec mani" id="why">
-  <div class="wrap mani-grid">
-    <div class="reveal"><span class="lbl" style="color:rgba(255,255,255,0.6)">WHY WE GATHER</span></div>
-    <div class="reveal">
-      <h2>AIが<wbr>どれだけ<wbr>進化しても、<br><b>人の心を<wbr>動かすこと</b>だけは、<br>人にしかできない。</h2>
-      <p>調べればすぐ<wbr>答えが出る<wbr>時代に、<wbr>答えのない<wbr>時間を<wbr>つくりたい。同じ船に<wbr>乗って、同じ音を<wbr>聴いて、<wbr>名前も<wbr>知らなかった人と話す。その夜に<wbr>起きた<wbr>ことは、<wbr>あとから<wbr>検索しても<wbr>出てきません。<br>
-      Azur Hour は、次の<wbr>世代を<wbr>つくる<wbr>人たちが、わく<wbr>わくした<wbr>気持ちのまま<wbr>集まれる<wbr>場所です。<wbr>肩書きも<wbr>業種も関係なく、<wbr>おもしろい人が<wbr>おもしろい人と<wbr>出会う。</p>
-      <div class="vals">
-        <div class="val"><div class="t">Not searchable.</div><div class="d">その夜の<wbr>会話は、<wbr>どこにも<wbr>載っていない。<wbr>実際にその場にいた<wbr>人だけの<wbr>ものです。</div></div>
-        <div class="val"><div class="t">No titles.</div><div class="d">肩書きも<wbr>年齢も<wbr>持ち込まない。<wbr>ひとりでの<wbr>参加が一番多い場を<wbr>つくっています。</div></div>
-        <div class="val"><div class="t">Something next.</div><div class="d">出会いで<wbr>終わらせない。次の場所、次の<wbr>プロジェクトへ<wbr>つながる<wbr>入口に<wbr>します。</div></div>
-      </div>
-    </div>
+<section class="about" id="about">
+  <div class="rv">
+    <div class="lbl"><i></i><b>About</b>An event series by Yoshida gumi</div>
+    <h2 class="h2">An event series for people who still like <span>meeting in person.</span></h2>
+  </div>
+  <div class="rv">
+    <p class="k">AIが<wbr>どれだけ<wbr>進化しても、<wbr>人の心を<wbr>動かすことだけは、<wbr>人にしか<wbr>できない。</p>
+    <p>調べれば<wbr>すぐ答えが<wbr>出る時代に、<wbr>答えのない<wbr>時間を<wbr>つくりたい。<wbr>音楽、<wbr>食、<wbr>会話、<wbr>場所を<wbr>組み合わせて、<wbr>名前も<wbr>知らなかった<wbr>人と<wbr>話せる夜を<wbr>用意しています。</p>
   </div>
 </section>
+<div class="vals rv">
+  <div class="val"><small>01</small><b>Not searchable.</b><span>その夜の<wbr>会話は、<wbr>どこにも<wbr>載っていない。<wbr>その場に<wbr>いた人だけのもの。</span></div>
+  <div class="val"><small>02</small><b>No titles.</b><span>肩書きも<wbr>年齢も<wbr>持ち込まない。<wbr>ひとり参加が<wbr>いちばん多い場です。</span></div>
+  <div class="val"><small>03</small><b>Something next.</b><span>出会いで<wbr>終わらせず、<wbr>次の場所、<wbr>次の<wbr>プロジェクトへ。</span></div>
+</div>
 
-<!-- HOW -->
-<section class="sec wrap" id="how">
-  <div class="head reveal">
+<section class="events" id="events">
+  <div class="head rv">
     <div>
-      <span class="lbl">HOW IT WORKS</span>
-      <h2 class="dsp">Joining is <em class="s">simple.</em></h2>
+      <div class="lbl"><i></i><b>Events</b>2 hours so far</div>
+      <h2 class="h2">Pick your <span>hour.</span></h2>
     </div>
-    <p class="lead" style="max-width:320px;font-size:14px">はじめての方も、<wbr>ひとりの方も。<br>特別な<wbr>準備は<wbr>いりません。</p>
+    <div class="tabs" role="group" aria-label="絞り込み">
+      <button type="button" data-f="all" aria-pressed="true">All</button>
+      <button type="button" data-f="up" aria-pressed="false">Upcoming</button>
+      <button type="button" data-f="past" aria-pressed="false">Past</button>
+    </div>
   </div>
-  <div class="steps">
-    <div class="step reveal">
-      <div class="n">01</div>
-      <h3>見つける</h3>
-      <p>開催予定から、気に<wbr>なる回を選ぶ。<wbr>テーマも<wbr>場所も毎回<wbr>変わります。<wbr>ひとりでの<wbr>参加も<wbr>歓迎です。</p>
-    </div>
-    <div class="step reveal">
-      <div class="n">02</div>
-      <h3>申し込む</h3>
-      <p>Peatix でチケットを<wbr>取るだけ。<wbr>事前の<wbr>やりとりや<wbr>面談は<wbr>ありません。<wbr>当日の<wbr>流れは<wbr>申込後に<wbr>ご案内します。</p>
-    </div>
-    <div class="step reveal">
-      <div class="n">03</div>
-      <h3>集まる</h3>
-      <p>当日、集合場所へ。<wbr>あとはその<wbr>時間を<wbr>過ごすだけ。<wbr>話したい人と<wbr>話して、<wbr>聴きたい音を<wbr>聴いてください。</p>
-    </div>
-    <div class="step-img reveal">
-      <img src="az-9.jpg" alt="" loading="lazy" width="1800" height="1350">
-      <a href="#loop" class="pill">次の案内を<wbr>受け取る <span>→</span></a>
+  <div class="shelf rv">
+    <a class="item" data-s="up" href="#next">
+      <div class="ph"><img src="b-r-sweet.jpg" alt="バスクチーズケーキとラテ" loading="lazy"><span class="tag up">Upcoming</span><span class="go">↗</span></div>
+      <div class="row"><span>Sweet Session</span><span>¥5,000</span></div>
+      <div class="sub"><span>002 ・ 12.18 Fri ・ 和歌山</span><span>女性限定 8席</span></div>
+    </a>
+    <a class="item" data-s="past" href="#cats">
+      <div class="ph"><img src="b-r-cruise.jpg" alt="船から見た大阪の夜の川" loading="lazy"><span class="tag">Done</span><span class="go">↗</span></div>
+      <div class="row"><span>Osaka Night Cruise</span><span>30 guests</span></div>
+      <div class="sub"><span>001 ・ 10.17 Sat ・ 大阪</span><span>大川クルーズ</span></div>
+    </a>
+    <div class="item ghost" data-s="up">
+      <div class="ph"><img src="b-r-next.jpg" alt="ブルーアワーの空" loading="lazy"><b>003</b><span>次の<wbr>開催は、<wbr>決まり次第<wbr>ここと<wbr>Instagram で<wbr>お知らせします。</span></div>
+      <div class="row"><span>Coming next</span><span>TBA</span></div>
+      <div class="sub"><span>@noah.palmz</span><span></span></div>
     </div>
   </div>
 </section>
 
-<!-- UPCOMING -->
-<section class="sec wrap" id="upcoming">
-  <div class="head reveal">
-    <div>
-      <span class="lbl">UPCOMING</span>
-      <h2 class="dsp">Next <em class="s">hour.</em></h2>
-    </div>
-    <div class="lbl" style="padding-bottom:10px">001 / 開催予定</div>
-  </div>
+<div class="cats rv" id="cats">
+  <a class="cat" href="#next">
+    <video data-src="b-wellness.mp4" muted loop playsinline preload="none" poster="b-wellness.jpg" aria-hidden="true"></video>
+    <span class="cat-word">wellness</span>
+    <div class="cat-foot"><p><b>Wellness Night</b>コーヒー、<wbr>フルーツ、<wbr>スイーツ。<wbr>体を<wbr>ととのえる夜。</p><span class="pill">Dec 18</span></div>
+  </a>
+  <a class="cat" href="#events">
+    <video data-src="b-cruise-v.mp4" muted loop playsinline preload="none" poster="b-cruise-v.jpg" aria-hidden="true"></video>
+    <span class="cat-word">cruise</span>
+    <div class="cat-foot"><p><b>Cruise</b>船を<wbr>貸し切って、<wbr>水の上で<wbr>音楽を。</p><span class="pill">30 guests</span></div>
+  </a>
+  <a class="cat" href="#about">
+    <img src="b-c-music.jpg" alt="船上でプレイするDJ" loading="lazy">
+    <span class="cat-word">music</span>
+    <div class="cat-foot"><p><b>On the decks</b>House、<wbr>Tech House。<wbr>夜の川の<wbr>DJブース。</p><span class="pill">001</span></div>
+  </a>
+</div>
 
-  <article class="card reveal">
-    <div>
-      <div class="d-week">SAT · 2026</div>
-      <div class="d-day">10.17</div>
-      <div class="d-time">18:00 – 20:00</div>
-      <div class="d-sub">受付 17:30〜</div>
-    </div>
-    <div>
-      <div class="c-num">001 / UPCOMING EVENT</div>
-      <h3>OSAKA NIGHT<br>CRUISE</h3>
-      <div class="tagline">Music on water, after sunset.</div>
-      <p>クルーズ船を<wbr>一隻貸し切り、<wbr>DJ・食事・ドリンクとともに<wbr>大阪の夜を<wbr>航行する<wbr>ナイトイベント。<wbr>陸上の<wbr>会場では<wbr>つくれない<wbr>距離感と、<wbr>移動する景色。その夜、その船に<wbr>乗った<wbr>人だけが<wbr>共有できる<wbr>時間を<wbr>つくります。</p>
-      <dl class="meta">
-        <dt>LOCATION</dt><dd>八軒家浜（大阪）集合 ／ 航路：大阪城〜淀川</dd>
-        <dt>FORMAT</dt><dd>DJ ／ クルーズ ／ ビュッフェ ／ ドリンク</dd>
+<section class="next" id="next">
+  <div class="lbl rv"><i></i><b>Next hour</b>002 ・ Wellness Night</div>
+  <div class="card">
+    <div class="poster rv"><img src="az-002.jpg" alt="SWEET SESSION — WELLNESS NIGHT のフライヤー。12月18日（金）19:00スタート、女性限定8席、5,000円。" width="1080" height="1919" loading="lazy"></div>
+    <div class="info rv">
+      <h3>Sweet<br>Session <span>— Dec 18</span></h3>
+      <p class="lead">DJの<wbr>音を<wbr>聴きながら、<wbr>スイーツと<wbr>コーヒーを<wbr>囲む夜。<wbr>女性限定・<wbr>8席だけの、<wbr>小さな<wbr>集まりです。</p>
+      <div class="chips"><span>Women only</span><span>8 seats</span><span>Wakayama</span><span>DJ · Sweets · Coffee · Talk</span></div>
+      <dl class="tt">
+        <div><dt>19:00</dt><dd>開場</dd><dd class="r">Open</dd></div>
+        <div><dt>DJ</dt><dd>音楽</dd><dd class="r">House · Tech House</dd></div>
+        <div><dt>Sweets</dt><dd>スイーツ</dd><dd class="r">Atelier.B · Kando</dd></div>
+        <div><dt>Place</dt><dd>和歌山（申込後にご案内）</dd><dd class="r">Wakayama</dd></div>
       </dl>
-      <div class="c-act">
-        <a href="https://peatix.com/event/5163108" target="_blank" rel="noopener" class="pill">View on Peatix <span>↗</span></a>
-        <small>チケット・価格・申込は Peatix に掲載しています</small>
+      <div class="buy">
+        <div><div class="price">¥5,000<small>／1名</small></div><div class="cd" id="cd">Dec 18 Fri · 19:00</div></div>
+        <a href="https://ig.me/m/noah.palmz" target="_blank" rel="noopener" class="btn or">Instagram の DM で申し込む <span class="ar">↗</span></a>
+      </div>
+      <div class="dm">
+        <div class="dm-h"><b>申込は、主催者への DM で受け付けています。</b><span>主催者 <a href="https://www.instagram.com/noah.palmz/" target="_blank" rel="noopener">@noah.palmz</a> の Instagram に、下のメッセージを送ってください。折り返し、会場と当日の流れをご案内します。</span></div>
+        <div class="dm-msg"><span id="dmText">12/18 Sweet Session 参加希望です。名前：　／人数：</span><button type="button" id="dmCopy">コピー</button></div>
+      </div>
+      <div class="steps">
+        <div><small>01</small><b>主催者に DM</b><span>@noah.palmz に<wbr>上の<wbr>メッセージを<wbr>送る。</span></div>
+        <div><small>02</small><b>詳細が届く</b><span>会場と<wbr>当日の<wbr>流れを<wbr>ご案内します。</span></div>
+        <div><small>03</small><b>当日、集まる</b><span>ひとりでの<wbr>参加も<wbr>歓迎です。</span></div>
       </div>
     </div>
-    <div class="thumb">
-      <img src="az-9-m.jpg" alt="OSAKA NIGHT CRUISE" loading="lazy" width="900" height="675">
-      <div class="lbl2">AZUR HOUR · 001</div>
-    </div>
-  </article>
-
-  <div class="ph reveal">
-    <span class="n">002</span>
-    <span class="t">開催が<wbr>決まり次第、<wbr>順次追加します。</span>
-    <a href="#loop">次回の<wbr>案内を<wbr>受け取る ↓</a>
   </div>
 </section>
 
-<!-- THE NAME -->
-<section class="sec wrap" id="name">
-  <div class="name-head reveal">
-    <span class="lbl">THE NAME</span>
-    <h2 class="jp">橙と青が、<wbr>入れ替わる<wbr>時間から。</h2>
-    <p class="lead" style="margin-top:20px">ふたつの<wbr>「Hour」が<wbr>重なる<wbr>ところに、この<wbr>名前を<wbr>置きました。</p>
-  </div>
-  <div class="name-grid">
-    <div class="name-fig reveal" aria-label="Azur と Hour が交わる図">
-      <svg viewBox="150 86 560 296" xmlns="http://www.w3.org/2000/svg" role="img">
-        <defs>
-          <linearGradient id="loopgrad" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stop-color="#0A1F55"/>
-            <stop offset="38%" stop-color="#23509E"/>
-            <stop offset="62%" stop-color="#C0592A"/>
-            <stop offset="100%" stop-color="#E8762D"/>
-          </linearGradient>
-        </defs>
-
-        <path d="M 430,190 C 380,92 216,92 196,190 C 176,288 380,288 430,190 C 480,92 644,92 664,190 C 684,288 480,288 430,190"
-              fill="none" stroke="url(#loopgrad)" stroke-width="17" stroke-linecap="round" opacity="0.92"/>
-
-        <polygon points="292,96 306,104 292,112" fill="#23509E" opacity="0.9"/>
-        <polygon points="568,284 554,276 568,268" fill="#E8762D" opacity="0.9"/>
-
-        <text x="295" y="178" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="34" letter-spacing="-1" fill="#0A1F55">AZUR</text>
-        <text x="295" y="204" text-anchor="middle" font-family="Courier New, monospace" font-size="12" letter-spacing="1.6" fill="#828AA0">BLUE HOUR</text>
-
-        <text x="565" y="178" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="34" letter-spacing="-1" fill="#C0592A">HOUR</text>
-        <text x="565" y="204" text-anchor="middle" font-family="Courier New, monospace" font-size="12" letter-spacing="1.6" fill="#828AA0">HAPPY HOUR</text>
-
-        <rect x="348" y="170" width="164" height="40" rx="20" fill="#FFFFFF" stroke="rgba(15,26,56,0.12)"/>
-        <text x="430" y="196" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-weight="500" font-size="15" fill="#0F1A38">集まる時間</text>
-
-        <text x="295" y="348" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="13" fill="#3C4766">空と水が、青に沈む20分</text>
-        <text x="565" y="348" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="13" fill="#3C4766">人が集まり、一杯を囲む時間</text>
-      </svg>
-    </div>
-    <div class="name-txt reveal">
-      <p>Azur は、日没直後、空と水が<wbr>いちばん深い青に沈む <b>Blue Hour</b> から取りました。<wbr>昼でも<wbr>夜でもない、<wbr>20分ほどしかない<wbr>時間です。</p>
-      <p>Hour には、人が<wbr>集まって<wbr>一杯を囲む <b>Happy Hour</b> の気配も<wbr>重ねています。この<wbr>ふたつが<wbr>交わる<wbr>ところ、<wbr>日常から少し<wbr>切り替わる<wbr>「集まる<wbr>時間」が Azur Hour です。</p>
-      <p>さらに<wbr>語源を<wbr>遡ると、<wbr>azur は <b>ラピスラズリ</b> という石に<wbr>行き着きます。石の<wbr>ままでは、<wbr>かつて<wbr>金より<wbr>高いとされたあの<wbr>青には<wbr>なりません。<wbr>掘り出して、<wbr>砕いて、<wbr>練って、<wbr>精製して、<wbr>はじめて色になる。</p>
-      <p>人が集まる<wbr>場所も、<wbr>同じだと<wbr>思っています。<b>ただ集めるだけでは、何も<wbr>起きない。</b></p>
-    </div>
-  </div>
-</section>
-
-<!-- WHAT WE CREATE -->
-<section class="sec wrap" id="create">
-  <div class="head reveal">
+<footer class="foot">
+  <div class="foot-top">
     <div>
-      <span class="lbl">WHAT WE CREATE</span>
-      <h2 class="dsp">Different events.<br><em class="s">Same reason to gather.</em></h2>
-      <p class="lead" style="margin-top:20px">形は変わっても、<wbr>つくりたいのは人が<wbr>自然に<wbr>交わる場。</p>
+      <h2>See you at<br>the next <span>hour.</span></h2>
+      <a href="https://www.instagram.com/noah.palmz/" target="_blank" rel="noopener" class="btn or">Follow on Instagram <span class="ar">↗</span></a>
     </div>
-    <div class="lbl" style="padding-bottom:10px">PEOPLE · PLACES · CONVERSATIONS</div>
-  </div>
-  <div class="tags reveal">
-    <span class="tag on">MUSIC</span><span class="tag">FOOD</span><span class="tag on">CRUISE</span>
-    <span class="tag">TALK</span><span class="tag">DAY</span><span class="tag on">NIGHT</span>
-  </div>
-</section>
-
-<!-- LOOP -->
-<section class="sec" id="loop" style="padding-left:0;padding-right:0">
-  <div class="loop">
-    <div class="loop-in reveal">
-      <span class="lbl">STAY IN THE LOOP</span>
-      <h2>次の案内を、<wbr>逃さない。</h2>
-      <p>開催が<wbr>決まり次第、<wbr>次回イベントと<wbr>申込開始の<wbr>お知らせを<wbr>お届けします。</p>
-      <form id="notifyForm" class="field">
-        <input type="email" name="email" placeholder="your@email.com" required aria-label="メールアドレス">
-        <input type="hidden" name="_subject" value="【Azur Hour】次回案内の登録">
-        <button class="pill" type="submit" id="notifyBtn">登録する</button>
-      </form>
-      <div style="margin-top:16px"><a href="https://azur0.peatix.com/" target="_blank" rel="noopener" class="pill on-dark">Follow on Peatix <span>↗</span></a></div>
-      <p class="fine">ご登録いただいた<wbr>連絡先は、<wbr>Azur Hour の開催案内、<wbr>申込開始、<wbr>開催に<wbr>関する<wbr>重要な<wbr>お知らせ、<wbr>および当社の関連事業<wbr>（Root X など）の<wbr>ご案内に<wbr>使用します。<wbr>配信停止は<wbr>いつでも<wbr>可能です。<a href="legal.html#privacy">プライバシーポリシー</a></p>
+    <div>
+      <div class="k">Site</div>
+      <a class="f" href="index.html">← Yoshida gumi</a>
+      <a class="f" href="contact.html">Contact</a>
+      <a class="f" href="https://www.instagram.com/noah.palmz/" target="_blank" rel="noopener">Instagram ↗</a>
+    </div>
+    <div>
+      <div class="k">Legal</div>
+      <a class="f" href="legal.html">特定商取引法に基づく表記</a>
+      <a class="f" href="legal.html#privacy">プライバシーポリシー</a>
+      <a class="f" href="legal.html#cancel">キャンセルポリシー</a>
     </div>
   </div>
-</section>
-
-<!-- CONTACT -->
-<section class="sec wrap two" id="contact" style="align-items:start">
-  <div class="reveal">
-    <span class="lbl">GET IN TOUCH</span>
-    <h2 class="dsp">Have an idea<br>worth <em class="s">gathering</em> for?</h2>
-    <p class="lead" style="margin-top:22px">人が集まる<wbr>理由を、<wbr>一緒に<wbr>つくりませんか。<br>イベント企画、<wbr>会場提供、出演、<wbr>法人交流会など、<wbr>まずは<wbr>お気軽に<wbr>ご相談ください。</p>
-    <div class="mail">
-      <div class="k">MAIL</div>
-      <a href="mailto:info@azurworks.com">info@azurworks.com</a>
-    </div>
+  <div class="foot-bot">
+    <span>Azur Hour は<a href="index.html">株式会社吉田組</a>が企画・運営するイベント事業です。和歌山県海草郡紀美野町松瀬459 ／ <a href="mailto:info@azurworks.com">info@azurworks.com</a></span>
+    <span>© 2026 YOSHIDA GUMI CO., LTD.</span>
   </div>
-  <form id="contactForm" class="form reveal">
-    <div><label class="f-label" for="cName">お名前 *</label><input class="f-in" id="cName" name="name" type="text" placeholder="山田 太郎" required></div>
-    <div><label class="f-label" for="cEmail">メールアドレス *</label><input class="f-in" id="cEmail" name="email" type="email" placeholder="example@email.com" required></div>
-    <div><label class="f-label" for="cMsg">ご相談内容 *</label><textarea class="f-ta" id="cMsg" name="message" placeholder="例：10/17 のクルーズについて ／ イベントの企画相談" required></textarea></div>
-    <input type="hidden" name="_subject" value="【Azur Hour】お問い合わせ">
-    <button class="pill" type="submit" id="contactBtn" style="justify-content:center">送信する <span>→</span></button>
-  </form>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="wrap">
-    <div class="f-grid">
-      <div class="f-brand">
-        <a href="index.html" class="logo"><svg><use href="#y-logo"/></svg>Yoshida gumi</a>
-        <p>Azur Hour は株式会社吉田組が<wbr>企画・運営する<wbr>イベント事業です。<br>
-        株式会社吉田組（法人番号 1170001005996）<br>
-        和歌山県海草郡紀<wbr>美野町松瀬459<br>
-        TEL <a href="tel:0734893178" style="display:inline;line-height:inherit">073-489-3178</a><br>
-        <a href="mailto:info@azurworks.com" style="display:inline;line-height:inherit">info@azurworks.com</a><br>
-        2027年4月<wbr>「Azur Works株式会社」へ<wbr>商号変更予定</p>
-        <a class="ig" href="https://www.instagram.com/noah.palmz/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0F1A38" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="#0F1A38" stroke="none"/></svg></a>
-      </div>
-      <div>
-        <div class="f-head">SITE</div>
-        <a href="index.html">Home</a><a href="azur-hour.html">Azur Hour</a>
-        <a href="index.html#works">Works</a><a href="index.html#licenses">Company</a><a href="#contact">Contact</a>
-      </div>
-      <div>
-        <div class="f-head">OUR BUSINESS</div>
-        <span>Root X（2026.11 始動予定）</span><span>Studio Azur</span><a href="azur-hour.html">Azur Hour</a>
-      </div>
-      <div>
-        <div class="f-head">LEGAL</div>
-        <a href="legal.html">特定商取引法に<wbr>基づく表記</a>
-        <a href="legal.html#privacy">プライバシーポリシー</a>
-        <a href="legal.html#cancel">キャンセルポリシー</a>
-      </div>
-    </div>
-    <div class="f-bot">
-      <span>© 2026 YOSHIDA GUMI CO., LTD.</span>
-      <span>2027.04 → AZUR WORKS INC.</span>
-    </div>
-  </div>
+  <div class="mark" aria-hidden="true">Azur Hour</div>
 </footer>
 
-<div class="toast" id="toast" role="status"></div>
-
 <script>
-(function(){var v=document.getElementById('heroVid');if(!v)return;
-if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-v.muted=true;v.defaultMuted=true;v.playsInline=true;v.setAttribute('muted','');
-function go(){var p=v.play();if(p&&p.catch)p.catch(function(){})}
-v.addEventListener('loadeddata',function(){v.classList.add('ready');go()});
-v.addEventListener('canplay',go);
-['touchstart','pointerdown','scroll'].forEach(function(ev){
-  addEventListener(ev,function h(){go();removeEventListener(ev,h)},{passive:true});
-});
-document.addEventListener('visibilitychange',function(){if(!document.hidden)go()});
-v.src=innerWidth<=900?'az-hero-m.mp4':'az-hero.mp4';v.load();go();})();
-const nav=document.getElementById('nav');
-addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60),{passive:true});
-const ov=document.getElementById('mOverlay');
-document.getElementById('burger').onclick=()=>ov.classList.add('open');
-document.getElementById('mClose').onclick=()=>ov.classList.remove('open');
-ov.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>ov.classList.remove('open')));
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:0.1});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-function toast(msg,ok){const t=document.getElementById('toast');t.textContent=msg;t.style.borderColor=ok?'#E8762D':'#C0392B';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),4200)}
-async function sendForm(form,btn,okMsg){
-  const orig=btn.innerHTML;btn.disabled=true;btn.innerHTML='送信中…';
-  try{
-    const res=await fetch('https://formspree.io/f/mzepdwze',{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
-    if(res.ok){form.reset();toast(okMsg,true)}else{toast('送信に失敗しました。時間をおいて再度お試しください。',false)}
-  }catch(e){toast('送信に失敗しました。通信環境をご確認ください。',false)}
-  btn.disabled=false;btn.innerHTML=orig;
-}
-document.getElementById('notifyForm').addEventListener('submit',e=>{e.preventDefault();sendForm(e.target,document.getElementById('notifyBtn'),'登録しました。次回の案内をお送りします。')});
-document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();sendForm(e.target,document.getElementById('contactBtn'),'送信しました。折り返しご連絡します。')});
+(function(){
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function play(v){var p=v.play();if(p&&p.catch)p.catch(function(){})}
+  var hv=document.getElementById('heroVid');
+  if(hv&&!reduce){hv.muted=true;hv.setAttribute('muted','');hv.src=innerWidth<=820?'az-hero-m.mp4':'az-hero.mp4';hv.load();play(hv);
+    ['touchstart','pointerdown','scroll'].forEach(function(ev){addEventListener(ev,function h(){play(hv);removeEventListener(ev,h)},{passive:true})});
+    document.addEventListener('visibilitychange',function(){if(!document.hidden)play(hv)});}
+
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+    if(!reduce){var vo=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;
+      if(e.isIntersecting){if(!v.getAttribute('src')){v.muted=true;v.src=v.getAttribute('data-src');v.load()}play(v)}else{v.pause()}})},{threshold:.2});
+      document.querySelectorAll('video[data-src]').forEach(function(v){vo.observe(v)});}
+    var fn=document.getElementById('fnav'),hero=document.getElementById('top');
+    new IntersectionObserver(function(es){fn.classList.toggle('on',!es[0].isIntersecting)},{threshold:0.08}).observe(hero);
+  }else{document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')})}
+
+  var clk=document.getElementById('clk');
+  function tick(){try{clk.textContent=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Tokyo',hour:'2-digit',minute:'2-digit'}).format(new Date())}catch(e){}}
+  tick();setInterval(tick,15000);
+
+  var cd=document.getElementById('cd'),ev=Date.parse('2026-12-18T19:00:00+09:00'),d=Math.ceil((ev-Date.now())/86400000);
+  if(d>1)cd.innerHTML='Dec 18 Fri · 19:00 — <b>'+d+' days to go</b>';else if(d===1)cd.innerHTML='Dec 18 Fri · 19:00 — <b>Tomorrow</b>';else if(d===0)cd.innerHTML='<b>Tonight</b> · 19:00';
+
+  var dc=document.getElementById('dmCopy');
+  if(dc){dc.addEventListener('click',function(){var s=document.getElementById('dmText').textContent;
+    function ok(){dc.textContent='コピーしました';setTimeout(function(){dc.textContent='コピー'},2000)}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(s).then(ok,function(){})}
+    else{var ta=document.createElement('textarea');ta.value=s;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');ok()}catch(e){}document.body.removeChild(ta)}})}
+  var fs=document.querySelectorAll('.tabs button'),items=document.querySelectorAll('.shelf .item');
+  fs.forEach(function(b){b.addEventListener('click',function(){var f=b.getAttribute('data-f');
+    fs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+    items.forEach(function(it){it.hidden=!(f==='all'||it.getAttribute('data-s')===f)})})});
+})();
 </script>
 </body>
 </html>
